@@ -1,2 +1,5 @@
 # Default reviewers for all code changes
 * @TheDaveCoder
+
+# Owner of CODEOWNERS file itself
+/.github/CODEOWNERS @TheDaveCoder
