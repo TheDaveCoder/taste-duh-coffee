@@ -5,10 +5,8 @@
  */
 package coffee;
 
-import java.awt.event.ActionEvent;
 import java.time.Instant;
 import java.util.Date;
-import javax.swing.JFrame;
 
 /**
  *
@@ -22,16 +20,23 @@ public class coffeeshop extends javax.swing.JFrame {
     public coffeeshop() {
         initComponents();
     }
+    
+    public void init(){
+        
+    }
+    
 
-    public void resetToZero() {
+    
+    public void resetToZero(){
         jSpinnerAmericano.setValue(0);
         jSpinnerCappucino.setValue(0);
         jSpinnerLatte.setValue(0);
-        subTotalTextFld.setText("0.0");
-        taxTextFld.setText("0.0");
-        totalTextFld.setText("0.0");
+        jTextFieldSubtotal.setText("0.0");
+        jTextFieldTax.setText("0.0");
+        jTextFieldTotal.setText("0.0");
     }
-
+    
+   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -41,1510 +46,1496 @@ public class coffeeshop extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        customerPanel = new javax.swing.JLabel();
-        americano = new javax.swing.ButtonGroup();
-        cappucino = new javax.swing.ButtonGroup();
-        latte = new javax.swing.ButtonGroup();
-        hazelnut = new javax.swing.ButtonGroup();
-        chocoChip = new javax.swing.ButtonGroup();
-        whiteMocha = new javax.swing.ButtonGroup();
-        toffee = new javax.swing.ButtonGroup();
-        darkChoco = new javax.swing.ButtonGroup();
-        cookiesNCream = new javax.swing.ButtonGroup();
-        shopName = new javax.swing.JPanel();
-        shopNameLbl = new javax.swing.JLabel();
-        menuItems = new javax.swing.JPanel();
-        menuItemsLbl = new javax.swing.JLabel();
-        coffeeLbl = new javax.swing.JLabel();
-        americanoPanel = new javax.swing.JPanel();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        jLabel50 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
         jSpinnerAmericano = new javax.swing.JSpinner();
-        americanoPriceLbl = new javax.swing.JLabel();
-        americanoQtyLbl = new javax.swing.JLabel();
-        americanoSizeLbl = new javax.swing.JLabel();
-        americanoPrice = new javax.swing.JTextField();
-        mdAmericano = new javax.swing.JRadioButton();
-        smAmericano = new javax.swing.JRadioButton();
-        lgAmericano = new javax.swing.JRadioButton();
-        americanoPurchaseCheckBox = new javax.swing.JCheckBox();
-        americanoPurchaseLbl = new javax.swing.JLabel();
-        americanoHeader = new javax.swing.JLabel();
-        cappucinoPanel = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        americanomedium = new javax.swing.JRadioButton();
+        smallamericano = new javax.swing.JRadioButton();
+        largeamericano = new javax.swing.JRadioButton();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
         jSpinnerCappucino = new javax.swing.JSpinner();
-        cappucinoPriceLbl = new javax.swing.JLabel();
-        cappucinoQtyLbl = new javax.swing.JLabel();
-        cappucinoSizeLbl = new javax.swing.JLabel();
-        cappucinoPrice = new javax.swing.JTextField();
-        mdCappucino = new javax.swing.JRadioButton();
-        smCappucino = new javax.swing.JRadioButton();
-        lgCappucino = new javax.swing.JRadioButton();
-        cappucinoPurchaseLbl = new javax.swing.JLabel();
-        cappucinoPurchaseCheckBox = new javax.swing.JCheckBox();
-        cappucinoHeader = new javax.swing.JLabel();
-        lattePanel = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jRadioButton5 = new javax.swing.JRadioButton();
+        jRadioButton6 = new javax.swing.JRadioButton();
+        jLabel17 = new javax.swing.JLabel();
+        jCheckBox3 = new javax.swing.JCheckBox();
+        jLabel48 = new javax.swing.JLabel();
+        jPanel11 = new javax.swing.JPanel();
         jSpinnerLatte = new javax.swing.JSpinner();
-        lattePriceLbl = new javax.swing.JLabel();
-        latteQtyLbl = new javax.swing.JLabel();
-        latteSizeLbl = new javax.swing.JLabel();
-        lattePrice = new javax.swing.JTextField();
-        mdLatte = new javax.swing.JRadioButton();
-        smLatte = new javax.swing.JRadioButton();
-        lgLatte = new javax.swing.JRadioButton();
-        lattePurchaseLbl = new javax.swing.JLabel();
-        lattePurchaseCheckBox = new javax.swing.JCheckBox();
-        latteHeader = new javax.swing.JLabel();
-        iceBlendedLbl = new javax.swing.JLabel();
-        hazelnutPanel = new javax.swing.JPanel();
-        jSpinner51 = new javax.swing.JSpinner();
-        hazelnutPriceLbl = new javax.swing.JLabel();
-        hazelnutQtyLbl = new javax.swing.JLabel();
-        hazelnutSizeLbl = new javax.swing.JLabel();
-        hazelnutPrice = new javax.swing.JTextField();
-        mdHazelnut = new javax.swing.JRadioButton();
-        smHazelnut = new javax.swing.JRadioButton();
-        lgHazelnut = new javax.swing.JRadioButton();
-        hazelnutPurchaseLbl = new javax.swing.JLabel();
-        hazelnutPurchaseCheckBox = new javax.swing.JCheckBox();
-        hazelnutHeader = new javax.swing.JLabel();
-        chocoChipPanel = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jRadioButton7 = new javax.swing.JRadioButton();
+        jRadioButton8 = new javax.swing.JRadioButton();
+        jRadioButton9 = new javax.swing.JRadioButton();
+        jLabel20 = new javax.swing.JLabel();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jLabel49 = new javax.swing.JLabel();
+        jPanel16 = new javax.swing.JPanel();
+        jSpinner99 = new javax.swing.JSpinner();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jRadioButton16 = new javax.swing.JRadioButton();
+        jRadioButton17 = new javax.swing.JRadioButton();
+        jRadioButton18 = new javax.swing.JRadioButton();
+        jLabel29 = new javax.swing.JLabel();
+        jCheckBox9 = new javax.swing.JCheckBox();
+        jLabel55 = new javax.swing.JLabel();
+        jPanel18 = new javax.swing.JPanel();
         jSpinner61 = new javax.swing.JSpinner();
-        chocoChipPriceLbl = new javax.swing.JLabel();
-        chocoChipQtyLbl = new javax.swing.JLabel();
-        chocoChipSizeLbl = new javax.swing.JLabel();
-        chocoChipPrice = new javax.swing.JTextField();
-        mdChocoChip = new javax.swing.JRadioButton();
-        smChocoChip = new javax.swing.JRadioButton();
-        lgChocoChip = new javax.swing.JRadioButton();
-        chocoChipPurchaseLbl = new javax.swing.JLabel();
-        chocoChipPurchaseCheckBox = new javax.swing.JCheckBox();
-        chocoChipHeader = new javax.swing.JLabel();
-        cookiesNCreamPanel = new javax.swing.JPanel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jRadioButton19 = new javax.swing.JRadioButton();
+        jRadioButton20 = new javax.swing.JRadioButton();
+        jRadioButton21 = new javax.swing.JRadioButton();
+        jLabel23 = new javax.swing.JLabel();
+        jCheckBox7 = new javax.swing.JCheckBox();
+        jLabel53 = new javax.swing.JLabel();
+        jPanel25 = new javax.swing.JPanel();
         jSpinner7 = new javax.swing.JSpinner();
-        cookiesNCreamPriceLbl = new javax.swing.JLabel();
-        cookiesNCreamQtyLbl = new javax.swing.JLabel();
-        cookiesNCreamSizeLbl = new javax.swing.JLabel();
-        cookiesNCreamPrice = new javax.swing.JTextField();
-        mdCookiesNCream = new javax.swing.JRadioButton();
-        smCookiesNCream = new javax.swing.JRadioButton();
-        lgCookiesNCream = new javax.swing.JRadioButton();
-        cookiesNCreamPurchaseLbl = new javax.swing.JLabel();
-        cookiesNCreamPurchaseCheckBox = new javax.swing.JCheckBox();
-        cookiesNCreamHeader = new javax.swing.JLabel();
-        frappeLbl = new javax.swing.JLabel();
-        whiteMochaPanel = new javax.swing.JPanel();
-        jSpinnerWhiteMocha = new javax.swing.JSpinner();
-        whiteMochaPriceLbl = new javax.swing.JLabel();
-        whiteMochaQtyLbl = new javax.swing.JLabel();
-        whiteMochaSizeLbl = new javax.swing.JLabel();
-        whiteMochaPrice = new javax.swing.JTextField();
-        mdWhiteMocha = new javax.swing.JRadioButton();
-        smWhiteMocha = new javax.swing.JRadioButton();
-        lgWhiteMocha = new javax.swing.JRadioButton();
-        whiteMochaPurchaseLbl = new javax.swing.JLabel();
-        whiteMochaPurchaseCheckBox = new javax.swing.JCheckBox();
-        whiteMochaHeader = new javax.swing.JLabel();
-        toffeeNutPanel = new javax.swing.JPanel();
-        jSpinnerToffeeNut = new javax.swing.JSpinner();
-        toffeeNutPriceLbl = new javax.swing.JLabel();
-        toffeeNutQtyLbl = new javax.swing.JLabel();
-        toffeeNutSizeLbl = new javax.swing.JLabel();
-        toffeeNutPrice = new javax.swing.JTextField();
-        mdToffee = new javax.swing.JRadioButton();
-        smToffee = new javax.swing.JRadioButton();
-        lgToffee = new javax.swing.JRadioButton();
-        toffeeNutPurchaseLbl = new javax.swing.JLabel();
-        toffeeNutPurchaseCheckBox = new javax.swing.JCheckBox();
-        toffeeNutHeader = new javax.swing.JLabel();
-        darkChocoPanel = new javax.swing.JPanel();
-        jSpinnerDarkChoco = new javax.swing.JSpinner();
-        darkChocoPriceLbl = new javax.swing.JLabel();
-        darkChocoQtyLbl = new javax.swing.JLabel();
-        darkChocoSizeLbl = new javax.swing.JLabel();
-        darkChocoPrice = new javax.swing.JTextField();
-        mdDarkChoco = new javax.swing.JRadioButton();
-        smDarkChoco = new javax.swing.JRadioButton();
-        lgDarkChoco = new javax.swing.JRadioButton();
-        darkChocoPurchaseLbl = new javax.swing.JLabel();
-        darkChocoPurchaseCheckBox = new javax.swing.JCheckBox();
-        darkChocoHeader = new javax.swing.JLabel();
-        pastryLbl = new javax.swing.JLabel();
-        painAuChocolatPanel = new javax.swing.JPanel();
-        jSpinnerPainAuChocolat = new javax.swing.JSpinner();
-        painAuChocolatPriceLbl = new javax.swing.JLabel();
-        painAuChocolatQtyLbl = new javax.swing.JLabel();
-        painAuChocolatPrice = new javax.swing.JTextField();
-        painAuChocolatPurchaseLbl = new javax.swing.JLabel();
-        painAuChocolatPurchaseCheckBox = new javax.swing.JCheckBox();
-        painAuChocolatHeader = new javax.swing.JLabel();
-        macaronPanel = new javax.swing.JPanel();
-        jSpinnerMacaron = new javax.swing.JSpinner();
-        macaronPriceLbl = new javax.swing.JLabel();
-        macaronQtyLbl = new javax.swing.JLabel();
-        macaronPrice = new javax.swing.JTextField();
-        macaronPurchaseLbl = new javax.swing.JLabel();
-        macaronPurchaseCheckBox = new javax.swing.JCheckBox();
-        macaronHeader = new javax.swing.JLabel();
-        blueberryCheesecakePanel = new javax.swing.JPanel();
-        jSpinnerBlueberryCheesecake = new javax.swing.JSpinner();
-        blueberryCheesecakePriceLbl = new javax.swing.JLabel();
-        blueberryCheesecakeQtyLbl = new javax.swing.JLabel();
-        blueberryCheesecakePrice = new javax.swing.JTextField();
-        blueberryCheesecakePurchaseLbl = new javax.swing.JLabel();
-        blueberryCheesecakePurchaseCheckBox = new javax.swing.JCheckBox();
-        blueberryCheesecakeHeader = new javax.swing.JLabel();
-        customerOptions = new javax.swing.JPanel();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        jLabel68 = new javax.swing.JLabel();
+        jTextField11 = new javax.swing.JTextField();
+        jRadioButton31 = new javax.swing.JRadioButton();
+        jRadioButton32 = new javax.swing.JRadioButton();
+        jRadioButton33 = new javax.swing.JRadioButton();
+        jLabel19 = new javax.swing.JLabel();
+        jCheckBox8 = new javax.swing.JCheckBox();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel27 = new javax.swing.JPanel();
+        jSpinner51 = new javax.swing.JSpinner();
+        jLabel74 = new javax.swing.JLabel();
+        jLabel75 = new javax.swing.JLabel();
+        jLabel76 = new javax.swing.JLabel();
+        jTextField13 = new javax.swing.JTextField();
+        jRadioButton37 = new javax.swing.JRadioButton();
+        jRadioButton38 = new javax.swing.JRadioButton();
+        jRadioButton39 = new javax.swing.JRadioButton();
+        jLabel22 = new javax.swing.JLabel();
+        jCheckBox6 = new javax.swing.JCheckBox();
+        jLabel51 = new javax.swing.JLabel();
+        jPanel28 = new javax.swing.JPanel();
+        jSpinner10 = new javax.swing.JSpinner();
+        jLabel78 = new javax.swing.JLabel();
+        jLabel79 = new javax.swing.JLabel();
+        jLabel80 = new javax.swing.JLabel();
+        jTextField14 = new javax.swing.JTextField();
+        jRadioButton40 = new javax.swing.JRadioButton();
+        jRadioButton41 = new javax.swing.JRadioButton();
+        jRadioButton42 = new javax.swing.JRadioButton();
+        jLabel31 = new javax.swing.JLabel();
+        jCheckBox5 = new javax.swing.JCheckBox();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jPanel31 = new javax.swing.JPanel();
+        jSpinner133 = new javax.swing.JSpinner();
+        jLabel96 = new javax.swing.JLabel();
+        jLabel97 = new javax.swing.JLabel();
+        jTextField17 = new javax.swing.JTextField();
+        jLabel43 = new javax.swing.JLabel();
+        jCheckBox13 = new javax.swing.JCheckBox();
+        jLabel58 = new javax.swing.JLabel();
+        jPanel32 = new javax.swing.JPanel();
+        jSpinner144 = new javax.swing.JSpinner();
+        jLabel100 = new javax.swing.JLabel();
+        jLabel101 = new javax.swing.JLabel();
+        jTextField18 = new javax.swing.JTextField();
+        jLabel44 = new javax.swing.JLabel();
+        jCheckBox14 = new javax.swing.JCheckBox();
+        jLabel59 = new javax.swing.JLabel();
+        jPanel33 = new javax.swing.JPanel();
+        jSpinner155 = new javax.swing.JSpinner();
+        jLabel104 = new javax.swing.JLabel();
+        jLabel105 = new javax.swing.JLabel();
+        jTextField19 = new javax.swing.JTextField();
+        jLabel45 = new javax.swing.JLabel();
+        jCheckBox16 = new javax.swing.JCheckBox();
+        jLabel60 = new javax.swing.JLabel();
+        jPanel35 = new javax.swing.JPanel();
+        jSpinner11 = new javax.swing.JSpinner();
+        jLabel86 = new javax.swing.JLabel();
+        jLabel87 = new javax.swing.JLabel();
+        jLabel88 = new javax.swing.JLabel();
+        jTextField23 = new javax.swing.JTextField();
+        jRadioButton61 = new javax.swing.JRadioButton();
+        jRadioButton62 = new javax.swing.JRadioButton();
+        jRadioButton63 = new javax.swing.JRadioButton();
+        jLabel32 = new javax.swing.JLabel();
+        jCheckBox11 = new javax.swing.JCheckBox();
+        jLabel57 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
         jButtonPay = new javax.swing.JButton();
         jButtonReceipt = new javax.swing.JButton();
         jButtonReset = new javax.swing.JButton();
         jButtonRemove = new javax.swing.JButton();
-        payment = new javax.swing.JPanel();
-        subTotalLbl = new javax.swing.JLabel();
-        totalLbl = new javax.swing.JLabel();
-        taxLbl = new javax.swing.JLabel();
-        taxTextFld = new javax.swing.JTextField();
-        subTotalTextFld = new javax.swing.JTextField();
-        totalTextFld = new javax.swing.JTextField();
-        cashLbl = new javax.swing.JLabel();
-        changeLbl = new javax.swing.JLabel();
-        cashTextFld = new javax.swing.JTextField();
-        changeTextFld = new javax.swing.JTextField();
-        orderList = new javax.swing.JScrollPane();
-        orderListTbl = new javax.swing.JTable();
-        invoiceScrn = new javax.swing.JScrollPane();
-        invoiceTextArea = new javax.swing.JTextArea();
-        btnDeleteItem = new javax.swing.JButton();
-        btnHistory = new javax.swing.JButton();
-        btnDisplayInvoice = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel114 = new javax.swing.JLabel();
+        jLabel115 = new javax.swing.JLabel();
+        jLabel116 = new javax.swing.JLabel();
+        jTextFieldTax = new javax.swing.JTextField();
+        jTextFieldSubtotal = new javax.swing.JTextField();
+        jTextFieldTotal = new javax.swing.JTextField();
+        jLabel113 = new javax.swing.JLabel();
+        jLabel112 = new javax.swing.JLabel();
+        jTextField22 = new javax.swing.JTextField();
+        jTextField21 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
-        customerPanel.setBackground(new java.awt.Color(204, 0, 0));
-        customerPanel.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
-        customerPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Latte.png"))); // NOI18N
+        jLabel50.setBackground(new java.awt.Color(204, 0, 0));
+        jLabel50.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jLabel50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Latte.png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        shopName.setBackground(new java.awt.Color(102, 102, 102));
-        shopName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        shopNameLbl.setFont(new java.awt.Font("Script MT Bold", 1, 48)); // NOI18N
-        shopNameLbl.setForeground(new java.awt.Color(255, 255, 255));
-        shopNameLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        shopNameLbl.setText("Taste The Coffee");
+        jLabel2.setFont(new java.awt.Font("Script MT Bold", 1, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Taste The Coffee");
 
-        javax.swing.GroupLayout shopNameLayout = new javax.swing.GroupLayout(shopName);
-        shopName.setLayout(shopNameLayout);
-        shopNameLayout.setHorizontalGroup(
-            shopNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(shopNameLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(590, 590, 590)
-                .addComponent(shopNameLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        shopNameLayout.setVerticalGroup(
-            shopNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(shopNameLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
-        menuItems.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        menuItemsLbl.setFont(new java.awt.Font("Segoe Print", 1, 36)); // NOI18N
-        menuItemsLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        menuItemsLbl.setText("Menu Items");
+        jLabel1.setFont(new java.awt.Font("Segoe Print", 1, 36)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Menu Items");
 
-        coffeeLbl.setBackground(new java.awt.Color(204, 0, 0));
-        coffeeLbl.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
-        coffeeLbl.setText("Coffee");
+        jLabel4.setBackground(new java.awt.Color(204, 0, 0));
+        jLabel4.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jLabel4.setText("Coffee");
 
-        americanoPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel5.setBackground(new java.awt.Color(204, 0, 0));
+        jLabel5.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jLabel5.setText("Ice Blended");
 
-        americanoPriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        americanoPriceLbl.setText("Price:");
+        jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        americanoQtyLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        americanoQtyLbl.setText("Quantity:");
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel7.setText("Price:");
 
-        americanoSizeLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        americanoSizeLbl.setText("Size:");
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel8.setText("Quantity:");
 
-        americanoPrice.setEditable(false);
-        americanoPrice.setText("80");
-        americanoPrice.addActionListener(new java.awt.event.ActionListener() {
+        jLabel26.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel26.setText("Size:");
+
+        jTextField1.setText("80");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                americanoPriceActionPerformed(evt);
+                jTextField1ActionPerformed(evt);
             }
         });
 
-        mdAmericano.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        mdAmericano.setText("M");
-        mdAmericano.addActionListener(new java.awt.event.ActionListener() {
+        americanomedium.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        americanomedium.setText("M");
+        americanomedium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mdAmericanoActionPerformed(evt);
+                americanomediumActionPerformed(evt);
             }
         });
 
-        smAmericano.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        smAmericano.setText("S");
-        smAmericano.addActionListener(new java.awt.event.ActionListener() {
+        smallamericano.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        smallamericano.setText("S");
+        smallamericano.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                smAmericanoActionPerformed(evt);
+                smallamericanoActionPerformed(evt);
             }
         });
 
-        lgAmericano.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        lgAmericano.setText("L");
-        lgAmericano.addActionListener(new java.awt.event.ActionListener() {
+        largeamericano.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        largeamericano.setText("L");
+        largeamericano.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lgAmericanoActionPerformed(evt);
+                largeamericanoActionPerformed(evt);
             }
         });
 
-        americanoPurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                americanoPurchaseCheckBoxActionPerformed(evt);
+                jCheckBox1ActionPerformed(evt);
             }
         });
 
-        americanoPurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        americanoPurchaseLbl.setText("Purchase");
+        jLabel18.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel18.setText("Purchase");
 
-        americanoHeader.setBackground(new java.awt.Color(204, 0, 0));
-        americanoHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
-        americanoHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Americano.png"))); // NOI18N
+        jLabel16.setBackground(new java.awt.Color(204, 0, 0));
+        jLabel16.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Americano.png"))); // NOI18N
 
-        javax.swing.GroupLayout americanoPanelLayout = new javax.swing.GroupLayout(americanoPanel);
-        americanoPanel.setLayout(americanoPanelLayout);
-        americanoPanelLayout.setHorizontalGroup(
-            americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(americanoPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(americanoQtyLbl)
-                    .addComponent(americanoPriceLbl)
-                    .addComponent(americanoSizeLbl))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel26))
                 .addGap(19, 19, 19)
-                .addGroup(americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(americanoPanelLayout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(jSpinnerAmericano)
                         .addContainerGap())
-                    .addGroup(americanoPanelLayout.createSequentialGroup()
-                        .addComponent(smAmericano)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(smallamericano)
                         .addGap(26, 26, 26)
-                        .addComponent(mdAmericano)
+                        .addComponent(americanomedium)
                         .addGap(18, 18, 18)
-                        .addComponent(lgAmericano))
-                    .addGroup(americanoPanelLayout.createSequentialGroup()
-                        .addComponent(americanoPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(largeamericano))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(americanoPurchaseLbl)
+                        .addComponent(jLabel18)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(americanoPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))))
-            .addComponent(americanoHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        americanoPanelLayout.setVerticalGroup(
-            americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, americanoPanelLayout.createSequentialGroup()
-                .addComponent(americanoHeader)
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addComponent(jLabel16)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(americanoSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(mdAmericano)
-                        .addComponent(smAmericano)
-                        .addComponent(lgAmericano)))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel26, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(americanomedium)
+                        .addComponent(smallamericano)
+                        .addComponent(largeamericano)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jSpinnerAmericano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(americanoQtyLbl))
+                    .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(americanoPriceLbl)
-                        .addComponent(americanoPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(americanoPurchaseLbl))
-                    .addComponent(americanoPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel7)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel18))
+                    .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        cappucinoPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        cappucinoPriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        cappucinoPriceLbl.setText("Price:");
+        jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel10.setText("Price:");
 
-        cappucinoQtyLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        cappucinoQtyLbl.setText("Quantity:");
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel11.setText("Quantity:");
 
-        cappucinoSizeLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        cappucinoSizeLbl.setText("Size:");
+        jLabel27.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel27.setText("Size:");
 
-        cappucinoPrice.setEditable(false);
-        cappucinoPrice.setText("85");
+        jTextField2.setText("85");
 
-        mdCappucino.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        mdCappucino.setText("M");
-        mdCappucino.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButton4.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton4.setText("M");
+        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mdCappucinoActionPerformed(evt);
+                jRadioButton4ActionPerformed(evt);
             }
         });
 
-        smCappucino.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        smCappucino.setText("S");
-        smCappucino.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButton5.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton5.setText("S");
+        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                smCappucinoActionPerformed(evt);
+                jRadioButton5ActionPerformed(evt);
             }
         });
 
-        lgCappucino.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        lgCappucino.setText("L");
-        lgCappucino.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButton6.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton6.setText("L");
+        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lgCappucinoActionPerformed(evt);
+                jRadioButton6ActionPerformed(evt);
             }
         });
 
-        cappucinoPurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        cappucinoPurchaseLbl.setText("Purchase");
+        jLabel17.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel17.setText("Purchase");
 
-        cappucinoPurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cappucinoPurchaseCheckBoxActionPerformed(evt);
+                jCheckBox3ActionPerformed(evt);
             }
         });
 
-        cappucinoHeader.setBackground(new java.awt.Color(204, 0, 0));
-        cappucinoHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
-        cappucinoHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Cappucino.png"))); // NOI18N
+        jLabel48.setBackground(new java.awt.Color(204, 0, 0));
+        jLabel48.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jLabel48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Cappucino.png"))); // NOI18N
 
-        javax.swing.GroupLayout cappucinoPanelLayout = new javax.swing.GroupLayout(cappucinoPanel);
-        cappucinoPanel.setLayout(cappucinoPanelLayout);
-        cappucinoPanelLayout.setHorizontalGroup(
-            cappucinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cappucinoPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(cappucinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cappucinoQtyLbl)
-                    .addComponent(cappucinoPriceLbl)
-                    .addComponent(cappucinoSizeLbl))
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel27))
                 .addGap(22, 22, 22)
-                .addGroup(cappucinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSpinnerCappucino)
-                    .addGroup(cappucinoPanelLayout.createSequentialGroup()
-                        .addComponent(smCappucino)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(jRadioButton5)
                         .addGap(26, 26, 26)
-                        .addComponent(mdCappucino)
+                        .addComponent(jRadioButton4)
                         .addGap(18, 18, 18)
-                        .addComponent(lgCappucino))
-                    .addGroup(cappucinoPanelLayout.createSequentialGroup()
-                        .addComponent(cappucinoPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jRadioButton6))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cappucinoPurchaseLbl)
+                        .addComponent(jLabel17)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cappucinoPurchaseCheckBox)))
+                        .addComponent(jCheckBox3)))
                 .addContainerGap())
-            .addGroup(cappucinoPanelLayout.createSequentialGroup()
-                .addComponent(cappucinoHeader)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addComponent(jLabel48)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        cappucinoPanelLayout.setVerticalGroup(
-            cappucinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cappucinoPanelLayout.createSequentialGroup()
-                .addComponent(cappucinoHeader)
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addComponent(jLabel48)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(cappucinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cappucinoSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cappucinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(mdCappucino)
-                        .addComponent(smCappucino)
-                        .addComponent(lgCappucino)))
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel27, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jRadioButton4)
+                        .addComponent(jRadioButton5)
+                        .addComponent(jRadioButton6)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cappucinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jSpinnerCappucino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cappucinoQtyLbl))
+                    .addComponent(jLabel11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cappucinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(cappucinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(cappucinoPriceLbl)
-                        .addComponent(cappucinoPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(cappucinoPurchaseLbl))
-                    .addComponent(cappucinoPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel10)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel17))
+                    .addComponent(jCheckBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        lattePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        lattePriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        lattePriceLbl.setText("Price:");
+        jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel13.setText("Price:");
 
-        latteQtyLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        latteQtyLbl.setText("Quantity:");
+        jLabel14.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel14.setText("Quantity:");
 
-        latteSizeLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        latteSizeLbl.setText("Size:");
+        jLabel28.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel28.setText("Size:");
 
-        lattePrice.setEditable(false);
-        lattePrice.setText("85");
-        lattePrice.addActionListener(new java.awt.event.ActionListener() {
+        jTextField3.setText("85");
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lattePriceActionPerformed(evt);
+                jTextField3ActionPerformed(evt);
             }
         });
 
-        mdLatte.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        mdLatte.setText("M");
-        mdLatte.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButton7.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton7.setText("M");
+        jRadioButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mdLatteActionPerformed(evt);
+                jRadioButton7ActionPerformed(evt);
             }
         });
 
-        smLatte.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        smLatte.setText("S");
-        smLatte.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButton8.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton8.setText("S");
+        jRadioButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                smLatteActionPerformed(evt);
+                jRadioButton8ActionPerformed(evt);
             }
         });
 
-        lgLatte.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        lgLatte.setText("L");
-        lgLatte.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButton9.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton9.setText("L");
+        jRadioButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lgLatteActionPerformed(evt);
+                jRadioButton9ActionPerformed(evt);
             }
         });
 
-        lattePurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        lattePurchaseLbl.setText("Purchase");
+        jLabel20.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel20.setText("Purchase");
 
-        lattePurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lattePurchaseCheckBoxActionPerformed(evt);
+                jCheckBox2ActionPerformed(evt);
             }
         });
 
-        latteHeader.setBackground(new java.awt.Color(204, 0, 0));
-        latteHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
-        latteHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Latte.png"))); // NOI18N
+        jLabel49.setBackground(new java.awt.Color(204, 0, 0));
+        jLabel49.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Latte.png"))); // NOI18N
 
-        javax.swing.GroupLayout lattePanelLayout = new javax.swing.GroupLayout(lattePanel);
-        lattePanel.setLayout(lattePanelLayout);
-        lattePanelLayout.setHorizontalGroup(
-            lattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(lattePanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(lattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(latteQtyLbl)
-                    .addComponent(lattePriceLbl)
-                    .addComponent(latteSizeLbl))
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel14)
+                    .addComponent(jLabel13)
+                    .addComponent(jLabel28))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(lattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSpinnerLatte)
-                    .addGroup(lattePanelLayout.createSequentialGroup()
-                        .addComponent(smLatte)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addComponent(jRadioButton8)
                         .addGap(26, 26, 26)
-                        .addComponent(mdLatte)
+                        .addComponent(jRadioButton7)
                         .addGap(18, 18, 18)
-                        .addComponent(lgLatte))
-                    .addGroup(lattePanelLayout.createSequentialGroup()
-                        .addComponent(lattePrice, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jRadioButton9))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lattePurchaseLbl)
+                        .addComponent(jLabel20)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lattePurchaseCheckBox)))
+                        .addComponent(jCheckBox2)))
                 .addContainerGap())
-            .addGroup(lattePanelLayout.createSequentialGroup()
-                .addComponent(latteHeader)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addComponent(jLabel49)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        lattePanelLayout.setVerticalGroup(
-            lattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lattePanelLayout.createSequentialGroup()
-                .addComponent(latteHeader)
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addComponent(jLabel49)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                .addGroup(lattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(latteSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(mdLatte)
-                        .addComponent(smLatte)
-                        .addComponent(lgLatte)))
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel28, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jRadioButton7)
+                        .addComponent(jRadioButton8)
+                        .addComponent(jRadioButton9)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(lattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jSpinnerLatte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(latteQtyLbl))
+                    .addComponent(jLabel14))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(lattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(lattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lattePriceLbl)
-                        .addComponent(lattePrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lattePurchaseLbl))
-                    .addComponent(lattePurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel13)
+                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel20))
+                    .addComponent(jCheckBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        iceBlendedLbl.setBackground(new java.awt.Color(204, 0, 0));
-        iceBlendedLbl.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
-        iceBlendedLbl.setText("Ice Blended");
+        jPanel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        hazelnutPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel37.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel37.setText("Price:");
 
-        hazelnutPriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        hazelnutPriceLbl.setText("Price:");
+        jLabel38.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel38.setText("Quantity:");
 
-        hazelnutQtyLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        hazelnutQtyLbl.setText("Quantity:");
+        jLabel39.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel39.setText("Size:");
 
-        hazelnutSizeLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        hazelnutSizeLbl.setText("Size:");
-
-        hazelnutPrice.setEditable(false);
-        hazelnutPrice.setText("90");
-
-        mdHazelnut.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        mdHazelnut.setText("M");
-        mdHazelnut.addActionListener(new java.awt.event.ActionListener() {
+        jTextField6.setText("120");
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mdHazelnutActionPerformed(evt);
+                jTextField6ActionPerformed(evt);
             }
         });
 
-        smHazelnut.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        smHazelnut.setText("S");
-        smHazelnut.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButton16.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton16.setText("M");
+        jRadioButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                smHazelnutActionPerformed(evt);
+                jRadioButton16ActionPerformed(evt);
             }
         });
 
-        lgHazelnut.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        lgHazelnut.setText("L");
-        lgHazelnut.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButton17.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton17.setText("S");
+        jRadioButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lgHazelnutActionPerformed(evt);
+                jRadioButton17ActionPerformed(evt);
             }
         });
 
-        hazelnutPurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        hazelnutPurchaseLbl.setText("Purchase");
-
-        hazelnutPurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButton18.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton18.setText("L");
+        jRadioButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                hazelnutPurchaseCheckBoxActionPerformed(evt);
+                jRadioButton18ActionPerformed(evt);
             }
         });
 
-        hazelnutHeader.setBackground(new java.awt.Color(204, 0, 0));
-        hazelnutHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
-        hazelnutHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Hazelnut.png"))); // NOI18N
+        jLabel29.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel29.setText("Purchase");
 
-        javax.swing.GroupLayout hazelnutPanelLayout = new javax.swing.GroupLayout(hazelnutPanel);
-        hazelnutPanel.setLayout(hazelnutPanelLayout);
-        hazelnutPanelLayout.setHorizontalGroup(
-            hazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(hazelnutPanelLayout.createSequentialGroup()
+        jCheckBox9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox9ActionPerformed(evt);
+            }
+        });
+
+        jLabel55.setBackground(new java.awt.Color(204, 0, 0));
+        jLabel55.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/White Mocha.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
+        jPanel16.setLayout(jPanel16Layout);
+        jPanel16Layout.setHorizontalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(hazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(hazelnutQtyLbl)
-                    .addComponent(hazelnutPriceLbl)
-                    .addComponent(hazelnutSizeLbl))
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel38)
+                    .addComponent(jLabel37)
+                    .addComponent(jLabel39))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(hazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSpinner51)
-                    .addGroup(hazelnutPanelLayout.createSequentialGroup()
-                        .addGroup(hazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(hazelnutPanelLayout.createSequentialGroup()
-                                .addComponent(smHazelnut)
-                                .addGap(26, 26, 26)
-                                .addComponent(mdHazelnut)
-                                .addGap(18, 18, 18)
-                                .addComponent(lgHazelnut))
-                            .addGroup(hazelnutPanelLayout.createSequentialGroup()
-                                .addComponent(hazelnutPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(hazelnutPurchaseLbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(hazelnutPurchaseCheckBox)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(hazelnutPanelLayout.createSequentialGroup()
-                .addComponent(hazelnutHeader)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        hazelnutPanelLayout.setVerticalGroup(
-            hazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hazelnutPanelLayout.createSequentialGroup()
-                .addComponent(hazelnutHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(hazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(hazelnutSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(mdHazelnut)
-                        .addComponent(smHazelnut)
-                        .addComponent(lgHazelnut)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(hazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpinner51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(hazelnutQtyLbl))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(hazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(hazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(hazelnutPriceLbl)
-                        .addComponent(hazelnutPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(hazelnutPurchaseLbl))
-                    .addComponent(hazelnutPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-
-        chocoChipPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        chocoChipPriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        chocoChipPriceLbl.setText("Price:");
-
-        chocoChipQtyLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        chocoChipQtyLbl.setText("Quantity:");
-
-        chocoChipSizeLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        chocoChipSizeLbl.setText("Size:");
-
-        chocoChipPrice.setEditable(false);
-        chocoChipPrice.setText("100");
-        chocoChipPrice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chocoChipPriceActionPerformed(evt);
-            }
-        });
-
-        mdChocoChip.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        mdChocoChip.setText("M");
-        mdChocoChip.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mdChocoChipActionPerformed(evt);
-            }
-        });
-
-        smChocoChip.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        smChocoChip.setText("S");
-        smChocoChip.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                smChocoChipActionPerformed(evt);
-            }
-        });
-
-        lgChocoChip.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        lgChocoChip.setText("L");
-        lgChocoChip.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lgChocoChipActionPerformed(evt);
-            }
-        });
-
-        chocoChipPurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        chocoChipPurchaseLbl.setText("Purchase");
-
-        chocoChipPurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chocoChipPurchaseCheckBoxActionPerformed(evt);
-            }
-        });
-
-        chocoChipHeader.setBackground(new java.awt.Color(204, 0, 0));
-        chocoChipHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
-        chocoChipHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Chocolate.png"))); // NOI18N
-
-        javax.swing.GroupLayout chocoChipPanelLayout = new javax.swing.GroupLayout(chocoChipPanel);
-        chocoChipPanel.setLayout(chocoChipPanelLayout);
-        chocoChipPanelLayout.setHorizontalGroup(
-            chocoChipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(chocoChipPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(chocoChipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chocoChipQtyLbl)
-                    .addComponent(chocoChipPriceLbl)
-                    .addComponent(chocoChipSizeLbl))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(chocoChipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSpinner61)
-                    .addGroup(chocoChipPanelLayout.createSequentialGroup()
-                        .addComponent(smChocoChip)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSpinner99)
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addComponent(jRadioButton17)
                         .addGap(26, 26, 26)
-                        .addComponent(mdChocoChip)
+                        .addComponent(jRadioButton16)
                         .addGap(18, 18, 18)
-                        .addComponent(lgChocoChip)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(chocoChipPanelLayout.createSequentialGroup()
-                        .addComponent(chocoChipPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(chocoChipPurchaseLbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(chocoChipPurchaseCheckBox)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, chocoChipPanelLayout.createSequentialGroup()
-                .addComponent(chocoChipHeader)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        chocoChipPanelLayout.setVerticalGroup(
-            chocoChipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, chocoChipPanelLayout.createSequentialGroup()
-                .addComponent(chocoChipHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(chocoChipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chocoChipSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, chocoChipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(mdChocoChip)
-                        .addComponent(smChocoChip)
-                        .addComponent(lgChocoChip)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(chocoChipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpinner61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(chocoChipQtyLbl))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(chocoChipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(chocoChipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(chocoChipPriceLbl)
-                        .addComponent(chocoChipPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(chocoChipPurchaseLbl))
-                    .addComponent(chocoChipPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-
-        cookiesNCreamPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        cookiesNCreamPriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        cookiesNCreamPriceLbl.setText("Price:");
-
-        cookiesNCreamQtyLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        cookiesNCreamQtyLbl.setText("Quantity:");
-
-        cookiesNCreamSizeLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        cookiesNCreamSizeLbl.setText("Size:");
-
-        cookiesNCreamPrice.setEditable(false);
-        cookiesNCreamPrice.setText("100");
-
-        mdCookiesNCream.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        mdCookiesNCream.setText("M");
-        mdCookiesNCream.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mdCookiesNCreamActionPerformed(evt);
-            }
-        });
-
-        smCookiesNCream.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        smCookiesNCream.setText("S");
-        smCookiesNCream.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                smCookiesNCreamActionPerformed(evt);
-            }
-        });
-
-        lgCookiesNCream.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        lgCookiesNCream.setText("L");
-        lgCookiesNCream.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lgCookiesNCreamActionPerformed(evt);
-            }
-        });
-
-        cookiesNCreamPurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        cookiesNCreamPurchaseLbl.setText("Purchase");
-
-        cookiesNCreamPurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cookiesNCreamPurchaseCheckBoxActionPerformed(evt);
-            }
-        });
-
-        cookiesNCreamHeader.setBackground(new java.awt.Color(204, 0, 0));
-        cookiesNCreamHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
-        cookiesNCreamHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Cookies n' cream.png"))); // NOI18N
-
-        javax.swing.GroupLayout cookiesNCreamPanelLayout = new javax.swing.GroupLayout(cookiesNCreamPanel);
-        cookiesNCreamPanel.setLayout(cookiesNCreamPanelLayout);
-        cookiesNCreamPanelLayout.setHorizontalGroup(
-            cookiesNCreamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cookiesNCreamPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cookiesNCreamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cookiesNCreamQtyLbl)
-                    .addComponent(cookiesNCreamPriceLbl)
-                    .addComponent(cookiesNCreamSizeLbl))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(cookiesNCreamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSpinner7)
-                    .addGroup(cookiesNCreamPanelLayout.createSequentialGroup()
-                        .addGroup(cookiesNCreamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(cookiesNCreamPanelLayout.createSequentialGroup()
-                                .addComponent(smCookiesNCream)
-                                .addGap(26, 26, 26)
-                                .addComponent(mdCookiesNCream)
-                                .addGap(18, 18, 18)
-                                .addComponent(lgCookiesNCream))
-                            .addGroup(cookiesNCreamPanelLayout.createSequentialGroup()
-                                .addComponent(cookiesNCreamPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(12, 12, 12)
-                                .addComponent(cookiesNCreamPurchaseLbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cookiesNCreamPurchaseCheckBox)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(cookiesNCreamPanelLayout.createSequentialGroup()
-                .addComponent(cookiesNCreamHeader)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        cookiesNCreamPanelLayout.setVerticalGroup(
-            cookiesNCreamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cookiesNCreamPanelLayout.createSequentialGroup()
-                .addComponent(cookiesNCreamHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                .addGroup(cookiesNCreamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cookiesNCreamSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cookiesNCreamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(mdCookiesNCream)
-                        .addComponent(smCookiesNCream)
-                        .addComponent(lgCookiesNCream)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cookiesNCreamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpinner7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cookiesNCreamQtyLbl))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cookiesNCreamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(cookiesNCreamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(cookiesNCreamPriceLbl)
-                        .addComponent(cookiesNCreamPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(cookiesNCreamPurchaseLbl))
-                    .addComponent(cookiesNCreamPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-
-        frappeLbl.setBackground(new java.awt.Color(204, 0, 0));
-        frappeLbl.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
-        frappeLbl.setText("Frappe");
-
-        whiteMochaPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        whiteMochaPriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        whiteMochaPriceLbl.setText("Price:");
-
-        whiteMochaQtyLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        whiteMochaQtyLbl.setText("Quantity:");
-
-        whiteMochaSizeLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        whiteMochaSizeLbl.setText("Size:");
-
-        whiteMochaPrice.setEditable(false);
-        whiteMochaPrice.setText("120");
-        whiteMochaPrice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                whiteMochaPriceActionPerformed(evt);
-            }
-        });
-
-        mdWhiteMocha.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        mdWhiteMocha.setText("M");
-        mdWhiteMocha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mdWhiteMochaActionPerformed(evt);
-            }
-        });
-
-        smWhiteMocha.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        smWhiteMocha.setText("S");
-        smWhiteMocha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                smWhiteMochaActionPerformed(evt);
-            }
-        });
-
-        lgWhiteMocha.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        lgWhiteMocha.setText("L");
-        lgWhiteMocha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lgWhiteMochaActionPerformed(evt);
-            }
-        });
-
-        whiteMochaPurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        whiteMochaPurchaseLbl.setText("Purchase");
-
-        whiteMochaPurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                whiteMochaPurchaseCheckBoxActionPerformed(evt);
-            }
-        });
-
-        whiteMochaHeader.setBackground(new java.awt.Color(204, 0, 0));
-        whiteMochaHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
-        whiteMochaHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/White Mocha.png"))); // NOI18N
-
-        javax.swing.GroupLayout whiteMochaPanelLayout = new javax.swing.GroupLayout(whiteMochaPanel);
-        whiteMochaPanel.setLayout(whiteMochaPanelLayout);
-        whiteMochaPanelLayout.setHorizontalGroup(
-            whiteMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(whiteMochaPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(whiteMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(whiteMochaQtyLbl)
-                    .addComponent(whiteMochaPriceLbl)
-                    .addComponent(whiteMochaSizeLbl))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(whiteMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSpinnerWhiteMocha)
-                    .addGroup(whiteMochaPanelLayout.createSequentialGroup()
-                        .addComponent(smWhiteMocha)
-                        .addGap(26, 26, 26)
-                        .addComponent(mdWhiteMocha)
-                        .addGap(18, 18, 18)
-                        .addComponent(lgWhiteMocha))
-                    .addGroup(whiteMochaPanelLayout.createSequentialGroup()
-                        .addComponent(whiteMochaPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jRadioButton18))
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(whiteMochaPurchaseLbl)
+                        .addComponent(jLabel29)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(whiteMochaPurchaseCheckBox)))
+                        .addComponent(jCheckBox9)))
                 .addContainerGap())
-            .addGroup(whiteMochaPanelLayout.createSequentialGroup()
-                .addComponent(whiteMochaHeader)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addComponent(jLabel55)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        whiteMochaPanelLayout.setVerticalGroup(
-            whiteMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, whiteMochaPanelLayout.createSequentialGroup()
-                .addComponent(whiteMochaHeader)
+        jPanel16Layout.setVerticalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
+                .addComponent(jLabel55)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(whiteMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(whiteMochaSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, whiteMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(mdWhiteMocha)
-                        .addComponent(smWhiteMocha)
-                        .addComponent(lgWhiteMocha)))
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel39, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jRadioButton16)
+                        .addComponent(jRadioButton17)
+                        .addComponent(jRadioButton18)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(whiteMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpinnerWhiteMocha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(whiteMochaQtyLbl))
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jSpinner99, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel38))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(whiteMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(whiteMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(whiteMochaPriceLbl)
-                        .addComponent(whiteMochaPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(whiteMochaPurchaseLbl))
-                    .addComponent(whiteMochaPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel37)
+                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel29))
+                    .addComponent(jCheckBox9, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        toffeeNutPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        toffeeNutPriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        toffeeNutPriceLbl.setText("Price:");
+        jLabel41.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel41.setText("Price:");
 
-        toffeeNutQtyLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        toffeeNutQtyLbl.setText("Quantity:");
+        jLabel42.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel42.setText("Quantity:");
 
-        toffeeNutSizeLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        toffeeNutSizeLbl.setText("Size:");
+        jLabel52.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel52.setText("Size:");
 
-        toffeeNutPrice.setEditable(false);
-        toffeeNutPrice.setText("125");
-        toffeeNutPrice.addActionListener(new java.awt.event.ActionListener() {
+        jTextField7.setText("100");
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                toffeeNutPriceActionPerformed(evt);
+                jTextField7ActionPerformed(evt);
             }
         });
 
-        mdToffee.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        mdToffee.setText("M");
-        mdToffee.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButton19.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton19.setText("M");
+        jRadioButton19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mdToffeeActionPerformed(evt);
+                jRadioButton19ActionPerformed(evt);
             }
         });
 
-        smToffee.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        smToffee.setText("S");
-        smToffee.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButton20.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton20.setText("S");
+        jRadioButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                smToffeeActionPerformed(evt);
+                jRadioButton20ActionPerformed(evt);
             }
         });
 
-        lgToffee.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        lgToffee.setText("L");
-        lgToffee.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButton21.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton21.setText("L");
+        jRadioButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lgToffeeActionPerformed(evt);
+                jRadioButton21ActionPerformed(evt);
             }
         });
 
-        toffeeNutPurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        toffeeNutPurchaseLbl.setText("Purchase");
+        jLabel23.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel23.setText("Purchase");
 
-        toffeeNutPurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBox7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                toffeeNutPurchaseCheckBoxActionPerformed(evt);
+                jCheckBox7ActionPerformed(evt);
             }
         });
 
-        toffeeNutHeader.setBackground(new java.awt.Color(204, 0, 0));
-        toffeeNutHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
-        toffeeNutHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Toffee.png"))); // NOI18N
+        jLabel53.setBackground(new java.awt.Color(204, 0, 0));
+        jLabel53.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Chocolate.png"))); // NOI18N
 
-        javax.swing.GroupLayout toffeeNutPanelLayout = new javax.swing.GroupLayout(toffeeNutPanel);
-        toffeeNutPanel.setLayout(toffeeNutPanelLayout);
-        toffeeNutPanelLayout.setHorizontalGroup(
-            toffeeNutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(toffeeNutPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
+        jPanel18.setLayout(jPanel18Layout);
+        jPanel18Layout.setHorizontalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(toffeeNutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(toffeeNutQtyLbl)
-                    .addComponent(toffeeNutPriceLbl)
-                    .addComponent(toffeeNutSizeLbl))
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel42)
+                    .addComponent(jLabel41)
+                    .addComponent(jLabel52))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(toffeeNutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSpinnerToffeeNut)
-                    .addGroup(toffeeNutPanelLayout.createSequentialGroup()
-                        .addComponent(smToffee)
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSpinner61)
+                    .addGroup(jPanel18Layout.createSequentialGroup()
+                        .addComponent(jRadioButton20)
                         .addGap(26, 26, 26)
-                        .addComponent(mdToffee)
+                        .addComponent(jRadioButton19)
                         .addGap(18, 18, 18)
-                        .addComponent(lgToffee)
+                        .addComponent(jRadioButton21)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(toffeeNutPanelLayout.createSequentialGroup()
-                        .addComponent(toffeeNutPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel18Layout.createSequentialGroup()
+                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(toffeeNutPurchaseLbl)
+                        .addComponent(jLabel23)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(toffeeNutPurchaseCheckBox)))
+                        .addComponent(jCheckBox7)))
                 .addContainerGap())
-            .addGroup(toffeeNutPanelLayout.createSequentialGroup()
-                .addComponent(toffeeNutHeader)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
+                .addComponent(jLabel53)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        toffeeNutPanelLayout.setVerticalGroup(
-            toffeeNutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, toffeeNutPanelLayout.createSequentialGroup()
-                .addComponent(toffeeNutHeader)
+        jPanel18Layout.setVerticalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
+                .addComponent(jLabel53)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(toffeeNutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(toffeeNutSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, toffeeNutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(mdToffee)
-                        .addComponent(smToffee)
-                        .addComponent(lgToffee)))
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel52, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jRadioButton19)
+                        .addComponent(jRadioButton20)
+                        .addComponent(jRadioButton21)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(toffeeNutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpinnerToffeeNut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(toffeeNutQtyLbl))
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jSpinner61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel42))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(toffeeNutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(toffeeNutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(toffeeNutPriceLbl)
-                        .addComponent(toffeeNutPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(toffeeNutPurchaseLbl))
-                    .addComponent(toffeeNutPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel41)
+                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel23))
+                    .addComponent(jCheckBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        darkChocoPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        darkChocoPriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        darkChocoPriceLbl.setText("Price:");
+        jLabel66.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel66.setText("Price:");
 
-        darkChocoQtyLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        darkChocoQtyLbl.setText("Quantity:");
+        jLabel67.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel67.setText("Quantity:");
 
-        darkChocoSizeLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        darkChocoSizeLbl.setText("Size:");
+        jLabel68.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel68.setText("Size:");
 
-        darkChocoPrice.setEditable(false);
-        darkChocoPrice.setText("135");
+        jTextField11.setText("100");
 
-        mdDarkChoco.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        mdDarkChoco.setText("M");
-        mdDarkChoco.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButton31.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton31.setText("M");
+        jRadioButton31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mdDarkChocoActionPerformed(evt);
+                jRadioButton31ActionPerformed(evt);
             }
         });
 
-        smDarkChoco.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        smDarkChoco.setText("S");
-        smDarkChoco.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButton32.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton32.setText("S");
+        jRadioButton32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                smDarkChocoActionPerformed(evt);
+                jRadioButton32ActionPerformed(evt);
             }
         });
 
-        lgDarkChoco.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        lgDarkChoco.setText("L");
-        lgDarkChoco.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButton33.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton33.setText("L");
+        jRadioButton33.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lgDarkChocoActionPerformed(evt);
+                jRadioButton33ActionPerformed(evt);
             }
         });
 
-        darkChocoPurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        darkChocoPurchaseLbl.setText("Purchase");
+        jLabel19.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel19.setText("Purchase");
 
-        darkChocoPurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBox8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                darkChocoPurchaseCheckBoxActionPerformed(evt);
+                jCheckBox8ActionPerformed(evt);
             }
         });
 
-        darkChocoHeader.setBackground(new java.awt.Color(204, 0, 0));
-        darkChocoHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
-        darkChocoHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Dark Choco.png"))); // NOI18N
+        jLabel54.setBackground(new java.awt.Color(204, 0, 0));
+        jLabel54.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jLabel54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Cookies n' cream.png"))); // NOI18N
 
-        javax.swing.GroupLayout darkChocoPanelLayout = new javax.swing.GroupLayout(darkChocoPanel);
-        darkChocoPanel.setLayout(darkChocoPanelLayout);
-        darkChocoPanelLayout.setHorizontalGroup(
-            darkChocoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(darkChocoPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
+        jPanel25.setLayout(jPanel25Layout);
+        jPanel25Layout.setHorizontalGroup(
+            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel25Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(darkChocoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(darkChocoQtyLbl)
-                    .addComponent(darkChocoPriceLbl)
-                    .addComponent(darkChocoSizeLbl))
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel67)
+                    .addComponent(jLabel66)
+                    .addComponent(jLabel68))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(darkChocoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSpinnerDarkChoco)
-                    .addGroup(darkChocoPanelLayout.createSequentialGroup()
-                        .addGroup(darkChocoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(darkChocoPanelLayout.createSequentialGroup()
-                                .addComponent(smDarkChoco)
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSpinner7)
+                    .addGroup(jPanel25Layout.createSequentialGroup()
+                        .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel25Layout.createSequentialGroup()
+                                .addComponent(jRadioButton32)
                                 .addGap(26, 26, 26)
-                                .addComponent(mdDarkChoco)
+                                .addComponent(jRadioButton31)
                                 .addGap(18, 18, 18)
-                                .addComponent(lgDarkChoco))
-                            .addGroup(darkChocoPanelLayout.createSequentialGroup()
-                                .addComponent(darkChocoPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jRadioButton33))
+                            .addGroup(jPanel25Layout.createSequentialGroup()
+                                .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(12, 12, 12)
+                                .addComponent(jLabel19)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(darkChocoPurchaseLbl)
+                                .addComponent(jCheckBox8)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(jPanel25Layout.createSequentialGroup()
+                .addComponent(jLabel54)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel25Layout.setVerticalGroup(
+            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createSequentialGroup()
+                .addComponent(jLabel54)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel68, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jRadioButton31)
+                        .addComponent(jRadioButton32)
+                        .addComponent(jRadioButton33)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jSpinner7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel67))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel66)
+                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel19))
+                    .addComponent(jCheckBox8, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        jLabel3.setBackground(new java.awt.Color(204, 0, 0));
+        jLabel3.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jLabel3.setText("Frappe");
+
+        jPanel27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel74.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel74.setText("Price:");
+
+        jLabel75.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel75.setText("Quantity:");
+
+        jLabel76.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel76.setText("Size:");
+
+        jTextField13.setText("90");
+
+        jRadioButton37.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton37.setText("M");
+        jRadioButton37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton37ActionPerformed(evt);
+            }
+        });
+
+        jRadioButton38.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton38.setText("S");
+        jRadioButton38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton38ActionPerformed(evt);
+            }
+        });
+
+        jRadioButton39.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton39.setText("L");
+        jRadioButton39.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton39ActionPerformed(evt);
+            }
+        });
+
+        jLabel22.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel22.setText("Purchase");
+
+        jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox6ActionPerformed(evt);
+            }
+        });
+
+        jLabel51.setBackground(new java.awt.Color(204, 0, 0));
+        jLabel51.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jLabel51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Hazelnut.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
+        jPanel27.setLayout(jPanel27Layout);
+        jPanel27Layout.setHorizontalGroup(
+            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel27Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel75)
+                    .addComponent(jLabel74)
+                    .addComponent(jLabel76))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSpinner51)
+                    .addGroup(jPanel27Layout.createSequentialGroup()
+                        .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel27Layout.createSequentialGroup()
+                                .addComponent(jRadioButton38)
+                                .addGap(26, 26, 26)
+                                .addComponent(jRadioButton37)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton39))
+                            .addGroup(jPanel27Layout.createSequentialGroup()
+                                .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(darkChocoPurchaseCheckBox)))
+                                .addComponent(jLabel22)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jCheckBox6)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(darkChocoPanelLayout.createSequentialGroup()
-                .addComponent(darkChocoHeader)
+            .addGroup(jPanel27Layout.createSequentialGroup()
+                .addComponent(jLabel51)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        darkChocoPanelLayout.setVerticalGroup(
-            darkChocoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, darkChocoPanelLayout.createSequentialGroup()
-                .addComponent(darkChocoHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addGroup(darkChocoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(darkChocoSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, darkChocoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(mdDarkChoco)
-                        .addComponent(smDarkChoco)
-                        .addComponent(lgDarkChoco)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(darkChocoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpinnerDarkChoco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(darkChocoQtyLbl))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(darkChocoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(darkChocoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(darkChocoPriceLbl)
-                        .addComponent(darkChocoPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(darkChocoPurchaseLbl))
-                    .addComponent(darkChocoPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-
-        pastryLbl.setBackground(new java.awt.Color(204, 0, 0));
-        pastryLbl.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
-        pastryLbl.setText("Pastry");
-
-        painAuChocolatPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        painAuChocolatPriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        painAuChocolatPriceLbl.setText("Price:");
-
-        painAuChocolatQtyLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        painAuChocolatQtyLbl.setText("Quantity:");
-
-        painAuChocolatPrice.setEditable(false);
-        painAuChocolatPrice.setText("70");
-        painAuChocolatPrice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                painAuChocolatPriceActionPerformed(evt);
-            }
-        });
-
-        painAuChocolatPurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        painAuChocolatPurchaseLbl.setText("Purchase");
-
-        painAuChocolatPurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                painAuChocolatPurchaseCheckBoxActionPerformed(evt);
-            }
-        });
-
-        painAuChocolatHeader.setBackground(new java.awt.Color(204, 0, 0));
-        painAuChocolatHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
-        painAuChocolatHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Pain Au Chocolat.png"))); // NOI18N
-
-        javax.swing.GroupLayout painAuChocolatPanelLayout = new javax.swing.GroupLayout(painAuChocolatPanel);
-        painAuChocolatPanel.setLayout(painAuChocolatPanelLayout);
-        painAuChocolatPanelLayout.setHorizontalGroup(
-            painAuChocolatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painAuChocolatPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(painAuChocolatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(painAuChocolatQtyLbl)
-                    .addComponent(painAuChocolatPriceLbl))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(painAuChocolatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSpinnerPainAuChocolat)
-                    .addGroup(painAuChocolatPanelLayout.createSequentialGroup()
-                        .addComponent(painAuChocolatPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(painAuChocolatPurchaseLbl)
-                        .addGap(18, 18, 18)
-                        .addComponent(painAuChocolatPurchaseCheckBox)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(painAuChocolatPanelLayout.createSequentialGroup()
-                .addComponent(painAuChocolatHeader)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        painAuChocolatPanelLayout.setVerticalGroup(
-            painAuChocolatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painAuChocolatPanelLayout.createSequentialGroup()
-                .addComponent(painAuChocolatHeader)
+        jPanel27Layout.setVerticalGroup(
+            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel27Layout.createSequentialGroup()
+                .addComponent(jLabel51)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(painAuChocolatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpinnerPainAuChocolat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(painAuChocolatQtyLbl))
+                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel76, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jRadioButton37)
+                        .addComponent(jRadioButton38)
+                        .addComponent(jRadioButton39)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(painAuChocolatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painAuChocolatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(painAuChocolatPriceLbl)
-                        .addComponent(painAuChocolatPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(painAuChocolatPurchaseLbl))
-                    .addComponent(painAuChocolatPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jSpinner51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel75))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel74)
+                        .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel22))
+                    .addComponent(jCheckBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        macaronPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        macaronPriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        macaronPriceLbl.setText("Price:");
+        jLabel78.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel78.setText("Price:");
 
-        macaronQtyLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        macaronQtyLbl.setText("Quantity:");
+        jLabel79.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel79.setText("Quantity:");
 
-        macaronPrice.setEditable(false);
-        macaronPrice.setText("40");
-        macaronPrice.addActionListener(new java.awt.event.ActionListener() {
+        jLabel80.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel80.setText("Size:");
+
+        jTextField14.setText("125");
+        jTextField14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                macaronPriceActionPerformed(evt);
+                jTextField14ActionPerformed(evt);
             }
         });
 
-        macaronPurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        macaronPurchaseLbl.setText("Purchase");
-
-        macaronPurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButton40.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton40.setText("M");
+        jRadioButton40.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                macaronPurchaseCheckBoxActionPerformed(evt);
+                jRadioButton40ActionPerformed(evt);
             }
         });
 
-        macaronHeader.setBackground(new java.awt.Color(204, 0, 0));
-        macaronHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
-        macaronHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Macaron.png"))); // NOI18N
+        jRadioButton41.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton41.setText("S");
+        jRadioButton41.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton41ActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout macaronPanelLayout = new javax.swing.GroupLayout(macaronPanel);
-        macaronPanel.setLayout(macaronPanelLayout);
-        macaronPanelLayout.setHorizontalGroup(
-            macaronPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(macaronPanelLayout.createSequentialGroup()
+        jRadioButton42.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton42.setText("L");
+        jRadioButton42.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton42ActionPerformed(evt);
+            }
+        });
+
+        jLabel31.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel31.setText("Purchase");
+
+        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox5ActionPerformed(evt);
+            }
+        });
+
+        jLabel56.setBackground(new java.awt.Color(204, 0, 0));
+        jLabel56.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Toffee.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
+        jPanel28.setLayout(jPanel28Layout);
+        jPanel28Layout.setHorizontalGroup(
+            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel28Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(macaronPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(macaronQtyLbl)
-                    .addComponent(macaronPriceLbl))
+                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel79)
+                    .addComponent(jLabel78)
+                    .addComponent(jLabel80))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(macaronPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSpinnerMacaron)
-                    .addGroup(macaronPanelLayout.createSequentialGroup()
-                        .addComponent(macaronPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(macaronPurchaseLbl)
+                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSpinner10)
+                    .addGroup(jPanel28Layout.createSequentialGroup()
+                        .addComponent(jRadioButton41)
+                        .addGap(26, 26, 26)
+                        .addComponent(jRadioButton40)
                         .addGap(18, 18, 18)
-                        .addComponent(macaronPurchaseCheckBox)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(jRadioButton42)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel28Layout.createSequentialGroup()
+                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel31)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jCheckBox5)))
                 .addContainerGap())
-            .addGroup(macaronPanelLayout.createSequentialGroup()
-                .addComponent(macaronHeader)
+            .addGroup(jPanel28Layout.createSequentialGroup()
+                .addComponent(jLabel56)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        macaronPanelLayout.setVerticalGroup(
-            macaronPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, macaronPanelLayout.createSequentialGroup()
-                .addComponent(macaronHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                .addGroup(macaronPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpinnerMacaron, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(macaronQtyLbl))
+        jPanel28Layout.setVerticalGroup(
+            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel28Layout.createSequentialGroup()
+                .addComponent(jLabel56)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel80, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jRadioButton40)
+                        .addComponent(jRadioButton41)
+                        .addComponent(jRadioButton42)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(macaronPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(macaronPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(macaronPriceLbl)
-                        .addComponent(macaronPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(macaronPurchaseLbl))
-                    .addComponent(macaronPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jSpinner10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel79))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel78)
+                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel31))
+                    .addComponent(jCheckBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        blueberryCheesecakePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel15.setBackground(new java.awt.Color(204, 0, 0));
+        jLabel15.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jLabel15.setText("Pastry");
 
-        blueberryCheesecakePriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        blueberryCheesecakePriceLbl.setText("Price:");
+        jPanel31.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        blueberryCheesecakeQtyLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        blueberryCheesecakeQtyLbl.setText("Quantity:");
+        jLabel96.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel96.setText("Price:");
 
-        blueberryCheesecakePrice.setEditable(false);
-        blueberryCheesecakePrice.setText("90");
+        jLabel97.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel97.setText("Quantity:");
 
-        blueberryCheesecakePurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        blueberryCheesecakePurchaseLbl.setText("Purchase");
-
-        blueberryCheesecakePurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
+        jTextField17.setText("70");
+        jTextField17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                blueberryCheesecakePurchaseCheckBoxActionPerformed(evt);
+                jTextField17ActionPerformed(evt);
             }
         });
 
-        blueberryCheesecakeHeader.setBackground(new java.awt.Color(204, 0, 0));
-        blueberryCheesecakeHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
-        blueberryCheesecakeHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Cheesecake.png"))); // NOI18N
+        jLabel43.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel43.setText("Purchase");
 
-        javax.swing.GroupLayout blueberryCheesecakePanelLayout = new javax.swing.GroupLayout(blueberryCheesecakePanel);
-        blueberryCheesecakePanel.setLayout(blueberryCheesecakePanelLayout);
-        blueberryCheesecakePanelLayout.setHorizontalGroup(
-            blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(blueberryCheesecakePanelLayout.createSequentialGroup()
+        jCheckBox13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox13ActionPerformed(evt);
+            }
+        });
+
+        jLabel58.setBackground(new java.awt.Color(204, 0, 0));
+        jLabel58.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Pain Au Chocolat.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
+        jPanel31.setLayout(jPanel31Layout);
+        jPanel31Layout.setHorizontalGroup(
+            jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel31Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(blueberryCheesecakeQtyLbl)
-                    .addComponent(blueberryCheesecakePriceLbl))
+                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel97)
+                    .addComponent(jLabel96))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSpinnerBlueberryCheesecake)
-                    .addGroup(blueberryCheesecakePanelLayout.createSequentialGroup()
-                        .addComponent(blueberryCheesecakePrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSpinner133)
+                    .addGroup(jPanel31Layout.createSequentialGroup()
+                        .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(blueberryCheesecakePurchaseLbl)
-                        .addGap(18, 18, 18)
-                        .addComponent(blueberryCheesecakePurchaseCheckBox)
+                        .addComponent(jLabel43)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox13)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(blueberryCheesecakePanelLayout.createSequentialGroup()
-                .addComponent(blueberryCheesecakeHeader)
+            .addGroup(jPanel31Layout.createSequentialGroup()
+                .addComponent(jLabel58)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        blueberryCheesecakePanelLayout.setVerticalGroup(
-            blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, blueberryCheesecakePanelLayout.createSequentialGroup()
-                .addComponent(blueberryCheesecakeHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                .addGroup(blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpinnerBlueberryCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(blueberryCheesecakeQtyLbl))
+        jPanel31Layout.setVerticalGroup(
+            jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel31Layout.createSequentialGroup()
+                .addComponent(jLabel58)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jSpinner133, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel97))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(blueberryCheesecakePriceLbl)
-                        .addComponent(blueberryCheesecakePrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(blueberryCheesecakePurchaseLbl))
-                    .addComponent(blueberryCheesecakePurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel96)
+                        .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel43))
+                    .addComponent(jCheckBox13, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout menuItemsLayout = new javax.swing.GroupLayout(menuItems);
-        menuItems.setLayout(menuItemsLayout);
-        menuItemsLayout.setHorizontalGroup(
-            menuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(menuItemsLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(menuItemsLayout.createSequentialGroup()
-                .addGroup(menuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(menuItemsLayout.createSequentialGroup()
+        jPanel32.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel100.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel100.setText("Price:");
+
+        jLabel101.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel101.setText("Quantity:");
+
+        jTextField18.setText("40");
+        jTextField18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField18ActionPerformed(evt);
+            }
+        });
+
+        jLabel44.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel44.setText("Purchase");
+
+        jCheckBox14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox14ActionPerformed(evt);
+            }
+        });
+
+        jLabel59.setBackground(new java.awt.Color(204, 0, 0));
+        jLabel59.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Macaron.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel32Layout = new javax.swing.GroupLayout(jPanel32);
+        jPanel32.setLayout(jPanel32Layout);
+        jPanel32Layout.setHorizontalGroup(
+            jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel32Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel101)
+                    .addComponent(jLabel100))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSpinner144)
+                    .addGroup(jPanel32Layout.createSequentialGroup()
+                        .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel44)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jCheckBox14)))
+                .addContainerGap())
+            .addGroup(jPanel32Layout.createSequentialGroup()
+                .addComponent(jLabel59)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel32Layout.setVerticalGroup(
+            jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel32Layout.createSequentialGroup()
+                .addComponent(jLabel59)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jSpinner144, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel101))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel100)
+                        .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel44))
+                    .addComponent(jCheckBox14, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        jPanel33.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel104.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel104.setText("Price:");
+
+        jLabel105.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel105.setText("Quantity:");
+
+        jTextField19.setText("90");
+
+        jLabel45.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel45.setText("Purchase");
+
+        jCheckBox16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox16ActionPerformed(evt);
+            }
+        });
+
+        jLabel60.setBackground(new java.awt.Color(204, 0, 0));
+        jLabel60.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jLabel60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Cheesecake.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
+        jPanel33.setLayout(jPanel33Layout);
+        jPanel33Layout.setHorizontalGroup(
+            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel33Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel105)
+                    .addComponent(jLabel104))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSpinner155)
+                    .addGroup(jPanel33Layout.createSequentialGroup()
+                        .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel45)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(jPanel33Layout.createSequentialGroup()
+                .addComponent(jLabel60)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel33Layout.createSequentialGroup()
+                    .addContainerGap(220, Short.MAX_VALUE)
+                    .addComponent(jCheckBox16)
+                    .addGap(16, 16, 16)))
+        );
+        jPanel33Layout.setVerticalGroup(
+            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel33Layout.createSequentialGroup()
+                .addComponent(jLabel60)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jSpinner155, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel105))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel104)
+                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel45))
+                .addGap(10, 10, 10))
+            .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel33Layout.createSequentialGroup()
+                    .addContainerGap(107, Short.MAX_VALUE)
+                    .addComponent(jCheckBox16, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(16, 16, 16)))
+        );
+
+        jPanel35.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel86.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel86.setText("Price:");
+
+        jLabel87.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel87.setText("Quantity:");
+
+        jLabel88.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel88.setText("Size:");
+
+        jTextField23.setText("135");
+
+        jRadioButton61.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton61.setText("M");
+        jRadioButton61.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton61ActionPerformed(evt);
+            }
+        });
+
+        jRadioButton62.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton62.setText("S");
+        jRadioButton62.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton62ActionPerformed(evt);
+            }
+        });
+
+        jRadioButton63.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jRadioButton63.setText("L");
+        jRadioButton63.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton63ActionPerformed(evt);
+            }
+        });
+
+        jLabel32.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel32.setText("Purchase");
+
+        jCheckBox11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox11ActionPerformed(evt);
+            }
+        });
+
+        jLabel57.setBackground(new java.awt.Color(204, 0, 0));
+        jLabel57.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        jLabel57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Dark Choco.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
+        jPanel35.setLayout(jPanel35Layout);
+        jPanel35Layout.setHorizontalGroup(
+            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel35Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel87)
+                    .addComponent(jLabel86)
+                    .addComponent(jLabel88))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSpinner11)
+                    .addGroup(jPanel35Layout.createSequentialGroup()
+                        .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel35Layout.createSequentialGroup()
+                                .addComponent(jRadioButton62)
+                                .addGap(26, 26, 26)
+                                .addComponent(jRadioButton61)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton63))
+                            .addGroup(jPanel35Layout.createSequentialGroup()
+                                .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel32)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBox11)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(jPanel35Layout.createSequentialGroup()
+                .addComponent(jLabel57)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel35Layout.setVerticalGroup(
+            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35Layout.createSequentialGroup()
+                .addComponent(jLabel57)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel88, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jRadioButton61)
+                        .addComponent(jRadioButton62)
+                        .addComponent(jRadioButton63)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jSpinner11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel87))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel86)
+                        .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel32))
+                    .addComponent(jCheckBox11, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(16, 16, 16)
-                        .addGroup(menuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pastryLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(menuItemsLayout.createSequentialGroup()
-                                .addComponent(painAuChocolatPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(macaronPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(blueberryCheesecakePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(menuItemsLayout.createSequentialGroup()
+                                .addComponent(jPanel33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addGroup(menuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(coffeeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(menuItemsLayout.createSequentialGroup()
-                                .addComponent(americanoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(cappucinoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(lattePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(menuItemsLayout.createSequentialGroup()
+                                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addGroup(menuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(frappeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(iceBlendedLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(menuItemsLayout.createSequentialGroup()
-                                .addGroup(menuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(hazelnutPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(whiteMochaPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(18, 18, 18)
-                                .addGroup(menuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(toffeeNutPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(chocoChipPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jPanel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(18, 18, 18)
-                                .addGroup(menuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(cookiesNCreamPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(darkChocoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jPanel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jPanel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addContainerGap(40, Short.MAX_VALUE))
         );
-        menuItemsLayout.setVerticalGroup(
-            menuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menuItemsLayout.createSequentialGroup()
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(menuItemsLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(coffeeLbl)
+                .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(menuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lattePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(cappucinoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(americanoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(iceBlendedLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(menuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(cookiesNCreamPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(chocoChipPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(hazelnutPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(frappeLbl)
+                .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(menuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(darkChocoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(toffeeNutPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(whiteMochaPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(pastryLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(menuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(macaronPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(blueberryCheesecakePanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(painAuChocolatPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel32, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel33, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        customerOptions.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jButtonPay.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonPay.setText("Pay");
@@ -1578,130 +1569,130 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout customerOptionsLayout = new javax.swing.GroupLayout(customerOptions);
-        customerOptions.setLayout(customerOptionsLayout);
-        customerOptionsLayout.setHorizontalGroup(
-            customerOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(customerOptionsLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(customerOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButtonPay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButtonReset, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                .addGroup(customerOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButtonReceipt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButtonRemove, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        customerOptionsLayout.setVerticalGroup(
-            customerOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(customerOptionsLayout.createSequentialGroup()
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(39, 39, 39)
-                .addGroup(customerOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonPay, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonReceipt, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
-                .addGroup(customerOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonReset, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonRemove, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        payment.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        subTotalLbl.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
-        subTotalLbl.setText("SubTotal");
+        jLabel114.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        jLabel114.setText("SubTotal");
 
-        totalLbl.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
-        totalLbl.setText("Total");
+        jLabel115.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        jLabel115.setText("Total");
 
-        taxLbl.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
-        taxLbl.setText("Tax");
+        jLabel116.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        jLabel116.setText("Tax");
 
-        taxTextFld.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        taxTextFld.setText("0.0");
-        taxTextFld.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldTax.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jTextFieldTax.setText("0.0");
+        jTextFieldTax.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                taxTextFldActionPerformed(evt);
+                jTextFieldTaxActionPerformed(evt);
             }
         });
 
-        subTotalTextFld.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        subTotalTextFld.setText("0.0");
+        jTextFieldSubtotal.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jTextFieldSubtotal.setText("0.0");
 
-        totalTextFld.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        totalTextFld.setText("0.0");
+        jTextFieldTotal.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jTextFieldTotal.setText("0.0");
 
-        cashLbl.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
-        cashLbl.setText("Cash");
+        jLabel113.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        jLabel113.setText("Cash");
 
-        changeLbl.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
-        changeLbl.setText("Change");
+        jLabel112.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        jLabel112.setText("Change");
 
-        cashTextFld.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        cashTextFld.setText("0.0");
-        cashTextFld.addActionListener(new java.awt.event.ActionListener() {
+        jTextField22.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jTextField22.setText("0.0");
+        jTextField22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cashTextFldActionPerformed(evt);
+                jTextField22ActionPerformed(evt);
             }
         });
 
-        changeTextFld.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        changeTextFld.setText("0.0");
+        jTextField21.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jTextField21.setText("0.0");
 
-        javax.swing.GroupLayout paymentLayout = new javax.swing.GroupLayout(payment);
-        payment.setLayout(paymentLayout);
-        paymentLayout.setHorizontalGroup(
-            paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(paymentLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(subTotalLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
-                    .addComponent(taxLbl, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(totalLbl, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(changeLbl, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(cashLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(paymentLayout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jLabel114, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                    .addComponent(jLabel116, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel115, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel112, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel113, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(totalTextFld, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(taxTextFld)
-                            .addGroup(paymentLayout.createSequentialGroup()
-                                .addComponent(subTotalTextFld, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextFieldTotal, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTextFieldTax)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jTextFieldSubtotal, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(changeTextFld)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paymentLayout.createSequentialGroup()
+                            .addComponent(jTextField21)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(cashTextFld, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(13, 13, 13))
         );
-        paymentLayout.setVerticalGroup(
-            paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(paymentLayout.createSequentialGroup()
-                .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cashLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cashTextFld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(subTotalLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(subTotalTextFld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel114, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldSubtotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(taxLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(taxTextFld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel116, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldTax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(totalTextFld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(totalLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
-                .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(changeTextFld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(changeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel112, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(16, 16, 16))
         );
 
-        orderListTbl.setModel(new javax.swing.table.DefaultTableModel(
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -1712,33 +1703,33 @@ public class coffeeshop extends javax.swing.JFrame {
                 "ID", "Product Name", "Quantity", "Size", "Price"
             }
         ));
-        orderList.setViewportView(orderListTbl);
+        jScrollPane1.setViewportView(jTable1);
 
-        invoiceTextArea.setColumns(20);
-        invoiceTextArea.setRows(5);
-        invoiceScrn.setViewportView(invoiceTextArea);
-
-        btnDeleteItem.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
-        btnDeleteItem.setText("Delete");
-        btnDeleteItem.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jButton1.setText("History");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteItemActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
-        btnHistory.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
-        btnHistory.setText("History");
-        btnHistory.addActionListener(new java.awt.event.ActionListener() {
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane2.setViewportView(jTextArea1);
+
+        jButton2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jButton2.setText("Delete");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHistoryActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
 
-        btnDisplayInvoice.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
-        btnDisplayInvoice.setText("Invoice");
-        btnDisplayInvoice.addActionListener(new java.awt.event.ActionListener() {
+        jButton3.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jButton3.setText("Invoice");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDisplayInvoiceActionPerformed(evt);
+                jButton3ActionPerformed(evt);
             }
         });
 
@@ -1748,189 +1739,150 @@ public class coffeeshop extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addComponent(menuItems, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(payment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(orderList, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnDeleteItem, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnDisplayInvoice, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(invoiceScrn)
-                    .addComponent(customerOptions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jScrollPane2)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 29, Short.MAX_VALUE))
-            .addComponent(shopName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(shopName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(menuItems, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(orderList, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(33, 33, 33)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(btnDeleteItem, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnDisplayInvoice, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(payment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(1, 1, 1)
-                        .addComponent(invoiceScrn, javax.swing.GroupLayout.PREFERRED_SIZE, 693, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 693, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(customerOptions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(20, 20, 20))))
         );
-        
-        // Grouping size radio buttons of each item in the menu
-        americano.add(smAmericano);
-        americano.add(mdAmericano);
-        americano.add(lgAmericano);
-        
-        cappucino.add(smCappucino);
-        cappucino.add(mdCappucino);
-        cappucino.add(lgCappucino);
-        
-        latte.add(smLatte);
-        latte.add(mdLatte);
-        latte.add(lgLatte);
-        
-        hazelnut.add(smHazelnut);
-        hazelnut.add(mdHazelnut);
-        hazelnut.add(lgHazelnut);
-        
-        chocoChip.add(smChocoChip);
-        chocoChip.add(mdChocoChip);
-        chocoChip.add(lgChocoChip);
-        
-        cookiesNCream.add(smCookiesNCream);
-        cookiesNCream.add(mdCookiesNCream);
-        cookiesNCream.add(lgCookiesNCream);
-        
-        whiteMocha.add(smWhiteMocha);
-        whiteMocha.add(mdWhiteMocha);
-        whiteMocha.add(lgWhiteMocha);
-        
-        toffee.add(smToffee);
-        toffee.add(mdToffee);
-        toffee.add(lgToffee);
-        
-        darkChoco.add(smDarkChoco);
-        darkChoco.add(mdDarkChoco);
-        darkChoco.add(lgDarkChoco);
-
-        menuItems.getAccessibleContext().setAccessibleDescription("");
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void lgAmericanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lgAmericanoActionPerformed
+    private void largeamericanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_largeamericanoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_lgAmericanoActionPerformed
+    }//GEN-LAST:event_largeamericanoActionPerformed
 
-    private void smAmericanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smAmericanoActionPerformed
+    private void smallamericanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smallamericanoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_smAmericanoActionPerformed
+    }//GEN-LAST:event_smallamericanoActionPerformed
 
-    private void mdAmericanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mdAmericanoActionPerformed
+    private void americanomediumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_americanomediumActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_mdAmericanoActionPerformed
+    }//GEN-LAST:event_americanomediumActionPerformed
 
-    private void mdCappucinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mdCappucinoActionPerformed
+    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_mdCappucinoActionPerformed
+    }//GEN-LAST:event_jRadioButton4ActionPerformed
 
-    private void smCappucinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smCappucinoActionPerformed
+    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_smCappucinoActionPerformed
+    }//GEN-LAST:event_jRadioButton5ActionPerformed
 
-    private void lgCappucinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lgCappucinoActionPerformed
+    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_lgCappucinoActionPerformed
+    }//GEN-LAST:event_jRadioButton6ActionPerformed
 
-    private void mdLatteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mdLatteActionPerformed
+    private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_mdLatteActionPerformed
+    }//GEN-LAST:event_jRadioButton7ActionPerformed
 
-    private void smLatteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smLatteActionPerformed
+    private void jRadioButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton8ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_smLatteActionPerformed
+    }//GEN-LAST:event_jRadioButton8ActionPerformed
 
-    private void lgLatteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lgLatteActionPerformed
+    private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_lgLatteActionPerformed
+    }//GEN-LAST:event_jRadioButton9ActionPerformed
 
-    private void mdWhiteMochaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mdWhiteMochaActionPerformed
+    private void jRadioButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton16ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_mdWhiteMochaActionPerformed
+    }//GEN-LAST:event_jRadioButton16ActionPerformed
 
-    private void smWhiteMochaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smWhiteMochaActionPerformed
+    private void jRadioButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton17ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_smWhiteMochaActionPerformed
+    }//GEN-LAST:event_jRadioButton17ActionPerformed
 
-    private void lgWhiteMochaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lgWhiteMochaActionPerformed
+    private void jRadioButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton18ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_lgWhiteMochaActionPerformed
+    }//GEN-LAST:event_jRadioButton18ActionPerformed
 
-    private void mdChocoChipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mdChocoChipActionPerformed
+    private void jRadioButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton19ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_mdChocoChipActionPerformed
+    }//GEN-LAST:event_jRadioButton19ActionPerformed
 
-    private void smChocoChipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smChocoChipActionPerformed
+    private void jRadioButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton20ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_smChocoChipActionPerformed
+    }//GEN-LAST:event_jRadioButton20ActionPerformed
 
-    private void lgChocoChipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lgChocoChipActionPerformed
+    private void jRadioButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton21ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_lgChocoChipActionPerformed
+    }//GEN-LAST:event_jRadioButton21ActionPerformed
 
-    private void mdCookiesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mdCookiesActionPerformed
+    private void jRadioButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton31ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_mdCookiesActionPerformed
+    }//GEN-LAST:event_jRadioButton31ActionPerformed
 
-    private void smCookiesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smCookiesActionPerformed
+    private void jRadioButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton32ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_smCookiesActionPerformed
+    }//GEN-LAST:event_jRadioButton32ActionPerformed
 
-    private void lgCookiesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lgCookiesActionPerformed
+    private void jRadioButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton33ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_lgCookiesActionPerformed
+    }//GEN-LAST:event_jRadioButton33ActionPerformed
 
-    private void mdHazelnutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mdHazelnutActionPerformed
+    private void jRadioButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton37ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_mdHazelnutActionPerformed
+    }//GEN-LAST:event_jRadioButton37ActionPerformed
 
-    private void smHazelnutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smHazelnutActionPerformed
+    private void jRadioButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton38ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_smHazelnutActionPerformed
+    }//GEN-LAST:event_jRadioButton38ActionPerformed
 
-    private void lgHazelnutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lgHazelnutActionPerformed
+    private void jRadioButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton39ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_lgHazelnutActionPerformed
+    }//GEN-LAST:event_jRadioButton39ActionPerformed
 
-    private void mdToffeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mdToffeeActionPerformed
+    private void jRadioButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton40ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_mdToffeeActionPerformed
+    }//GEN-LAST:event_jRadioButton40ActionPerformed
 
-    private void smToffeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smToffeeActionPerformed
+    private void jRadioButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton41ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_smToffeeActionPerformed
+    }//GEN-LAST:event_jRadioButton41ActionPerformed
 
-    private void lgToffeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lgToffeeActionPerformed
+    private void jRadioButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton42ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_lgToffeeActionPerformed
+    }//GEN-LAST:event_jRadioButton42ActionPerformed
 
     private void jButtonPayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPayActionPerformed
         // TODO add your handling code here:
@@ -1941,135 +1893,120 @@ public class coffeeshop extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonReceiptActionPerformed
 
     private void jButtonResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResetActionPerformed
-        resetToZero();
+        resetToZero();        
     }//GEN-LAST:event_jButtonResetActionPerformed
 
     private void jButtonRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRemoveActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonRemoveActionPerformed
 
-    private void americanoPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_americanoPriceActionPerformed
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+     
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
-    }//GEN-LAST:event_americanoPriceActionPerformed
-
-    private void mdDarkChocoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mdDarkChocoActionPerformed
+    private void jRadioButton61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton61ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_mdDarkChocoActionPerformed
+    }//GEN-LAST:event_jRadioButton61ActionPerformed
 
-    private void smDarkChocoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smDarkChocoActionPerformed
+    private void jRadioButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton62ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_smDarkChocoActionPerformed
+    }//GEN-LAST:event_jRadioButton62ActionPerformed
 
-    private void lgDarkChocoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lgDarkChocoActionPerformed
+    private void jRadioButton63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton63ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_lgDarkChocoActionPerformed
+    }//GEN-LAST:event_jRadioButton63ActionPerformed
 
-    private void taxTextFldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_taxTextFldActionPerformed
+    private void jTextFieldTaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTaxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_taxTextFldActionPerformed
+    }//GEN-LAST:event_jTextFieldTaxActionPerformed
 
-    private void btnHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistoryActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        history history = new history();
-        history.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        history.setVisible(true);
-    }//GEN-LAST:event_btnHistoryActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void whiteMochaPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_whiteMochaPriceActionPerformed
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_whiteMochaPriceActionPerformed
+    }//GEN-LAST:event_jTextField6ActionPerformed
 
-    private void lattePriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lattePriceActionPerformed
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_lattePriceActionPerformed
+    }//GEN-LAST:event_jTextField3ActionPerformed
 
-    private void chocoChipPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chocoChipPriceActionPerformed
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_chocoChipPriceActionPerformed
+    }//GEN-LAST:event_jTextField7ActionPerformed
 
-    private void toffeeNutPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toffeeNutPriceActionPerformed
+    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_toffeeNutPriceActionPerformed
+    }//GEN-LAST:event_jTextField14ActionPerformed
 
-    private void painAuChocolatPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_painAuChocolatPriceActionPerformed
+    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_painAuChocolatPriceActionPerformed
+    }//GEN-LAST:event_jTextField17ActionPerformed
 
-    private void macaronPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_macaronPriceActionPerformed
+    private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField18ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_macaronPriceActionPerformed
+    }//GEN-LAST:event_jTextField18ActionPerformed
 
-    private void cashTextFldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cashTextFldActionPerformed
+    private void jTextField22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField22ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cashTextFldActionPerformed
+    }//GEN-LAST:event_jTextField22ActionPerformed
 
-    private void americanoPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_americanoPurchaseCheckBoxActionPerformed
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_americanoPurchaseCheckBoxActionPerformed
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
-    private void lattePurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lattePurchaseCheckBoxActionPerformed
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_lattePurchaseCheckBoxActionPerformed
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
 
-    private void cappucinoPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cappucinoPurchaseCheckBoxActionPerformed
+    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cappucinoPurchaseCheckBoxActionPerformed
+    }//GEN-LAST:event_jCheckBox3ActionPerformed
 
-    private void toffeeNutPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toffeeNutPurchaseCheckBoxActionPerformed
+    private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_toffeeNutPurchaseCheckBoxActionPerformed
+    }//GEN-LAST:event_jCheckBox5ActionPerformed
 
-    private void hazelnutPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hazelnutPurchaseCheckBoxActionPerformed
+    private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_hazelnutPurchaseCheckBoxActionPerformed
+    }//GEN-LAST:event_jCheckBox6ActionPerformed
 
-    private void chocoChipPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chocoChipPurchaseCheckBoxActionPerformed
+    private void jCheckBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox7ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_chocoChipPurchaseCheckBoxActionPerformed
+    }//GEN-LAST:event_jCheckBox7ActionPerformed
 
-    private void cookiesNCreamPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cookiesNCreamPurchaseCheckBoxActionPerformed
+    private void jCheckBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox8ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cookiesNCreamPurchaseCheckBoxActionPerformed
+    }//GEN-LAST:event_jCheckBox8ActionPerformed
 
-    private void whiteMochaPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_whiteMochaPurchaseCheckBoxActionPerformed
+    private void jCheckBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox9ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_whiteMochaPurchaseCheckBoxActionPerformed
+    }//GEN-LAST:event_jCheckBox9ActionPerformed
 
-    private void darkChocoPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_darkChocoPurchaseCheckBoxActionPerformed
+    private void jCheckBox11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox11ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_darkChocoPurchaseCheckBoxActionPerformed
+    }//GEN-LAST:event_jCheckBox11ActionPerformed
 
-    private void painAuChocolatPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_painAuChocolatPurchaseCheckBoxActionPerformed
+    private void jCheckBox13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox13ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_painAuChocolatPurchaseCheckBoxActionPerformed
+    }//GEN-LAST:event_jCheckBox13ActionPerformed
 
-    private void macaronPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_macaronPurchaseCheckBoxActionPerformed
+    private void jCheckBox14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox14ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_macaronPurchaseCheckBoxActionPerformed
+    }//GEN-LAST:event_jCheckBox14ActionPerformed
 
-    private void blueberryCheesecakePurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blueberryCheesecakePurchaseCheckBoxActionPerformed
+    private void jCheckBox16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox16ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_blueberryCheesecakePurchaseCheckBoxActionPerformed
+    }//GEN-LAST:event_jCheckBox16ActionPerformed
 
-    private void btnDeleteItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteItemActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnDeleteItemActionPerformed
+    }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void btnDisplayInvoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisplayInvoiceActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnDisplayInvoiceActionPerformed
-
-    private void smCookiesNCreamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smCookiesNCreamActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_smCookiesNCreamActionPerformed
-
-    private void mdCookiesNCreamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mdCookiesNCreamActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mdCookiesNCreamActionPerformed
-
-    private void lgCookiesNCreamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lgCookiesNCreamActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lgCookiesNCreamActionPerformed
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2100,7 +2037,6 @@ public class coffeeshop extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
             public void run() {
                 new coffeeshop().setVisible(true);
             }
@@ -2108,178 +2044,171 @@ public class coffeeshop extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup americano;
-    private javax.swing.JLabel americanoHeader;
-    private javax.swing.JPanel americanoPanel;
-    private javax.swing.JTextField americanoPrice;
-    private javax.swing.JLabel americanoPriceLbl;
-    private javax.swing.JCheckBox americanoPurchaseCheckBox;
-    private javax.swing.JLabel americanoPurchaseLbl;
-    private javax.swing.JLabel americanoQtyLbl;
-    private javax.swing.JLabel americanoSizeLbl;
-    private javax.swing.JLabel blueberryCheesecakeHeader;
-    private javax.swing.JPanel blueberryCheesecakePanel;
-    private javax.swing.JTextField blueberryCheesecakePrice;
-    private javax.swing.JLabel blueberryCheesecakePriceLbl;
-    private javax.swing.JCheckBox blueberryCheesecakePurchaseCheckBox;
-    private javax.swing.JLabel blueberryCheesecakePurchaseLbl;
-    private javax.swing.JLabel blueberryCheesecakeQtyLbl;
-    private javax.swing.JButton btnDeleteItem;
-    private javax.swing.JButton btnDisplayInvoice;
-    private javax.swing.JButton btnHistory;
-    private javax.swing.ButtonGroup cappucino;
-    private javax.swing.JLabel cappucinoHeader;
-    private javax.swing.JPanel cappucinoPanel;
-    private javax.swing.JTextField cappucinoPrice;
-    private javax.swing.JLabel cappucinoPriceLbl;
-    private javax.swing.JCheckBox cappucinoPurchaseCheckBox;
-    private javax.swing.JLabel cappucinoPurchaseLbl;
-    private javax.swing.JLabel cappucinoQtyLbl;
-    private javax.swing.JLabel cappucinoSizeLbl;
-    private javax.swing.JLabel cashLbl;
-    private javax.swing.JTextField cashTextFld;
-    private javax.swing.JLabel changeLbl;
-    private javax.swing.JTextField changeTextFld;
-    private javax.swing.ButtonGroup chocoChip;
-    private javax.swing.JLabel chocoChipHeader;
-    private javax.swing.JPanel chocoChipPanel;
-    private javax.swing.JTextField chocoChipPrice;
-    private javax.swing.JLabel chocoChipPriceLbl;
-    private javax.swing.JCheckBox chocoChipPurchaseCheckBox;
-    private javax.swing.JLabel chocoChipPurchaseLbl;
-    private javax.swing.JLabel chocoChipQtyLbl;
-    private javax.swing.JLabel chocoChipSizeLbl;
-    private javax.swing.JLabel coffeeLbl;
-    private javax.swing.ButtonGroup cookiesNCream;
-    private javax.swing.JLabel cookiesNCreamHeader;
-    private javax.swing.JPanel cookiesNCreamPanel;
-    private javax.swing.JTextField cookiesNCreamPrice;
-    private javax.swing.JLabel cookiesNCreamPriceLbl;
-    private javax.swing.JCheckBox cookiesNCreamPurchaseCheckBox;
-    private javax.swing.JLabel cookiesNCreamPurchaseLbl;
-    private javax.swing.JLabel cookiesNCreamQtyLbl;
-    private javax.swing.JLabel cookiesNCreamSizeLbl;
-    private javax.swing.JPanel customerOptions;
-    private javax.swing.JLabel customerPanel;
-    private javax.swing.ButtonGroup darkChoco;
-    private javax.swing.JLabel darkChocoHeader;
-    private javax.swing.JPanel darkChocoPanel;
-    private javax.swing.JTextField darkChocoPrice;
-    private javax.swing.JLabel darkChocoPriceLbl;
-    private javax.swing.JCheckBox darkChocoPurchaseCheckBox;
-    private javax.swing.JLabel darkChocoPurchaseLbl;
-    private javax.swing.JLabel darkChocoQtyLbl;
-    private javax.swing.JLabel darkChocoSizeLbl;
-    private javax.swing.JLabel frappeLbl;
-    private javax.swing.ButtonGroup hazelnut;
-    private javax.swing.JLabel hazelnutHeader;
-    private javax.swing.JPanel hazelnutPanel;
-    private javax.swing.JTextField hazelnutPrice;
-    private javax.swing.JLabel hazelnutPriceLbl;
-    private javax.swing.JCheckBox hazelnutPurchaseCheckBox;
-    private javax.swing.JLabel hazelnutPurchaseLbl;
-    private javax.swing.JLabel hazelnutQtyLbl;
-    private javax.swing.JLabel hazelnutSizeLbl;
-    private javax.swing.JLabel iceBlendedLbl;
-    private javax.swing.JScrollPane invoiceScrn;
-    private javax.swing.JTextArea invoiceTextArea;
+    private javax.swing.JRadioButton americanomedium;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButtonPay;
     private javax.swing.JButton jButtonReceipt;
     private javax.swing.JButton jButtonRemove;
     private javax.swing.JButton jButtonReset;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox11;
+    private javax.swing.JCheckBox jCheckBox13;
+    private javax.swing.JCheckBox jCheckBox14;
+    private javax.swing.JCheckBox jCheckBox16;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JCheckBox jCheckBox5;
+    private javax.swing.JCheckBox jCheckBox6;
+    private javax.swing.JCheckBox jCheckBox7;
+    private javax.swing.JCheckBox jCheckBox8;
+    private javax.swing.JCheckBox jCheckBox9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel100;
+    private javax.swing.JLabel jLabel101;
+    private javax.swing.JLabel jLabel104;
+    private javax.swing.JLabel jLabel105;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel112;
+    private javax.swing.JLabel jLabel113;
+    private javax.swing.JLabel jLabel114;
+    private javax.swing.JLabel jLabel115;
+    private javax.swing.JLabel jLabel116;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel86;
+    private javax.swing.JLabel jLabel87;
+    private javax.swing.JLabel jLabel88;
+    private javax.swing.JLabel jLabel96;
+    private javax.swing.JLabel jLabel97;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel27;
+    private javax.swing.JPanel jPanel28;
+    private javax.swing.JPanel jPanel31;
+    private javax.swing.JPanel jPanel32;
+    private javax.swing.JPanel jPanel33;
+    private javax.swing.JPanel jPanel35;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JRadioButton jRadioButton16;
+    private javax.swing.JRadioButton jRadioButton17;
+    private javax.swing.JRadioButton jRadioButton18;
+    private javax.swing.JRadioButton jRadioButton19;
+    private javax.swing.JRadioButton jRadioButton20;
+    private javax.swing.JRadioButton jRadioButton21;
+    private javax.swing.JRadioButton jRadioButton31;
+    private javax.swing.JRadioButton jRadioButton32;
+    private javax.swing.JRadioButton jRadioButton33;
+    private javax.swing.JRadioButton jRadioButton37;
+    private javax.swing.JRadioButton jRadioButton38;
+    private javax.swing.JRadioButton jRadioButton39;
+    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JRadioButton jRadioButton40;
+    private javax.swing.JRadioButton jRadioButton41;
+    private javax.swing.JRadioButton jRadioButton42;
+    private javax.swing.JRadioButton jRadioButton5;
+    private javax.swing.JRadioButton jRadioButton6;
+    private javax.swing.JRadioButton jRadioButton61;
+    private javax.swing.JRadioButton jRadioButton62;
+    private javax.swing.JRadioButton jRadioButton63;
+    private javax.swing.JRadioButton jRadioButton7;
+    private javax.swing.JRadioButton jRadioButton8;
+    private javax.swing.JRadioButton jRadioButton9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSpinner jSpinner10;
+    private javax.swing.JSpinner jSpinner11;
+    private javax.swing.JSpinner jSpinner133;
+    private javax.swing.JSpinner jSpinner144;
+    private javax.swing.JSpinner jSpinner155;
     private javax.swing.JSpinner jSpinner51;
     private javax.swing.JSpinner jSpinner61;
     private javax.swing.JSpinner jSpinner7;
+    private javax.swing.JSpinner jSpinner99;
     private javax.swing.JSpinner jSpinnerAmericano;
-    private javax.swing.JSpinner jSpinnerBlueberryCheesecake;
     private javax.swing.JSpinner jSpinnerCappucino;
-    private javax.swing.JSpinner jSpinnerDarkChoco;
     private javax.swing.JSpinner jSpinnerLatte;
-    private javax.swing.JSpinner jSpinnerMacaron;
-    private javax.swing.JSpinner jSpinnerPainAuChocolat;
-    private javax.swing.JSpinner jSpinnerToffeeNut;
-    private javax.swing.JSpinner jSpinnerWhiteMocha;
-    private javax.swing.ButtonGroup latte;
-    private javax.swing.JLabel latteHeader;
-    private javax.swing.JPanel lattePanel;
-    private javax.swing.JTextField lattePrice;
-    private javax.swing.JLabel lattePriceLbl;
-    private javax.swing.JCheckBox lattePurchaseCheckBox;
-    private javax.swing.JLabel lattePurchaseLbl;
-    private javax.swing.JLabel latteQtyLbl;
-    private javax.swing.JLabel latteSizeLbl;
-    private javax.swing.JRadioButton lgAmericano;
-    private javax.swing.JRadioButton lgCappucino;
-    private javax.swing.JRadioButton lgChocoChip;
-    private javax.swing.JRadioButton lgCookiesNCream;
-    private javax.swing.JRadioButton lgDarkChoco;
-    private javax.swing.JRadioButton lgHazelnut;
-    private javax.swing.JRadioButton lgLatte;
-    private javax.swing.JRadioButton lgToffee;
-    private javax.swing.JRadioButton lgWhiteMocha;
-    private javax.swing.JLabel macaronHeader;
-    private javax.swing.JPanel macaronPanel;
-    private javax.swing.JTextField macaronPrice;
-    private javax.swing.JLabel macaronPriceLbl;
-    private javax.swing.JCheckBox macaronPurchaseCheckBox;
-    private javax.swing.JLabel macaronPurchaseLbl;
-    private javax.swing.JLabel macaronQtyLbl;
-    private javax.swing.JRadioButton mdAmericano;
-    private javax.swing.JRadioButton mdCappucino;
-    private javax.swing.JRadioButton mdChocoChip;
-    private javax.swing.JRadioButton mdCookiesNCream;
-    private javax.swing.JRadioButton mdDarkChoco;
-    private javax.swing.JRadioButton mdHazelnut;
-    private javax.swing.JRadioButton mdLatte;
-    private javax.swing.JRadioButton mdToffee;
-    private javax.swing.JRadioButton mdWhiteMocha;
-    private javax.swing.JPanel menuItems;
-    private javax.swing.JLabel menuItemsLbl;
-    private javax.swing.JScrollPane orderList;
-    private javax.swing.JTable orderListTbl;
-    private javax.swing.JLabel painAuChocolatHeader;
-    private javax.swing.JPanel painAuChocolatPanel;
-    private javax.swing.JTextField painAuChocolatPrice;
-    private javax.swing.JLabel painAuChocolatPriceLbl;
-    private javax.swing.JCheckBox painAuChocolatPurchaseCheckBox;
-    private javax.swing.JLabel painAuChocolatPurchaseLbl;
-    private javax.swing.JLabel painAuChocolatQtyLbl;
-    private javax.swing.JLabel pastryLbl;
-    private javax.swing.JPanel payment;
-    private javax.swing.JPanel shopName;
-    private javax.swing.JLabel shopNameLbl;
-    private javax.swing.JRadioButton smAmericano;
-    private javax.swing.JRadioButton smCappucino;
-    private javax.swing.JRadioButton smChocoChip;
-    private javax.swing.JRadioButton smCookiesNCream;
-    private javax.swing.JRadioButton smDarkChoco;
-    private javax.swing.JRadioButton smHazelnut;
-    private javax.swing.JRadioButton smLatte;
-    private javax.swing.JRadioButton smToffee;
-    private javax.swing.JRadioButton smWhiteMocha;
-    private javax.swing.JLabel subTotalLbl;
-    private javax.swing.JTextField subTotalTextFld;
-    private javax.swing.JLabel taxLbl;
-    private javax.swing.JTextField taxTextFld;
-    private javax.swing.ButtonGroup toffee;
-    private javax.swing.JLabel toffeeNutHeader;
-    private javax.swing.JPanel toffeeNutPanel;
-    private javax.swing.JTextField toffeeNutPrice;
-    private javax.swing.JLabel toffeeNutPriceLbl;
-    private javax.swing.JCheckBox toffeeNutPurchaseCheckBox;
-    private javax.swing.JLabel toffeeNutPurchaseLbl;
-    private javax.swing.JLabel toffeeNutQtyLbl;
-    private javax.swing.JLabel toffeeNutSizeLbl;
-    private javax.swing.JLabel totalLbl;
-    private javax.swing.JTextField totalTextFld;
-    private javax.swing.ButtonGroup whiteMocha;
-    private javax.swing.JLabel whiteMochaHeader;
-    private javax.swing.JPanel whiteMochaPanel;
-    private javax.swing.JTextField whiteMochaPrice;
-    private javax.swing.JLabel whiteMochaPriceLbl;
-    private javax.swing.JCheckBox whiteMochaPurchaseCheckBox;
-    private javax.swing.JLabel whiteMochaPurchaseLbl;
-    private javax.swing.JLabel whiteMochaQtyLbl;
-    private javax.swing.JLabel whiteMochaSizeLbl;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField17;
+    private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField21;
+    private javax.swing.JTextField jTextField22;
+    private javax.swing.JTextField jTextField23;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextFieldSubtotal;
+    private javax.swing.JTextField jTextFieldTax;
+    private javax.swing.JTextField jTextFieldTotal;
+    private javax.swing.JRadioButton largeamericano;
+    private javax.swing.JRadioButton smallamericano;
     // End of variables declaration//GEN-END:variables
 }
