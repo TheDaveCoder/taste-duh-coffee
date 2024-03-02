@@ -272,6 +272,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        americano.add(mdAmericano);
         mdAmericano.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         mdAmericano.setText("M");
         mdAmericano.addActionListener(new java.awt.event.ActionListener() {
@@ -280,6 +281,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        americano.add(smAmericano);
         smAmericano.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         smAmericano.setText("S");
         smAmericano.addActionListener(new java.awt.event.ActionListener() {
@@ -288,6 +290,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        americano.add(lgAmericano);
         lgAmericano.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         lgAmericano.setText("L");
         lgAmericano.addActionListener(new java.awt.event.ActionListener() {
@@ -377,6 +380,7 @@ public class coffeeshop extends javax.swing.JFrame {
         cappucinoPrice.setEditable(false);
         cappucinoPrice.setText("85");
 
+        cappucino.add(mdCappucino);
         mdCappucino.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         mdCappucino.setText("M");
         mdCappucino.addActionListener(new java.awt.event.ActionListener() {
@@ -385,6 +389,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        cappucino.add(smCappucino);
         smCappucino.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         smCappucino.setText("S");
         smCappucino.addActionListener(new java.awt.event.ActionListener() {
@@ -393,6 +398,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        cappucino.add(lgCappucino);
         lgCappucino.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         lgCappucino.setText("L");
         lgCappucino.addActionListener(new java.awt.event.ActionListener() {
@@ -488,6 +494,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        latte.add(mdLatte);
         mdLatte.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         mdLatte.setText("M");
         mdLatte.addActionListener(new java.awt.event.ActionListener() {
@@ -496,6 +503,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        latte.add(smLatte);
         smLatte.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         smLatte.setText("S");
         smLatte.addActionListener(new java.awt.event.ActionListener() {
@@ -504,6 +512,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        latte.add(lgLatte);
         lgLatte.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         lgLatte.setText("L");
         lgLatte.addActionListener(new java.awt.event.ActionListener() {
@@ -598,6 +607,7 @@ public class coffeeshop extends javax.swing.JFrame {
         hazelnutPrice.setEditable(false);
         hazelnutPrice.setText("90");
 
+        hazelnut.add(mdHazelnut);
         mdHazelnut.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         mdHazelnut.setText("M");
         mdHazelnut.addActionListener(new java.awt.event.ActionListener() {
@@ -606,6 +616,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        hazelnut.add(smHazelnut);
         smHazelnut.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         smHazelnut.setText("S");
         smHazelnut.addActionListener(new java.awt.event.ActionListener() {
@@ -614,6 +625,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        hazelnut.add(lgHazelnut);
         lgHazelnut.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         lgHazelnut.setText("L");
         lgHazelnut.addActionListener(new java.awt.event.ActionListener() {
@@ -712,6 +724,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        chocoChip.add(mdChocoChip);
         mdChocoChip.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         mdChocoChip.setText("M");
         mdChocoChip.addActionListener(new java.awt.event.ActionListener() {
@@ -720,6 +733,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        chocoChip.add(smChocoChip);
         smChocoChip.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         smChocoChip.setText("S");
         smChocoChip.addActionListener(new java.awt.event.ActionListener() {
@@ -728,6 +742,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        chocoChip.add(lgChocoChip);
         lgChocoChip.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         lgChocoChip.setText("L");
         lgChocoChip.addActionListener(new java.awt.event.ActionListener() {
@@ -819,6 +834,7 @@ public class coffeeshop extends javax.swing.JFrame {
         cookiesNCreamPrice.setEditable(false);
         cookiesNCreamPrice.setText("100");
 
+        cookiesNCream.add(mdCookiesNCream);
         mdCookiesNCream.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         mdCookiesNCream.setText("M");
         mdCookiesNCream.addActionListener(new java.awt.event.ActionListener() {
@@ -827,6 +843,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        cookiesNCream.add(smCookiesNCream);
         smCookiesNCream.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         smCookiesNCream.setText("S");
         smCookiesNCream.addActionListener(new java.awt.event.ActionListener() {
@@ -835,6 +852,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        cookiesNCream.add(lgCookiesNCream);
         lgCookiesNCream.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         lgCookiesNCream.setText("L");
         lgCookiesNCream.addActionListener(new java.awt.event.ActionListener() {
@@ -937,6 +955,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        whiteMocha.add(mdWhiteMocha);
         mdWhiteMocha.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         mdWhiteMocha.setText("M");
         mdWhiteMocha.addActionListener(new java.awt.event.ActionListener() {
@@ -945,6 +964,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        whiteMocha.add(smWhiteMocha);
         smWhiteMocha.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         smWhiteMocha.setText("S");
         smWhiteMocha.addActionListener(new java.awt.event.ActionListener() {
@@ -953,6 +973,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        whiteMocha.add(lgWhiteMocha);
         lgWhiteMocha.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         lgWhiteMocha.setText("L");
         lgWhiteMocha.addActionListener(new java.awt.event.ActionListener() {
@@ -1048,6 +1069,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        toffeeNut.add(mdToffeeNut);
         mdToffeeNut.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         mdToffeeNut.setText("M");
         mdToffeeNut.addActionListener(new java.awt.event.ActionListener() {
@@ -1056,6 +1078,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        toffeeNut.add(smToffeeNut);
         smToffeeNut.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         smToffeeNut.setText("S");
         smToffeeNut.addActionListener(new java.awt.event.ActionListener() {
@@ -1064,6 +1087,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        toffeeNut.add(lgToffeeNut);
         lgToffeeNut.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         lgToffeeNut.setText("L");
         lgToffeeNut.addActionListener(new java.awt.event.ActionListener() {
@@ -1155,6 +1179,7 @@ public class coffeeshop extends javax.swing.JFrame {
         darkChocoPrice.setEditable(false);
         darkChocoPrice.setText("135");
 
+        darkChoco.add(mdDarkChoco);
         mdDarkChoco.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         mdDarkChoco.setText("M");
         mdDarkChoco.addActionListener(new java.awt.event.ActionListener() {
@@ -1163,6 +1188,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        darkChoco.add(smDarkChoco);
         smDarkChoco.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         smDarkChoco.setText("S");
         smDarkChoco.addActionListener(new java.awt.event.ActionListener() {
@@ -1171,6 +1197,7 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
+        darkChoco.add(lgDarkChoco);
         lgDarkChoco.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         lgDarkChoco.setText("L");
         lgDarkChoco.addActionListener(new java.awt.event.ActionListener() {
@@ -1299,7 +1326,7 @@ public class coffeeshop extends javax.swing.JFrame {
                         .addComponent(painAuChocolatPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(painAuChocolatPurchaseLbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(painAuChocolatPurchaseCheckBox)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -1370,8 +1397,9 @@ public class coffeeshop extends javax.swing.JFrame {
                         .addComponent(macaronPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(macaronPurchaseLbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(macaronPurchaseCheckBox)))
+                        .addGap(18, 18, 18)
+                        .addComponent(macaronPurchaseCheckBox)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(macaronPanelLayout.createSequentialGroup()
                 .addComponent(macaronHeader)
@@ -1381,7 +1409,7 @@ public class coffeeshop extends javax.swing.JFrame {
             macaronPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, macaronPanelLayout.createSequentialGroup()
                 .addComponent(macaronHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addGroup(macaronPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jSpinnerMacaron, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(macaronQtyLbl))
@@ -1409,12 +1437,6 @@ public class coffeeshop extends javax.swing.JFrame {
         blueberryCheesecakePurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         blueberryCheesecakePurchaseLbl.setText("Purchase");
 
-        blueberryCheesecakePurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                blueberryCheesecakePurchaseCheckBoxActionPerformed(evt);
-            }
-        });
-
         blueberryCheesecakeHeader.setBackground(new java.awt.Color(204, 0, 0));
         blueberryCheesecakeHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         blueberryCheesecakeHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Cheesecake.png"))); // NOI18N
@@ -1435,36 +1457,29 @@ public class coffeeshop extends javax.swing.JFrame {
                         .addComponent(blueberryCheesecakePrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(blueberryCheesecakePurchaseLbl)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(blueberryCheesecakePurchaseCheckBox)))
                 .addContainerGap())
             .addGroup(blueberryCheesecakePanelLayout.createSequentialGroup()
                 .addComponent(blueberryCheesecakeHeader)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, blueberryCheesecakePanelLayout.createSequentialGroup()
-                    .addContainerGap(220, Short.MAX_VALUE)
-                    .addComponent(blueberryCheesecakePurchaseCheckBox)
-                    .addGap(16, 16, 16)))
         );
         blueberryCheesecakePanelLayout.setVerticalGroup(
             blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, blueberryCheesecakePanelLayout.createSequentialGroup()
                 .addComponent(blueberryCheesecakeHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addGroup(blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jSpinnerBlueberryCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(blueberryCheesecakeQtyLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(blueberryCheesecakePriceLbl)
-                    .addComponent(blueberryCheesecakePrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(blueberryCheesecakePurchaseLbl))
-                .addGap(10, 10, 10))
-            .addGroup(blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, blueberryCheesecakePanelLayout.createSequentialGroup()
-                    .addContainerGap(107, Short.MAX_VALUE)
-                    .addComponent(blueberryCheesecakePurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(16, 16, 16)))
+                .addGroup(blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(blueberryCheesecakePriceLbl)
+                        .addComponent(blueberryCheesecakePrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(blueberryCheesecakePurchaseLbl))
+                    .addComponent(blueberryCheesecakePurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(13, 13, 13))
         );
 
         javax.swing.GroupLayout menuItemsPnlLayout = new javax.swing.GroupLayout(menuItemsPnl);
@@ -2010,10 +2025,6 @@ public class coffeeshop extends javax.swing.JFrame {
     private void macaronPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_macaronPurchaseCheckBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_macaronPurchaseCheckBoxActionPerformed
-
-    private void blueberryCheesecakePurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blueberryCheesecakePurchaseCheckBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_blueberryCheesecakePurchaseCheckBoxActionPerformed
 
     private void btnDeleteItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteItemActionPerformed
         // TODO add your handling code here:

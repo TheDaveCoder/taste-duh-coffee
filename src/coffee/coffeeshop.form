@@ -393,6 +393,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="mdAmericano">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="americano"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -404,6 +407,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="smAmericano">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="americano"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -415,6 +421,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="lgAmericano">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="americano"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -564,6 +573,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="mdCappucino">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="cappucino"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -575,6 +587,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="smCappucino">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="cappucino"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -586,6 +601,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="lgCappucino">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="cappucino"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -738,6 +756,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="mdLatte">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="latte"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -749,6 +770,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="smLatte">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="latte"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -760,6 +784,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="lgLatte">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="latte"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -925,6 +952,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="mdHazelnut">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="hazelnut"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -936,6 +966,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="smHazelnut">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="hazelnut"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -947,6 +980,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="lgHazelnut">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="hazelnut"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -1100,6 +1136,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="mdChocoChip">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="chocoChip"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -1111,6 +1150,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="smChocoChip">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="chocoChip"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -1122,6 +1164,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="lgChocoChip">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="chocoChip"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -1276,6 +1321,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="mdCookiesNCream">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="cookiesNCream"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -1287,6 +1335,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="smCookiesNCream">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="cookiesNCream"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -1298,6 +1349,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="lgCookiesNCream">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="cookiesNCream"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -1461,6 +1515,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="mdWhiteMocha">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="whiteMocha"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -1472,6 +1529,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="smWhiteMocha">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="whiteMocha"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -1483,6 +1543,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="lgWhiteMocha">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="whiteMocha"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -1636,6 +1699,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="mdToffeeNut">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="toffeeNut"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -1647,6 +1713,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="smToffeeNut">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="toffeeNut"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -1658,6 +1727,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="lgToffeeNut">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="toffeeNut"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -1812,6 +1884,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="mdDarkChoco">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="darkChoco"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -1823,6 +1898,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="smDarkChoco">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="darkChoco"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -1834,6 +1912,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="lgDarkChoco">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="darkChoco"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="1"/>
                 </Property>
@@ -1907,7 +1988,7 @@
                               <Component id="painAuChocolatPrice" min="-2" pref="56" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="painAuChocolatPurchaseLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="painAuChocolatPurchaseCheckBox" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
@@ -2024,8 +2105,9 @@
                               <Component id="macaronPrice" min="-2" pref="56" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="macaronPurchaseLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="macaronPurchaseCheckBox" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -2040,7 +2122,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="macaronHeader" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="45" max="32767" attributes="0"/>
+                      <EmptySpace pref="48" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jSpinnerMacaron" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="macaronQtyLbl" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2140,7 +2222,8 @@
                               <Component id="blueberryCheesecakePrice" min="-2" pref="56" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="blueberryCheesecakePurchaseLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="blueberryCheesecakePurchaseCheckBox" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -2149,38 +2232,27 @@
                       <Component id="blueberryCheesecakeHeader" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="220" max="32767" attributes="0"/>
-                          <Component id="blueberryCheesecakePurchaseCheckBox" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="blueberryCheesecakeHeader" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="48" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jSpinnerBlueberryCheesecake" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="blueberryCheesecakeQtyLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="blueberryCheesecakePriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="blueberryCheesecakePrice" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="blueberryCheesecakePurchaseLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="107" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="blueberryCheesecakePriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="blueberryCheesecakePrice" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="blueberryCheesecakePurchaseLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <Component id="blueberryCheesecakePurchaseCheckBox" min="-2" pref="26" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2219,9 +2291,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JCheckBox" name="blueberryCheesecakePurchaseCheckBox">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="blueberryCheesecakePurchaseCheckBoxActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="blueberryCheesecakeHeader">
               <Properties>
