@@ -23,6 +23,8 @@ public class coffeeshop extends javax.swing.JFrame {
     ArrayList<Sale> sales = new ArrayList<>();
     private int productID = 0;
     private int invoiceID = 1;
+    private int cashierID = 1;
+    private double subTotal = 0.0;
     
     /**
      * Creates new form coffeeshop
@@ -38,12 +40,51 @@ public class coffeeshop extends javax.swing.JFrame {
 
     
     public void resetToZero(){
-        jSpinnerAmericano.setValue(0);
-        jSpinnerCappucino.setValue(0);
-        jSpinnerLatte.setValue(0);
+        americano.clearSelection();
+        jSpinnerAmericano.setValue(1);
+        americanoPrice.setText("");
+               
+        cappucino.clearSelection();
+        jSpinnerCappucino.setValue(1);
+        cappucinoPrice.setText("");
+        
+        latte.clearSelection();
+        jSpinnerLatte.setValue(1);
+        lattePrice.setText("");
+        
+        hazelnut.clearSelection();
+        jSpinnerHazelnut.setValue(1);
+        hazelnutPrice.setText("");
+        
+        chocoChip.clearSelection();
+        jSpinnerChocoChip.setValue(1);
+        chocoChipPrice.setText("");
+        
+        cookiesNCream.clearSelection();
+        jSpinnerCookiesNCream.setValue(1);
+        cookiesNCreamPrice.setText("");
+        
+        whiteMocha.clearSelection();
+        jSpinnerWhiteMocha.setValue(1);
+        whiteMochaPrice.setText("");
+        
+        toffeeNut.clearSelection();
+        jSpinnerToffeeNut.setValue(1);
+        toffeeNutPrice.setText("");
+        
+        darkChoco.clearSelection();
+        jSpinnerDarkChoco.setValue(1);
+        darkChocoPrice.setText("");
+        
+        jSpinnerPainAuChocolat.setValue(1);
+        jSpinnerMacaron.setValue(1);    
+        jSpinnerBlueberryCheesecake.setValue(1);
+        
+        cashTextFld.setText("0.0");
         subTotalTextFld.setText("0.0");
         taxTextFld.setText("0.0");
         totalTextFld.setText("0.0");
+        changeTextFld.setText("0.0");
     }
     
    
@@ -1941,6 +1982,29 @@ public class coffeeshop extends javax.swing.JFrame {
 
     private void jButtonPayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPayActionPerformed
         // TODO add your handling code here:
+        Double cash = 0.0
+            , subTotal = 0.0
+            , tax = 0.0
+            , total = 0.0
+            , change = 0.0;
+        
+        cash = Double.parseDouble(cashTextFld.getText());
+        
+        if(cash > 0.0) {
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            tax = 0.12 * subTotal;
+            total = subTotal + tax;
+            change = cash - total;
+            
+            subTotalTextFld.setText(String.valueOf(subTotal));
+            taxTextFld.setText(String.valueOf(tax));
+            totalTextFld.setText(String.valueOf(total));
+            changeTextFld.setText(String.valueOf(Math.round(change * 100.0) / 100.0));
+        } else {
+            JOptionPane.showMessageDialog(this, "The cash has not been set!");
+        }
     }//GEN-LAST:event_jButtonPayActionPerformed
 
     private void jButtonReceiptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReceiptActionPerformed
@@ -2032,6 +2096,7 @@ public class coffeeshop extends javax.swing.JFrame {
 
     private void btnDisplayInvoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisplayInvoiceActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnDisplayInvoiceActionPerformed
 
     private void americanoPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_americanoPurchaseActionPerformed
@@ -2064,6 +2129,12 @@ public class coffeeshop extends javax.swing.JFrame {
             
             Sale saleAmericano = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
             sales.add(saleAmericano);
+            
+            subTotal = 0.0;
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            subTotalTextFld.setText(String.valueOf(subTotal));
         } else {
             JOptionPane.showMessageDialog(this, "Size for the "+ prodName + " is not selected!");
         }
@@ -2077,9 +2148,6 @@ public class coffeeshop extends javax.swing.JFrame {
         if (smCappucino.isSelected() || mdCappucino.isSelected() || lgCappucino.isSelected()) {
             isSizeSelected = true;
         }
-        Double unitPrice = Double.parseDouble(cappucinoPrice.getText());
-        int quantity = (int) jSpinnerCappucino.getValue();
-        Double amount = unitPrice * quantity;
         
         if(isSizeSelected) {
             productID++;
@@ -2091,6 +2159,9 @@ public class coffeeshop extends javax.swing.JFrame {
             } else if (lgCappucino.isSelected()) {
                 sizeName = lgCappucino.getText();
             }
+            Double unitPrice = Double.parseDouble(cappucinoPrice.getText());
+            int quantity = (int) jSpinnerCappucino.getValue();
+            Double amount = unitPrice * quantity;
             
             Object[] addRow = {productID, prodName, quantity, sizeName, unitPrice, amount};
         
@@ -2099,6 +2170,12 @@ public class coffeeshop extends javax.swing.JFrame {
             
             Sale saleCappucino = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
             sales.add(saleCappucino);
+            
+            subTotal = 0.0;
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            subTotalTextFld.setText(String.valueOf(subTotal));
         } else {
             JOptionPane.showMessageDialog(this, "Size for the "+ prodName + " is not selected!");
         }
@@ -2112,9 +2189,6 @@ public class coffeeshop extends javax.swing.JFrame {
         if (smLatte.isSelected() || mdLatte.isSelected() || lgLatte.isSelected()) {
             isSizeSelected = true;
         }
-        Double unitPrice = Double.parseDouble(lattePrice.getText());
-        int quantity = (int) jSpinnerLatte.getValue();
-        Double amount = unitPrice * quantity;
         
         if(isSizeSelected) {
             productID++;
@@ -2126,6 +2200,9 @@ public class coffeeshop extends javax.swing.JFrame {
             } else if (lgLatte.isSelected()) {
                 sizeName = lgLatte.getText();
             }
+            Double unitPrice = Double.parseDouble(lattePrice.getText());
+            int quantity = (int) jSpinnerLatte.getValue();
+            Double amount = unitPrice * quantity;
             
             Object[] addRow = {productID, prodName, quantity, sizeName, unitPrice, amount};
         
@@ -2134,6 +2211,12 @@ public class coffeeshop extends javax.swing.JFrame {
             
             Sale saleLatte = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
             sales.add(saleLatte);
+            
+            subTotal = 0.0;
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            subTotalTextFld.setText(String.valueOf(subTotal));
         } else {
             JOptionPane.showMessageDialog(this, "Size for the "+ prodName + " is not selected!");
         }
@@ -2147,9 +2230,7 @@ public class coffeeshop extends javax.swing.JFrame {
         if (smHazelnut.isSelected() || mdHazelnut.isSelected() || lgHazelnut.isSelected()) {
             isSizeSelected = true;
         }
-        Double unitPrice = Double.parseDouble(hazelnutPrice.getText());
-        int quantity = (int) jSpinnerHazelnut.getValue();
-        Double amount = unitPrice * quantity;
+        
         
         if(isSizeSelected) {
             productID++;
@@ -2161,6 +2242,9 @@ public class coffeeshop extends javax.swing.JFrame {
             } else if (lgHazelnut.isSelected()) {
                 sizeName = lgHazelnut.getText();
             }
+            Double unitPrice = Double.parseDouble(hazelnutPrice.getText());
+            int quantity = (int) jSpinnerHazelnut.getValue();
+            Double amount = unitPrice * quantity;
             
             Object[] addRow = {productID, prodName, quantity, sizeName, unitPrice, amount};
         
@@ -2169,6 +2253,12 @@ public class coffeeshop extends javax.swing.JFrame {
             
             Sale saleHazelnut = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
             sales.add(saleHazelnut);
+            
+            subTotal = 0.0;
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            subTotalTextFld.setText(String.valueOf(subTotal));
         } else {
             JOptionPane.showMessageDialog(this, "Size for the "+ prodName + " is not selected!");
         }
@@ -2182,9 +2272,6 @@ public class coffeeshop extends javax.swing.JFrame {
         if (smChocoChip.isSelected() || mdChocoChip.isSelected() || lgChocoChip.isSelected()) {
             isSizeSelected = true;
         }
-        Double unitPrice = Double.parseDouble(chocoChipPrice.getText());
-        int quantity = (int) jSpinnerChocoChip.getValue();
-        Double amount = unitPrice * quantity;
         
         if(isSizeSelected) {
             productID++;
@@ -2196,6 +2283,9 @@ public class coffeeshop extends javax.swing.JFrame {
             } else if (lgChocoChip.isSelected()) {
                 sizeName = lgChocoChip.getText();
             }
+            Double unitPrice = Double.parseDouble(chocoChipPrice.getText());
+            int quantity = (int) jSpinnerChocoChip.getValue();
+            Double amount = unitPrice * quantity;
             
             Object[] addRow = {productID, prodName, quantity, sizeName, unitPrice, amount};
         
@@ -2204,6 +2294,12 @@ public class coffeeshop extends javax.swing.JFrame {
             
             Sale saleChocoChip = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
             sales.add(saleChocoChip);
+            
+            subTotal = 0.0;
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            subTotalTextFld.setText(String.valueOf(subTotal));
         } else {
             JOptionPane.showMessageDialog(this, "Size for the "+ prodName + " is not selected!");
         }
@@ -2217,9 +2313,6 @@ public class coffeeshop extends javax.swing.JFrame {
         if (smCookiesNCream.isSelected() || mdCookiesNCream.isSelected() || lgCookiesNCream.isSelected()) {
             isSizeSelected = true;
         }
-        Double unitPrice = Double.parseDouble(cookiesNCreamPrice.getText());
-        int quantity = (int) jSpinnerCookiesNCream.getValue();
-        Double amount = unitPrice * quantity;
         
         if(isSizeSelected) {
             productID++;
@@ -2231,6 +2324,9 @@ public class coffeeshop extends javax.swing.JFrame {
             } else if (lgCookiesNCream.isSelected()) {
                 sizeName = lgCookiesNCream.getText();
             }
+            Double unitPrice = Double.parseDouble(cookiesNCreamPrice.getText());
+            int quantity = (int) jSpinnerCookiesNCream.getValue();
+            Double amount = unitPrice * quantity;
             
             Object[] addRow = {productID, prodName, quantity, sizeName, unitPrice, amount};
         
@@ -2239,6 +2335,12 @@ public class coffeeshop extends javax.swing.JFrame {
             
             Sale saleCookiesNCream = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
             sales.add(saleCookiesNCream);
+            
+            subTotal = 0.0;
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            subTotalTextFld.setText(String.valueOf(subTotal));
         } else {
             JOptionPane.showMessageDialog(this, "Size for the "+ prodName + " is not selected!");
         }
@@ -2252,9 +2354,6 @@ public class coffeeshop extends javax.swing.JFrame {
         if (smWhiteMocha.isSelected() || mdWhiteMocha.isSelected() || lgWhiteMocha.isSelected()) {
             isSizeSelected = true;
         }
-        Double unitPrice = Double.parseDouble(whiteMochaPrice.getText());
-        int quantity = (int) jSpinnerWhiteMocha.getValue();
-        Double amount = unitPrice * quantity;
         
         if(isSizeSelected) {
             productID++;
@@ -2266,6 +2365,9 @@ public class coffeeshop extends javax.swing.JFrame {
             } else if (lgWhiteMocha.isSelected()) {
                 sizeName = lgWhiteMocha.getText();
             }
+            Double unitPrice = Double.parseDouble(whiteMochaPrice.getText());
+            int quantity = (int) jSpinnerWhiteMocha.getValue();
+            Double amount = unitPrice * quantity;
             
             Object[] addRow = {productID, prodName, quantity, sizeName, unitPrice, amount};
         
@@ -2274,6 +2376,12 @@ public class coffeeshop extends javax.swing.JFrame {
             
             Sale saleWhiteMocha = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
             sales.add(saleWhiteMocha);
+            
+            subTotal = 0.0;
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            subTotalTextFld.setText(String.valueOf(subTotal));
         } else {
             JOptionPane.showMessageDialog(this, "Size for the "+ prodName + " is not selected!");
         }
@@ -2287,9 +2395,6 @@ public class coffeeshop extends javax.swing.JFrame {
         if (smToffeeNut.isSelected() || mdToffeeNut.isSelected() || lgToffeeNut.isSelected()) {
             isSizeSelected = true;
         }
-        Double unitPrice = Double.parseDouble(toffeeNutPrice.getText());
-        int quantity = (int) jSpinnerToffeeNut.getValue();
-        Double amount = unitPrice * quantity;
         
         if(isSizeSelected) {
             productID++;
@@ -2301,6 +2406,9 @@ public class coffeeshop extends javax.swing.JFrame {
             } else if (lgToffeeNut.isSelected()) {
                 sizeName = lgToffeeNut.getText();
             }
+            Double unitPrice = Double.parseDouble(toffeeNutPrice.getText());
+            int quantity = (int) jSpinnerToffeeNut.getValue();
+            Double amount = unitPrice * quantity;
             
             Object[] addRow = {productID, prodName, quantity, sizeName, unitPrice, amount};
         
@@ -2309,6 +2417,12 @@ public class coffeeshop extends javax.swing.JFrame {
             
             Sale saleToffeeNut = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
             sales.add(saleToffeeNut);
+            
+            subTotal = 0.0;
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            subTotalTextFld.setText(String.valueOf(subTotal));
         } else {
             JOptionPane.showMessageDialog(this, "Size for the "+ prodName + " is not selected!");
         }
@@ -2322,9 +2436,6 @@ public class coffeeshop extends javax.swing.JFrame {
         if (smDarkChoco.isSelected() || mdDarkChoco.isSelected() || lgDarkChoco.isSelected()) {
             isSizeSelected = true;
         }
-        Double unitPrice = Double.parseDouble(darkChocoPrice.getText());
-        int quantity = (int) jSpinnerDarkChoco.getValue();
-        Double amount = unitPrice * quantity;
         
         if(isSizeSelected) {
             productID++;
@@ -2336,6 +2447,9 @@ public class coffeeshop extends javax.swing.JFrame {
             } else if (lgDarkChoco.isSelected()) {
                 sizeName = lgDarkChoco.getText();
             }
+            Double unitPrice = Double.parseDouble(darkChocoPrice.getText());
+            int quantity = (int) jSpinnerDarkChoco.getValue();
+            Double amount = unitPrice * quantity;
             
             Object[] addRow = {productID, prodName, quantity, sizeName, unitPrice, amount};
         
@@ -2344,6 +2458,12 @@ public class coffeeshop extends javax.swing.JFrame {
             
             Sale saleDarkChoco = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
             sales.add(saleDarkChoco);
+            
+            subTotal = 0.0;
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            subTotalTextFld.setText(String.valueOf(subTotal));
         } else {
             JOptionPane.showMessageDialog(this, "Size for the "+ prodName + " is not selected!");
         }
@@ -2365,6 +2485,12 @@ public class coffeeshop extends javax.swing.JFrame {
         
         Sale salePainAuChocolat = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
         sales.add(salePainAuChocolat);
+        
+        subTotal = 0.0;
+        for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+        }
+        subTotalTextFld.setText(String.valueOf(subTotal));
     }//GEN-LAST:event_painAuChocolatPurchaseActionPerformed
 
     private void macaronPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_macaronPurchaseActionPerformed
@@ -2383,6 +2509,12 @@ public class coffeeshop extends javax.swing.JFrame {
         
         Sale saleMacaron = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
         sales.add(saleMacaron);
+        
+        subTotal = 0.0;
+        for(Sale sale : sales) {
+            subTotal += sale.getAmount();
+        }
+        subTotalTextFld.setText(String.valueOf(subTotal));
     }//GEN-LAST:event_macaronPurchaseActionPerformed
 
     private void blueberryCheesecakePurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blueberryCheesecakePurchaseActionPerformed
@@ -2401,6 +2533,12 @@ public class coffeeshop extends javax.swing.JFrame {
         
         Sale saleBlueberryCheesecake = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
         sales.add(saleBlueberryCheesecake);
+        
+        subTotal = 0.0;
+        for(Sale sale : sales) {
+            subTotal += sale.getAmount();
+        }
+        subTotalTextFld.setText(String.valueOf(subTotal));
     }//GEN-LAST:event_blueberryCheesecakePurchaseActionPerformed
 
     private void hazelnutPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hazelnutPriceActionPerformed
