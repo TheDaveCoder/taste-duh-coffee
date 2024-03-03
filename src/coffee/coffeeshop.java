@@ -2015,6 +2015,19 @@ public class coffeeshop extends javax.swing.JFrame {
 
     private void btnDeleteItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteItemActionPerformed
         // TODO add your handling code here:
+        DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
+        
+        if(orderListTbl.getSelectedRowCount() == 1) {
+            int currentProdID = Integer.parseInt(orderListTbl.getValueAt(orderListTbl.getSelectedRow(), 0).toString());
+            sales.removeIf(sales -> sales.getProductID() == currentProdID);
+            tblModel.removeRow(orderListTbl.getSelectedRow());
+        } else {
+            if(orderListTbl.getRowCount() == 0) {
+                JOptionPane.showMessageDialog(this, "Order is empty!");
+            } else {
+                JOptionPane.showMessageDialog(this, "Please select an order to be removed!");
+            }
+        }
     }//GEN-LAST:event_btnDeleteItemActionPerformed
 
     private void btnDisplayInvoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisplayInvoiceActionPerformed
