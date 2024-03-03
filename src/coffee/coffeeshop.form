@@ -305,18 +305,21 @@
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="smAmericano" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              <Component id="mdAmericano" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="lgAmericano" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="americanoPrice" min="-2" pref="57" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="americanoPurchaseLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="americanoPurchaseCheckBox" min="-2" pref="27" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="smAmericano" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                      <Component id="mdAmericano" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="lgAmericano" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="americanoPrice" min="-2" pref="57" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="americanoPurchase" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -327,7 +330,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="americanoHeader" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="9" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="americanoSizeLbl" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="1" groupAlignment="3" attributes="0">
@@ -342,21 +345,23 @@
                           <Component id="americanoQtyLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="americanoPriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="americanoPrice" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="americanoPurchaseLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="americanoPurchaseCheckBox" min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="americanoPriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="americanoPrice" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="americanoPurchase" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JSpinner" name="jSpinnerAmericano">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="1" type="code"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="americanoPriceLbl">
               <Properties>
@@ -433,19 +438,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lgAmericanoActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="americanoPurchaseCheckBox">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="americanoPurchaseCheckBoxActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JLabel" name="americanoPurchaseLbl">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="14" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Purchase"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JLabel" name="americanoHeader">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -458,6 +450,17 @@
                   <Image iconType="3" name="/coffee/Americano.png"/>
                 </Property>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="americanoPurchase">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Purchase"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="americanoPurchaseActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -484,18 +487,21 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jSpinnerCappucino" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="smCappucino" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              <Component id="mdCappucino" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="lgCappucino" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="cappucinoPrice" min="-2" pref="58" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="cappucinoPurchaseLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="cappucinoPurchaseCheckBox" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="smCappucino" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                      <Component id="mdCappucino" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="lgCappucino" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="cappucinoPrice" min="-2" pref="58" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="cappucinoPurchase" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -510,7 +516,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="cappucinoHeader" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="9" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="cappucinoSizeLbl" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="1" groupAlignment="3" attributes="0">
@@ -525,15 +531,12 @@
                           <Component id="cappucinoQtyLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="cappucinoPriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="cappucinoPrice" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="cappucinoPurchaseLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="cappucinoPurchaseCheckBox" min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cappucinoPriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cappucinoPrice" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cappucinoPurchase" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -613,19 +616,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lgCappucinoActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="cappucinoPurchaseLbl">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="14" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Purchase"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="cappucinoPurchaseCheckBox">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cappucinoPurchaseCheckBoxActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="cappucinoHeader">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -638,6 +628,17 @@
                   <Image iconType="3" name="/coffee/Cappucino.png"/>
                 </Property>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="cappucinoPurchase">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Purchase"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cappucinoPurchaseActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -664,18 +665,21 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jSpinnerLatte" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="smLatte" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              <Component id="mdLatte" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="lgLatte" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="lattePrice" min="-2" pref="58" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="lattePurchaseLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lattePurchaseCheckBox" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="smLatte" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                      <Component id="mdLatte" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="lgLatte" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="lattePrice" min="-2" pref="58" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="lattePurchase" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -690,7 +694,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="latteHeader" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="7" max="32767" attributes="0"/>
+                      <EmptySpace pref="9" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="latteSizeLbl" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="1" groupAlignment="3" attributes="0">
@@ -705,15 +709,12 @@
                           <Component id="latteQtyLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lattePriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lattePrice" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lattePurchaseLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="lattePurchaseCheckBox" min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lattePriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lattePrice" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lattePurchase" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -796,19 +797,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lgLatteActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lattePurchaseLbl">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="14" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Purchase"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="lattePurchaseCheckBox">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lattePurchaseCheckBoxActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="latteHeader">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -821,6 +809,17 @@
                   <Image iconType="3" name="/coffee/Latte.png"/>
                 </Property>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="lattePurchase">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Purchase"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lattePurchaseActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -869,9 +868,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="hazelnutPrice" min="-2" pref="56" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="hazelnutPurchaseLbl" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="hazelnutPurchaseCheckBox" min="-2" max="-2" attributes="0"/>
+                                      <Component id="hazelnutPurchase" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -889,7 +886,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="hazelnutHeader" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="9" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="hazelnutSizeLbl" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="1" groupAlignment="3" attributes="0">
@@ -904,15 +901,12 @@
                           <Component id="hazelnutQtyLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="hazelnutPriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="hazelnutPrice" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="hazelnutPurchaseLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="hazelnutPurchaseCheckBox" min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="hazelnutPriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="hazelnutPrice" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="hazelnutPurchase" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -992,19 +986,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lgHazelnutActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="hazelnutPurchaseLbl">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="14" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Purchase"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="hazelnutPurchaseCheckBox">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hazelnutPurchaseCheckBoxActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="hazelnutHeader">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1017,6 +998,17 @@
                   <Image iconType="3" name="/coffee/Hazelnut.png"/>
                 </Property>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="hazelnutPurchase">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Purchase"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hazelnutPurchaseActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -1043,19 +1035,21 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jSpinnerChocoChip" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="smChocoChip" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              <Component id="mdChocoChip" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="lgChocoChip" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="smChocoChip" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                      <Component id="mdChocoChip" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="lgChocoChip" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="chocoChipPrice" min="-2" pref="56" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="chocoChipPurchase" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="chocoChipPrice" min="-2" pref="56" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="chocoChipPurchaseLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="chocoChipPurchaseCheckBox" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -1070,7 +1064,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="chocoChipHeader" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="9" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="chocoChipSizeLbl" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="1" groupAlignment="3" attributes="0">
@@ -1085,15 +1079,12 @@
                           <Component id="chocoChipQtyLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="chocoChipPriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="chocoChipPrice" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="chocoChipPurchaseLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="chocoChipPurchaseCheckBox" min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="chocoChipPriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="chocoChipPrice" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="chocoChipPurchase" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1176,19 +1167,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lgChocoChipActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="chocoChipPurchaseLbl">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="14" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Purchase"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="chocoChipPurchaseCheckBox">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chocoChipPurchaseCheckBoxActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="chocoChipHeader">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1201,6 +1179,17 @@
                   <Image iconType="3" name="/coffee/Chocolate.png"/>
                 </Property>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="chocoChipPurchase">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Purchase"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chocoChipPurchaseActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -1237,10 +1226,8 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="cookiesNCreamPrice" min="-2" pref="56" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                      <Component id="cookiesNCreamPurchaseLbl" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="cookiesNCreamPurchaseCheckBox" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cookiesNCreamPurchase" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -1258,7 +1245,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="cookiesNCreamHeader" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="7" max="32767" attributes="0"/>
+                      <EmptySpace pref="9" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="cookiesNCreamSizeLbl" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="1" groupAlignment="3" attributes="0">
@@ -1273,15 +1260,12 @@
                           <Component id="cookiesNCreamQtyLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="cookiesNCreamPriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="cookiesNCreamPrice" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="cookiesNCreamPurchaseLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="cookiesNCreamPurchaseCheckBox" min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cookiesNCreamPriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cookiesNCreamPrice" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cookiesNCreamPurchase" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1361,19 +1345,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lgCookiesNCreamActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="cookiesNCreamPurchaseLbl">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="14" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Purchase"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="cookiesNCreamPurchaseCheckBox">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cookiesNCreamPurchaseCheckBoxActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="cookiesNCreamHeader">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1386,6 +1357,17 @@
                   <Image iconType="3" name="/coffee/Cookies n&apos; cream.png"/>
                 </Property>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="cookiesNCreamPurchase">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Purchase"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cookiesNCreamPurchaseActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -1423,18 +1405,21 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jSpinnerWhiteMocha" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="smWhiteMocha" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              <Component id="mdWhiteMocha" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="lgWhiteMocha" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="whiteMochaPrice" min="-2" pref="56" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="whiteMochaPurchaseLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="whiteMochaPurchaseCheckBox" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="smWhiteMocha" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                      <Component id="mdWhiteMocha" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="lgWhiteMocha" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="whiteMochaPrice" min="-2" pref="56" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="whiteMochaPurchase" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -1449,7 +1434,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="whiteMochaHeader" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="16" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="whiteMochaSizeLbl" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="1" groupAlignment="3" attributes="0">
@@ -1464,15 +1449,12 @@
                           <Component id="whiteMochaQtyLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="whiteMochaPriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="whiteMochaPrice" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="whiteMochaPurchaseLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="whiteMochaPurchaseCheckBox" min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="whiteMochaPriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="whiteMochaPrice" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="whiteMochaPurchase" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1555,19 +1537,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lgWhiteMochaActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="whiteMochaPurchaseLbl">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="14" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Purchase"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="whiteMochaPurchaseCheckBox">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="whiteMochaPurchaseCheckBoxActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="whiteMochaHeader">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1580,6 +1549,17 @@
                   <Image iconType="3" name="/coffee/White Mocha.png"/>
                 </Property>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="whiteMochaPurchase">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Purchase"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="whiteMochaPurchaseActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -1606,19 +1586,21 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jSpinnerToffeeNut" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="smToffeeNut" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              <Component id="mdToffeeNut" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="lgToffeeNut" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="smToffeeNut" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                      <Component id="mdToffeeNut" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="lgToffeeNut" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="toffeeNutPrice" min="-2" pref="56" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="toffeeNutPurchase" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="toffeeNutPrice" min="-2" pref="56" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="toffeeNutPurchaseLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="toffeeNutPurchaseCheckBox" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -1633,7 +1615,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="toffeeNutHeader" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="16" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="toffeeNutSizeLbl" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="1" groupAlignment="3" attributes="0">
@@ -1648,15 +1630,12 @@
                           <Component id="toffeeNutQtyLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="toffeeNutPriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="toffeeNutPrice" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="toffeeNutPurchaseLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="toffeeNutPurchaseCheckBox" min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="toffeeNutPriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="toffeeNutPrice" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="toffeeNutPurchase" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1739,19 +1718,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lgToffeeNutActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="toffeeNutPurchaseLbl">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="14" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Purchase"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="toffeeNutPurchaseCheckBox">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toffeeNutPurchaseCheckBoxActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="toffeeNutHeader">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1764,6 +1730,17 @@
                   <Image iconType="3" name="/coffee/Toffee.png"/>
                 </Property>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="toffeeNutPurchase">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Purchase"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toffeeNutPurchaseActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -1801,9 +1778,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="darkChocoPrice" min="-2" pref="56" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="darkChocoPurchaseLbl" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="darkChocoPurchaseCheckBox" min="-2" max="-2" attributes="0"/>
+                                      <Component id="darkChocoPurchase" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -1821,7 +1796,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="darkChocoHeader" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="14" max="32767" attributes="0"/>
+                      <EmptySpace pref="16" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="darkChocoSizeLbl" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="1" groupAlignment="3" attributes="0">
@@ -1836,15 +1811,12 @@
                           <Component id="darkChocoQtyLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="darkChocoPriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="darkChocoPrice" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="darkChocoPurchaseLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="darkChocoPurchaseCheckBox" min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="darkChocoPriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="darkChocoPrice" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="darkChocoPurchase" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1924,19 +1896,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lgDarkChocoActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="darkChocoPurchaseLbl">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="14" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Purchase"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="darkChocoPurchaseCheckBox">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="darkChocoPurchaseCheckBoxActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="darkChocoHeader">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1949,6 +1908,17 @@
                   <Image iconType="3" name="/coffee/Dark Choco.png"/>
                 </Property>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="darkChocoPurchase">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Purchase"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="darkChocoPurchaseActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -1987,9 +1957,7 @@
                           <Group type="102" attributes="0">
                               <Component id="painAuChocolatPrice" min="-2" pref="56" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="painAuChocolatPurchaseLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="painAuChocolatPurchaseCheckBox" min="-2" max="-2" attributes="0"/>
+                              <Component id="painAuChocolatPurchase" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -2005,21 +1973,18 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="painAuChocolatHeader" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="49" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jSpinnerPainAuChocolat" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="painAuChocolatQtyLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="painAuChocolatPriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="painAuChocolatPrice" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="painAuChocolatPurchaseLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="painAuChocolatPurchaseCheckBox" min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="painAuChocolatPriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="painAuChocolatPrice" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="painAuChocolatPurchase" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2052,19 +2017,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="painAuChocolatPriceActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="painAuChocolatPurchaseLbl">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="14" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Purchase"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="painAuChocolatPurchaseCheckBox">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="painAuChocolatPurchaseCheckBoxActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="painAuChocolatHeader">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -2077,6 +2029,17 @@
                   <Image iconType="3" name="/coffee/Pain Au Chocolat.png"/>
                 </Property>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="painAuChocolatPurchase">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Purchase"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="painAuChocolatPurchaseActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -2104,9 +2067,7 @@
                           <Group type="102" attributes="0">
                               <Component id="macaronPrice" min="-2" pref="56" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="macaronPurchaseLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="macaronPurchaseCheckBox" min="-2" max="-2" attributes="0"/>
+                              <Component id="macaronPurchase" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -2122,21 +2083,18 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="macaronHeader" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="48" max="32767" attributes="0"/>
+                      <EmptySpace pref="49" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jSpinnerMacaron" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="macaronQtyLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="macaronPriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="macaronPrice" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="macaronPurchaseLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="macaronPurchaseCheckBox" min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="macaronPriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="macaronPrice" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="macaronPurchase" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2169,19 +2127,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="macaronPriceActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="macaronPurchaseLbl">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="14" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Purchase"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="macaronPurchaseCheckBox">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="macaronPurchaseCheckBoxActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="macaronHeader">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -2194,6 +2139,17 @@
                   <Image iconType="3" name="/coffee/Macaron.png"/>
                 </Property>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="macaronPurchase">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Purchase"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="macaronPurchaseActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -2221,9 +2177,8 @@
                           <Group type="102" attributes="0">
                               <Component id="blueberryCheesecakePrice" min="-2" pref="56" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="blueberryCheesecakePurchaseLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="blueberryCheesecakePurchaseCheckBox" min="-2" max="-2" attributes="0"/>
+                              <Component id="blueberryCheesecakePurchase" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -2238,21 +2193,18 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="blueberryCheesecakeHeader" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="48" max="32767" attributes="0"/>
+                      <EmptySpace pref="50" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jSpinnerBlueberryCheesecake" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="blueberryCheesecakeQtyLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="blueberryCheesecakePriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="blueberryCheesecakePrice" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="blueberryCheesecakePurchaseLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="blueberryCheesecakePurchaseCheckBox" min="-2" pref="26" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="blueberryCheesecakePriceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="blueberryCheesecakePrice" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="blueberryCheesecakePurchase" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2282,16 +2234,6 @@
                 <Property name="text" type="java.lang.String" value="90"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="blueberryCheesecakePurchaseLbl">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="14" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Purchase"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="blueberryCheesecakePurchaseCheckBox">
-            </Component>
             <Component class="javax.swing.JLabel" name="blueberryCheesecakeHeader">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -2304,6 +2246,17 @@
                   <Image iconType="3" name="/coffee/Cheesecake.png"/>
                 </Property>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="blueberryCheesecakePurchase">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Purchase"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="blueberryCheesecakePurchaseActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -2469,7 +2422,7 @@
                   <EmptySpace pref="13" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="changeTextFld" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="changeLbl" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="changeLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
               </Group>
@@ -2487,6 +2440,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="cashTextFld">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="horizontalAlignment" type="int" value="2"/>
             <Property name="text" type="java.lang.String" value="0.0"/>
           </Properties>
@@ -2504,6 +2458,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="subTotalTextFld">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="horizontalAlignment" type="int" value="2"/>
             <Property name="text" type="java.lang.String" value="0.0"/>
           </Properties>
@@ -2518,6 +2473,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="taxTextFld">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="horizontalAlignment" type="int" value="2"/>
             <Property name="text" type="java.lang.String" value="0.0"/>
           </Properties>
@@ -2535,6 +2491,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="totalTextFld">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="horizontalAlignment" type="int" value="2"/>
             <Property name="text" type="java.lang.String" value="0.0"/>
           </Properties>
@@ -2549,6 +2506,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="changeTextFld">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="horizontalAlignment" type="int" value="2"/>
             <Property name="text" type="java.lang.String" value="0.0"/>
           </Properties>

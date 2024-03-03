@@ -7,6 +7,8 @@ package coffee;
 
 import java.time.Instant;
 import java.util.Date;
+    import javax.swing.JFrame;
+
 
 /**
  *
@@ -69,9 +71,8 @@ public class coffeeshop extends javax.swing.JFrame {
         mdAmericano = new javax.swing.JRadioButton();
         smAmericano = new javax.swing.JRadioButton();
         lgAmericano = new javax.swing.JRadioButton();
-        americanoPurchaseCheckBox = new javax.swing.JCheckBox();
-        americanoPurchaseLbl = new javax.swing.JLabel();
         americanoHeader = new javax.swing.JLabel();
+        americanoPurchase = new javax.swing.JButton();
         cappucinoPanel = new javax.swing.JPanel();
         jSpinnerCappucino = new javax.swing.JSpinner();
         cappucinoPriceLbl = new javax.swing.JLabel();
@@ -81,9 +82,8 @@ public class coffeeshop extends javax.swing.JFrame {
         mdCappucino = new javax.swing.JRadioButton();
         smCappucino = new javax.swing.JRadioButton();
         lgCappucino = new javax.swing.JRadioButton();
-        cappucinoPurchaseLbl = new javax.swing.JLabel();
-        cappucinoPurchaseCheckBox = new javax.swing.JCheckBox();
         cappucinoHeader = new javax.swing.JLabel();
+        cappucinoPurchase = new javax.swing.JButton();
         lattePanel = new javax.swing.JPanel();
         jSpinnerLatte = new javax.swing.JSpinner();
         lattePriceLbl = new javax.swing.JLabel();
@@ -93,9 +93,8 @@ public class coffeeshop extends javax.swing.JFrame {
         mdLatte = new javax.swing.JRadioButton();
         smLatte = new javax.swing.JRadioButton();
         lgLatte = new javax.swing.JRadioButton();
-        lattePurchaseLbl = new javax.swing.JLabel();
-        lattePurchaseCheckBox = new javax.swing.JCheckBox();
         latteHeader = new javax.swing.JLabel();
+        lattePurchase = new javax.swing.JButton();
         iceBlendedLbl = new javax.swing.JLabel();
         hazelnutPanel = new javax.swing.JPanel();
         jSpinnerHazelnut = new javax.swing.JSpinner();
@@ -106,9 +105,8 @@ public class coffeeshop extends javax.swing.JFrame {
         mdHazelnut = new javax.swing.JRadioButton();
         smHazelnut = new javax.swing.JRadioButton();
         lgHazelnut = new javax.swing.JRadioButton();
-        hazelnutPurchaseLbl = new javax.swing.JLabel();
-        hazelnutPurchaseCheckBox = new javax.swing.JCheckBox();
         hazelnutHeader = new javax.swing.JLabel();
+        hazelnutPurchase = new javax.swing.JButton();
         chocoChipPanel = new javax.swing.JPanel();
         jSpinnerChocoChip = new javax.swing.JSpinner();
         chocoChipPriceLbl = new javax.swing.JLabel();
@@ -118,9 +116,8 @@ public class coffeeshop extends javax.swing.JFrame {
         mdChocoChip = new javax.swing.JRadioButton();
         smChocoChip = new javax.swing.JRadioButton();
         lgChocoChip = new javax.swing.JRadioButton();
-        chocoChipPurchaseLbl = new javax.swing.JLabel();
-        chocoChipPurchaseCheckBox = new javax.swing.JCheckBox();
         chocoChipHeader = new javax.swing.JLabel();
+        chocoChipPurchase = new javax.swing.JButton();
         cookiesNCreamPanel = new javax.swing.JPanel();
         jSpinnerCookiesNCream = new javax.swing.JSpinner();
         cookiesNCreamPriceLbl = new javax.swing.JLabel();
@@ -130,9 +127,8 @@ public class coffeeshop extends javax.swing.JFrame {
         mdCookiesNCream = new javax.swing.JRadioButton();
         smCookiesNCream = new javax.swing.JRadioButton();
         lgCookiesNCream = new javax.swing.JRadioButton();
-        cookiesNCreamPurchaseLbl = new javax.swing.JLabel();
-        cookiesNCreamPurchaseCheckBox = new javax.swing.JCheckBox();
         cookiesNCreamHeader = new javax.swing.JLabel();
+        cookiesNCreamPurchase = new javax.swing.JButton();
         frappeLbl = new javax.swing.JLabel();
         whiteMochaPanel = new javax.swing.JPanel();
         jSpinnerWhiteMocha = new javax.swing.JSpinner();
@@ -143,9 +139,8 @@ public class coffeeshop extends javax.swing.JFrame {
         mdWhiteMocha = new javax.swing.JRadioButton();
         smWhiteMocha = new javax.swing.JRadioButton();
         lgWhiteMocha = new javax.swing.JRadioButton();
-        whiteMochaPurchaseLbl = new javax.swing.JLabel();
-        whiteMochaPurchaseCheckBox = new javax.swing.JCheckBox();
         whiteMochaHeader = new javax.swing.JLabel();
+        whiteMochaPurchase = new javax.swing.JButton();
         toffeeNutPanel = new javax.swing.JPanel();
         jSpinnerToffeeNut = new javax.swing.JSpinner();
         toffeeNutPriceLbl = new javax.swing.JLabel();
@@ -155,9 +150,8 @@ public class coffeeshop extends javax.swing.JFrame {
         mdToffeeNut = new javax.swing.JRadioButton();
         smToffeeNut = new javax.swing.JRadioButton();
         lgToffeeNut = new javax.swing.JRadioButton();
-        toffeeNutPurchaseLbl = new javax.swing.JLabel();
-        toffeeNutPurchaseCheckBox = new javax.swing.JCheckBox();
         toffeeNutHeader = new javax.swing.JLabel();
+        toffeeNutPurchase = new javax.swing.JButton();
         darkChocoPanel = new javax.swing.JPanel();
         jSpinnerDarkChoco = new javax.swing.JSpinner();
         darkChocoPriceLbl = new javax.swing.JLabel();
@@ -167,34 +161,30 @@ public class coffeeshop extends javax.swing.JFrame {
         mdDarkChoco = new javax.swing.JRadioButton();
         smDarkChoco = new javax.swing.JRadioButton();
         lgDarkChoco = new javax.swing.JRadioButton();
-        darkChocoPurchaseLbl = new javax.swing.JLabel();
-        darkChocoPurchaseCheckBox = new javax.swing.JCheckBox();
         darkChocoHeader = new javax.swing.JLabel();
+        darkChocoPurchase = new javax.swing.JButton();
         pastryLbl = new javax.swing.JLabel();
         painAuChocolatPanel = new javax.swing.JPanel();
         jSpinnerPainAuChocolat = new javax.swing.JSpinner();
         painAuChocolatPriceLbl = new javax.swing.JLabel();
         painAuChocolatQtyLbl = new javax.swing.JLabel();
         painAuChocolatPrice = new javax.swing.JTextField();
-        painAuChocolatPurchaseLbl = new javax.swing.JLabel();
-        painAuChocolatPurchaseCheckBox = new javax.swing.JCheckBox();
         painAuChocolatHeader = new javax.swing.JLabel();
+        painAuChocolatPurchase = new javax.swing.JButton();
         macaronPanel = new javax.swing.JPanel();
         jSpinnerMacaron = new javax.swing.JSpinner();
         macaronPriceLbl = new javax.swing.JLabel();
         macaronQtyLbl = new javax.swing.JLabel();
         macaronPrice = new javax.swing.JTextField();
-        macaronPurchaseLbl = new javax.swing.JLabel();
-        macaronPurchaseCheckBox = new javax.swing.JCheckBox();
         macaronHeader = new javax.swing.JLabel();
+        macaronPurchase = new javax.swing.JButton();
         blueberryCheesecakePanel = new javax.swing.JPanel();
         jSpinnerBlueberryCheesecake = new javax.swing.JSpinner();
         blueberryCheesecakePriceLbl = new javax.swing.JLabel();
         blueberryCheesecakeQtyLbl = new javax.swing.JLabel();
         blueberryCheesecakePrice = new javax.swing.JTextField();
-        blueberryCheesecakePurchaseLbl = new javax.swing.JLabel();
-        blueberryCheesecakePurchaseCheckBox = new javax.swing.JCheckBox();
         blueberryCheesecakeHeader = new javax.swing.JLabel();
+        blueberryCheesecakePurchase = new javax.swing.JButton();
         customerOptions = new javax.swing.JPanel();
         jButtonPay = new javax.swing.JButton();
         jButtonReceipt = new javax.swing.JButton();
@@ -255,6 +245,8 @@ public class coffeeshop extends javax.swing.JFrame {
 
         americanoPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jSpinnerAmericano.setValue(1);
+
         americanoPriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         americanoPriceLbl.setText("Price:");
 
@@ -299,18 +291,17 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
-        americanoPurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                americanoPurchaseCheckBoxActionPerformed(evt);
-            }
-        });
-
-        americanoPurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        americanoPurchaseLbl.setText("Purchase");
-
         americanoHeader.setBackground(new java.awt.Color(204, 0, 0));
         americanoHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         americanoHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Americano.png"))); // NOI18N
+
+        americanoPurchase.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        americanoPurchase.setText("Purchase");
+        americanoPurchase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                americanoPurchaseActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout americanoPanelLayout = new javax.swing.GroupLayout(americanoPanel);
         americanoPanel.setLayout(americanoPanelLayout);
@@ -328,24 +319,25 @@ public class coffeeshop extends javax.swing.JFrame {
                         .addComponent(jSpinnerAmericano)
                         .addContainerGap())
                     .addGroup(americanoPanelLayout.createSequentialGroup()
-                        .addComponent(smAmericano)
-                        .addGap(26, 26, 26)
-                        .addComponent(mdAmericano)
-                        .addGap(18, 18, 18)
-                        .addComponent(lgAmericano))
-                    .addGroup(americanoPanelLayout.createSequentialGroup()
-                        .addComponent(americanoPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(americanoPurchaseLbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(americanoPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(americanoPanelLayout.createSequentialGroup()
+                                .addComponent(smAmericano)
+                                .addGap(26, 26, 26)
+                                .addComponent(mdAmericano)
+                                .addGap(18, 18, 18)
+                                .addComponent(lgAmericano))
+                            .addGroup(americanoPanelLayout.createSequentialGroup()
+                                .addComponent(americanoPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(americanoPurchase)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
             .addComponent(americanoHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         americanoPanelLayout.setVerticalGroup(
             americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, americanoPanelLayout.createSequentialGroup()
                 .addComponent(americanoHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addGroup(americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(americanoSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -357,13 +349,11 @@ public class coffeeshop extends javax.swing.JFrame {
                     .addComponent(jSpinnerAmericano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(americanoQtyLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(americanoPriceLbl)
-                        .addComponent(americanoPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(americanoPurchaseLbl))
-                    .addComponent(americanoPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGroup(americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(americanoPriceLbl)
+                    .addComponent(americanoPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(americanoPurchase))
+                .addGap(11, 11, 11))
         );
 
         cappucinoPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -407,18 +397,17 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
-        cappucinoPurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        cappucinoPurchaseLbl.setText("Purchase");
-
-        cappucinoPurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cappucinoPurchaseCheckBoxActionPerformed(evt);
-            }
-        });
-
         cappucinoHeader.setBackground(new java.awt.Color(204, 0, 0));
         cappucinoHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         cappucinoHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Cappucino.png"))); // NOI18N
+
+        cappucinoPurchase.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        cappucinoPurchase.setText("Purchase");
+        cappucinoPurchase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cappucinoPurchaseActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout cappucinoPanelLayout = new javax.swing.GroupLayout(cappucinoPanel);
         cappucinoPanel.setLayout(cappucinoPanelLayout);
@@ -434,17 +423,18 @@ public class coffeeshop extends javax.swing.JFrame {
                 .addGroup(cappucinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSpinnerCappucino)
                     .addGroup(cappucinoPanelLayout.createSequentialGroup()
-                        .addComponent(smCappucino)
-                        .addGap(26, 26, 26)
-                        .addComponent(mdCappucino)
-                        .addGap(18, 18, 18)
-                        .addComponent(lgCappucino))
-                    .addGroup(cappucinoPanelLayout.createSequentialGroup()
-                        .addComponent(cappucinoPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cappucinoPurchaseLbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cappucinoPurchaseCheckBox)))
+                        .addGroup(cappucinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(cappucinoPanelLayout.createSequentialGroup()
+                                .addComponent(smCappucino)
+                                .addGap(26, 26, 26)
+                                .addComponent(mdCappucino)
+                                .addGap(18, 18, 18)
+                                .addComponent(lgCappucino))
+                            .addGroup(cappucinoPanelLayout.createSequentialGroup()
+                                .addComponent(cappucinoPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cappucinoPurchase)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(cappucinoPanelLayout.createSequentialGroup()
                 .addComponent(cappucinoHeader)
@@ -454,7 +444,7 @@ public class coffeeshop extends javax.swing.JFrame {
             cappucinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cappucinoPanelLayout.createSequentialGroup()
                 .addComponent(cappucinoHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addGroup(cappucinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cappucinoSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cappucinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -466,13 +456,11 @@ public class coffeeshop extends javax.swing.JFrame {
                     .addComponent(jSpinnerCappucino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cappucinoQtyLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cappucinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(cappucinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(cappucinoPriceLbl)
-                        .addComponent(cappucinoPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(cappucinoPurchaseLbl))
-                    .addComponent(cappucinoPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGroup(cappucinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cappucinoPriceLbl)
+                    .addComponent(cappucinoPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cappucinoPurchase))
+                .addGap(11, 11, 11))
         );
 
         lattePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -521,18 +509,17 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
-        lattePurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        lattePurchaseLbl.setText("Purchase");
-
-        lattePurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lattePurchaseCheckBoxActionPerformed(evt);
-            }
-        });
-
         latteHeader.setBackground(new java.awt.Color(204, 0, 0));
         latteHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         latteHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Latte.png"))); // NOI18N
+
+        lattePurchase.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        lattePurchase.setText("Purchase");
+        lattePurchase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lattePurchaseActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout lattePanelLayout = new javax.swing.GroupLayout(lattePanel);
         lattePanel.setLayout(lattePanelLayout);
@@ -548,17 +535,18 @@ public class coffeeshop extends javax.swing.JFrame {
                 .addGroup(lattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSpinnerLatte)
                     .addGroup(lattePanelLayout.createSequentialGroup()
-                        .addComponent(smLatte)
-                        .addGap(26, 26, 26)
-                        .addComponent(mdLatte)
-                        .addGap(18, 18, 18)
-                        .addComponent(lgLatte))
-                    .addGroup(lattePanelLayout.createSequentialGroup()
-                        .addComponent(lattePrice, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lattePurchaseLbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lattePurchaseCheckBox)))
+                        .addGroup(lattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(lattePanelLayout.createSequentialGroup()
+                                .addComponent(smLatte)
+                                .addGap(26, 26, 26)
+                                .addComponent(mdLatte)
+                                .addGap(18, 18, 18)
+                                .addComponent(lgLatte))
+                            .addGroup(lattePanelLayout.createSequentialGroup()
+                                .addComponent(lattePrice, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lattePurchase)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(lattePanelLayout.createSequentialGroup()
                 .addComponent(latteHeader)
@@ -568,7 +556,7 @@ public class coffeeshop extends javax.swing.JFrame {
             lattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lattePanelLayout.createSequentialGroup()
                 .addComponent(latteHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addGroup(lattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(latteSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -580,13 +568,11 @@ public class coffeeshop extends javax.swing.JFrame {
                     .addComponent(jSpinnerLatte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(latteQtyLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(lattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(lattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lattePriceLbl)
-                        .addComponent(lattePrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lattePurchaseLbl))
-                    .addComponent(lattePurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGroup(lattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lattePriceLbl)
+                    .addComponent(lattePrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lattePurchase))
+                .addGap(11, 11, 11))
         );
 
         iceBlendedLbl.setBackground(new java.awt.Color(204, 0, 0));
@@ -634,18 +620,17 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
-        hazelnutPurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        hazelnutPurchaseLbl.setText("Purchase");
-
-        hazelnutPurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                hazelnutPurchaseCheckBoxActionPerformed(evt);
-            }
-        });
-
         hazelnutHeader.setBackground(new java.awt.Color(204, 0, 0));
         hazelnutHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         hazelnutHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Hazelnut.png"))); // NOI18N
+
+        hazelnutPurchase.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        hazelnutPurchase.setText("Purchase");
+        hazelnutPurchase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hazelnutPurchaseActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout hazelnutPanelLayout = new javax.swing.GroupLayout(hazelnutPanel);
         hazelnutPanel.setLayout(hazelnutPanelLayout);
@@ -671,9 +656,7 @@ public class coffeeshop extends javax.swing.JFrame {
                             .addGroup(hazelnutPanelLayout.createSequentialGroup()
                                 .addComponent(hazelnutPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(hazelnutPurchaseLbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(hazelnutPurchaseCheckBox)))
+                                .addComponent(hazelnutPurchase)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(hazelnutPanelLayout.createSequentialGroup()
@@ -684,7 +667,7 @@ public class coffeeshop extends javax.swing.JFrame {
             hazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hazelnutPanelLayout.createSequentialGroup()
                 .addComponent(hazelnutHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addGroup(hazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(hazelnutSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -696,13 +679,11 @@ public class coffeeshop extends javax.swing.JFrame {
                     .addComponent(jSpinnerHazelnut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(hazelnutQtyLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(hazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(hazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(hazelnutPriceLbl)
-                        .addComponent(hazelnutPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(hazelnutPurchaseLbl))
-                    .addComponent(hazelnutPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGroup(hazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(hazelnutPriceLbl)
+                    .addComponent(hazelnutPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(hazelnutPurchase))
+                .addGap(11, 11, 11))
         );
 
         chocoChipPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -751,18 +732,17 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
-        chocoChipPurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        chocoChipPurchaseLbl.setText("Purchase");
-
-        chocoChipPurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chocoChipPurchaseCheckBoxActionPerformed(evt);
-            }
-        });
-
         chocoChipHeader.setBackground(new java.awt.Color(204, 0, 0));
         chocoChipHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         chocoChipHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Chocolate.png"))); // NOI18N
+
+        chocoChipPurchase.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        chocoChipPurchase.setText("Purchase");
+        chocoChipPurchase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chocoChipPurchaseActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout chocoChipPanelLayout = new javax.swing.GroupLayout(chocoChipPanel);
         chocoChipPanel.setLayout(chocoChipPanelLayout);
@@ -778,18 +758,18 @@ public class coffeeshop extends javax.swing.JFrame {
                 .addGroup(chocoChipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSpinnerChocoChip)
                     .addGroup(chocoChipPanelLayout.createSequentialGroup()
-                        .addComponent(smChocoChip)
-                        .addGap(26, 26, 26)
-                        .addComponent(mdChocoChip)
-                        .addGap(18, 18, 18)
-                        .addComponent(lgChocoChip)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(chocoChipPanelLayout.createSequentialGroup()
-                        .addComponent(chocoChipPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(chocoChipPurchaseLbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(chocoChipPurchaseCheckBox)))
+                        .addGroup(chocoChipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(chocoChipPanelLayout.createSequentialGroup()
+                                .addComponent(smChocoChip)
+                                .addGap(26, 26, 26)
+                                .addComponent(mdChocoChip)
+                                .addGap(18, 18, 18)
+                                .addComponent(lgChocoChip))
+                            .addGroup(chocoChipPanelLayout.createSequentialGroup()
+                                .addComponent(chocoChipPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(chocoChipPurchase)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, chocoChipPanelLayout.createSequentialGroup()
                 .addComponent(chocoChipHeader)
@@ -799,7 +779,7 @@ public class coffeeshop extends javax.swing.JFrame {
             chocoChipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, chocoChipPanelLayout.createSequentialGroup()
                 .addComponent(chocoChipHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addGroup(chocoChipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(chocoChipSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, chocoChipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -811,13 +791,11 @@ public class coffeeshop extends javax.swing.JFrame {
                     .addComponent(jSpinnerChocoChip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(chocoChipQtyLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(chocoChipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(chocoChipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(chocoChipPriceLbl)
-                        .addComponent(chocoChipPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(chocoChipPurchaseLbl))
-                    .addComponent(chocoChipPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGroup(chocoChipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(chocoChipPriceLbl)
+                    .addComponent(chocoChipPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(chocoChipPurchase))
+                .addGap(11, 11, 11))
         );
 
         cookiesNCreamPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -861,18 +839,17 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
-        cookiesNCreamPurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        cookiesNCreamPurchaseLbl.setText("Purchase");
-
-        cookiesNCreamPurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cookiesNCreamPurchaseCheckBoxActionPerformed(evt);
-            }
-        });
-
         cookiesNCreamHeader.setBackground(new java.awt.Color(204, 0, 0));
         cookiesNCreamHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         cookiesNCreamHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Cookies n' cream.png"))); // NOI18N
+
+        cookiesNCreamPurchase.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        cookiesNCreamPurchase.setText("Purchase");
+        cookiesNCreamPurchase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cookiesNCreamPurchaseActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout cookiesNCreamPanelLayout = new javax.swing.GroupLayout(cookiesNCreamPanel);
         cookiesNCreamPanel.setLayout(cookiesNCreamPanelLayout);
@@ -897,10 +874,8 @@ public class coffeeshop extends javax.swing.JFrame {
                                 .addComponent(lgCookiesNCream))
                             .addGroup(cookiesNCreamPanelLayout.createSequentialGroup()
                                 .addComponent(cookiesNCreamPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(12, 12, 12)
-                                .addComponent(cookiesNCreamPurchaseLbl)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cookiesNCreamPurchaseCheckBox)))
+                                .addComponent(cookiesNCreamPurchase)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(cookiesNCreamPanelLayout.createSequentialGroup()
@@ -911,7 +886,7 @@ public class coffeeshop extends javax.swing.JFrame {
             cookiesNCreamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cookiesNCreamPanelLayout.createSequentialGroup()
                 .addComponent(cookiesNCreamHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addGroup(cookiesNCreamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cookiesNCreamSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cookiesNCreamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -923,13 +898,11 @@ public class coffeeshop extends javax.swing.JFrame {
                     .addComponent(jSpinnerCookiesNCream, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cookiesNCreamQtyLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cookiesNCreamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(cookiesNCreamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(cookiesNCreamPriceLbl)
-                        .addComponent(cookiesNCreamPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(cookiesNCreamPurchaseLbl))
-                    .addComponent(cookiesNCreamPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGroup(cookiesNCreamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cookiesNCreamPriceLbl)
+                    .addComponent(cookiesNCreamPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cookiesNCreamPurchase))
+                .addGap(11, 11, 11))
         );
 
         frappeLbl.setBackground(new java.awt.Color(204, 0, 0));
@@ -982,18 +955,17 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
-        whiteMochaPurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        whiteMochaPurchaseLbl.setText("Purchase");
-
-        whiteMochaPurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                whiteMochaPurchaseCheckBoxActionPerformed(evt);
-            }
-        });
-
         whiteMochaHeader.setBackground(new java.awt.Color(204, 0, 0));
         whiteMochaHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         whiteMochaHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/White Mocha.png"))); // NOI18N
+
+        whiteMochaPurchase.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        whiteMochaPurchase.setText("Purchase");
+        whiteMochaPurchase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                whiteMochaPurchaseActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout whiteMochaPanelLayout = new javax.swing.GroupLayout(whiteMochaPanel);
         whiteMochaPanel.setLayout(whiteMochaPanelLayout);
@@ -1009,17 +981,18 @@ public class coffeeshop extends javax.swing.JFrame {
                 .addGroup(whiteMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSpinnerWhiteMocha)
                     .addGroup(whiteMochaPanelLayout.createSequentialGroup()
-                        .addComponent(smWhiteMocha)
-                        .addGap(26, 26, 26)
-                        .addComponent(mdWhiteMocha)
-                        .addGap(18, 18, 18)
-                        .addComponent(lgWhiteMocha))
-                    .addGroup(whiteMochaPanelLayout.createSequentialGroup()
-                        .addComponent(whiteMochaPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(whiteMochaPurchaseLbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(whiteMochaPurchaseCheckBox)))
+                        .addGroup(whiteMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(whiteMochaPanelLayout.createSequentialGroup()
+                                .addComponent(smWhiteMocha)
+                                .addGap(26, 26, 26)
+                                .addComponent(mdWhiteMocha)
+                                .addGap(18, 18, 18)
+                                .addComponent(lgWhiteMocha))
+                            .addGroup(whiteMochaPanelLayout.createSequentialGroup()
+                                .addComponent(whiteMochaPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(whiteMochaPurchase)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(whiteMochaPanelLayout.createSequentialGroup()
                 .addComponent(whiteMochaHeader)
@@ -1029,7 +1002,7 @@ public class coffeeshop extends javax.swing.JFrame {
             whiteMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, whiteMochaPanelLayout.createSequentialGroup()
                 .addComponent(whiteMochaHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(whiteMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(whiteMochaSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, whiteMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1041,13 +1014,11 @@ public class coffeeshop extends javax.swing.JFrame {
                     .addComponent(jSpinnerWhiteMocha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(whiteMochaQtyLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(whiteMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(whiteMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(whiteMochaPriceLbl)
-                        .addComponent(whiteMochaPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(whiteMochaPurchaseLbl))
-                    .addComponent(whiteMochaPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGroup(whiteMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(whiteMochaPriceLbl)
+                    .addComponent(whiteMochaPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(whiteMochaPurchase))
+                .addGap(11, 11, 11))
         );
 
         toffeeNutPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1096,18 +1067,17 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
-        toffeeNutPurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        toffeeNutPurchaseLbl.setText("Purchase");
-
-        toffeeNutPurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                toffeeNutPurchaseCheckBoxActionPerformed(evt);
-            }
-        });
-
         toffeeNutHeader.setBackground(new java.awt.Color(204, 0, 0));
         toffeeNutHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         toffeeNutHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Toffee.png"))); // NOI18N
+
+        toffeeNutPurchase.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        toffeeNutPurchase.setText("Purchase");
+        toffeeNutPurchase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                toffeeNutPurchaseActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout toffeeNutPanelLayout = new javax.swing.GroupLayout(toffeeNutPanel);
         toffeeNutPanel.setLayout(toffeeNutPanelLayout);
@@ -1123,18 +1093,18 @@ public class coffeeshop extends javax.swing.JFrame {
                 .addGroup(toffeeNutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSpinnerToffeeNut)
                     .addGroup(toffeeNutPanelLayout.createSequentialGroup()
-                        .addComponent(smToffeeNut)
-                        .addGap(26, 26, 26)
-                        .addComponent(mdToffeeNut)
-                        .addGap(18, 18, 18)
-                        .addComponent(lgToffeeNut)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(toffeeNutPanelLayout.createSequentialGroup()
-                        .addComponent(toffeeNutPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(toffeeNutPurchaseLbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(toffeeNutPurchaseCheckBox)))
+                        .addGroup(toffeeNutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(toffeeNutPanelLayout.createSequentialGroup()
+                                .addComponent(smToffeeNut)
+                                .addGap(26, 26, 26)
+                                .addComponent(mdToffeeNut)
+                                .addGap(18, 18, 18)
+                                .addComponent(lgToffeeNut))
+                            .addGroup(toffeeNutPanelLayout.createSequentialGroup()
+                                .addComponent(toffeeNutPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(toffeeNutPurchase)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(toffeeNutPanelLayout.createSequentialGroup()
                 .addComponent(toffeeNutHeader)
@@ -1144,7 +1114,7 @@ public class coffeeshop extends javax.swing.JFrame {
             toffeeNutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, toffeeNutPanelLayout.createSequentialGroup()
                 .addComponent(toffeeNutHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(toffeeNutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(toffeeNutSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, toffeeNutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1156,13 +1126,11 @@ public class coffeeshop extends javax.swing.JFrame {
                     .addComponent(jSpinnerToffeeNut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(toffeeNutQtyLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(toffeeNutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(toffeeNutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(toffeeNutPriceLbl)
-                        .addComponent(toffeeNutPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(toffeeNutPurchaseLbl))
-                    .addComponent(toffeeNutPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGroup(toffeeNutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(toffeeNutPriceLbl)
+                    .addComponent(toffeeNutPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(toffeeNutPurchase))
+                .addGap(11, 11, 11))
         );
 
         darkChocoPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1206,18 +1174,17 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
-        darkChocoPurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        darkChocoPurchaseLbl.setText("Purchase");
-
-        darkChocoPurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                darkChocoPurchaseCheckBoxActionPerformed(evt);
-            }
-        });
-
         darkChocoHeader.setBackground(new java.awt.Color(204, 0, 0));
         darkChocoHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         darkChocoHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Dark Choco.png"))); // NOI18N
+
+        darkChocoPurchase.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        darkChocoPurchase.setText("Purchase");
+        darkChocoPurchase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                darkChocoPurchaseActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout darkChocoPanelLayout = new javax.swing.GroupLayout(darkChocoPanel);
         darkChocoPanel.setLayout(darkChocoPanelLayout);
@@ -1243,9 +1210,7 @@ public class coffeeshop extends javax.swing.JFrame {
                             .addGroup(darkChocoPanelLayout.createSequentialGroup()
                                 .addComponent(darkChocoPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(darkChocoPurchaseLbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(darkChocoPurchaseCheckBox)))
+                                .addComponent(darkChocoPurchase)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(darkChocoPanelLayout.createSequentialGroup()
@@ -1256,7 +1221,7 @@ public class coffeeshop extends javax.swing.JFrame {
             darkChocoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, darkChocoPanelLayout.createSequentialGroup()
                 .addComponent(darkChocoHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(darkChocoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(darkChocoSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, darkChocoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1268,13 +1233,11 @@ public class coffeeshop extends javax.swing.JFrame {
                     .addComponent(jSpinnerDarkChoco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(darkChocoQtyLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(darkChocoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(darkChocoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(darkChocoPriceLbl)
-                        .addComponent(darkChocoPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(darkChocoPurchaseLbl))
-                    .addComponent(darkChocoPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGroup(darkChocoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(darkChocoPriceLbl)
+                    .addComponent(darkChocoPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(darkChocoPurchase))
+                .addGap(11, 11, 11))
         );
 
         pastryLbl.setBackground(new java.awt.Color(204, 0, 0));
@@ -1297,18 +1260,17 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
-        painAuChocolatPurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        painAuChocolatPurchaseLbl.setText("Purchase");
-
-        painAuChocolatPurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                painAuChocolatPurchaseCheckBoxActionPerformed(evt);
-            }
-        });
-
         painAuChocolatHeader.setBackground(new java.awt.Color(204, 0, 0));
         painAuChocolatHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         painAuChocolatHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Pain Au Chocolat.png"))); // NOI18N
+
+        painAuChocolatPurchase.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        painAuChocolatPurchase.setText("Purchase");
+        painAuChocolatPurchase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                painAuChocolatPurchaseActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painAuChocolatPanelLayout = new javax.swing.GroupLayout(painAuChocolatPanel);
         painAuChocolatPanel.setLayout(painAuChocolatPanelLayout);
@@ -1325,9 +1287,7 @@ public class coffeeshop extends javax.swing.JFrame {
                     .addGroup(painAuChocolatPanelLayout.createSequentialGroup()
                         .addComponent(painAuChocolatPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(painAuChocolatPurchaseLbl)
-                        .addGap(18, 18, 18)
-                        .addComponent(painAuChocolatPurchaseCheckBox)
+                        .addComponent(painAuChocolatPurchase)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(painAuChocolatPanelLayout.createSequentialGroup()
@@ -1338,18 +1298,16 @@ public class coffeeshop extends javax.swing.JFrame {
             painAuChocolatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painAuChocolatPanelLayout.createSequentialGroup()
                 .addComponent(painAuChocolatHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addGroup(painAuChocolatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jSpinnerPainAuChocolat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(painAuChocolatQtyLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(painAuChocolatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painAuChocolatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(painAuChocolatPriceLbl)
-                        .addComponent(painAuChocolatPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(painAuChocolatPurchaseLbl))
-                    .addComponent(painAuChocolatPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGroup(painAuChocolatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(painAuChocolatPriceLbl)
+                    .addComponent(painAuChocolatPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(painAuChocolatPurchase))
+                .addGap(11, 11, 11))
         );
 
         macaronPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1368,18 +1326,17 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
-        macaronPurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        macaronPurchaseLbl.setText("Purchase");
-
-        macaronPurchaseCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                macaronPurchaseCheckBoxActionPerformed(evt);
-            }
-        });
-
         macaronHeader.setBackground(new java.awt.Color(204, 0, 0));
         macaronHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         macaronHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Macaron.png"))); // NOI18N
+
+        macaronPurchase.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        macaronPurchase.setText("Purchase");
+        macaronPurchase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                macaronPurchaseActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout macaronPanelLayout = new javax.swing.GroupLayout(macaronPanel);
         macaronPanel.setLayout(macaronPanelLayout);
@@ -1396,9 +1353,7 @@ public class coffeeshop extends javax.swing.JFrame {
                     .addGroup(macaronPanelLayout.createSequentialGroup()
                         .addComponent(macaronPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(macaronPurchaseLbl)
-                        .addGap(18, 18, 18)
-                        .addComponent(macaronPurchaseCheckBox)
+                        .addComponent(macaronPurchase)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(macaronPanelLayout.createSequentialGroup()
@@ -1409,18 +1364,16 @@ public class coffeeshop extends javax.swing.JFrame {
             macaronPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, macaronPanelLayout.createSequentialGroup()
                 .addComponent(macaronHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addGroup(macaronPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jSpinnerMacaron, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(macaronQtyLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(macaronPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(macaronPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(macaronPriceLbl)
-                        .addComponent(macaronPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(macaronPurchaseLbl))
-                    .addComponent(macaronPurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGroup(macaronPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(macaronPriceLbl)
+                    .addComponent(macaronPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(macaronPurchase))
+                .addGap(11, 11, 11))
         );
 
         blueberryCheesecakePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1434,12 +1387,17 @@ public class coffeeshop extends javax.swing.JFrame {
         blueberryCheesecakePrice.setEditable(false);
         blueberryCheesecakePrice.setText("90");
 
-        blueberryCheesecakePurchaseLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        blueberryCheesecakePurchaseLbl.setText("Purchase");
-
         blueberryCheesecakeHeader.setBackground(new java.awt.Color(204, 0, 0));
         blueberryCheesecakeHeader.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         blueberryCheesecakeHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/Cheesecake.png"))); // NOI18N
+
+        blueberryCheesecakePurchase.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        blueberryCheesecakePurchase.setText("Purchase");
+        blueberryCheesecakePurchase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                blueberryCheesecakePurchaseActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout blueberryCheesecakePanelLayout = new javax.swing.GroupLayout(blueberryCheesecakePanel);
         blueberryCheesecakePanel.setLayout(blueberryCheesecakePanelLayout);
@@ -1456,9 +1414,8 @@ public class coffeeshop extends javax.swing.JFrame {
                     .addGroup(blueberryCheesecakePanelLayout.createSequentialGroup()
                         .addComponent(blueberryCheesecakePrice, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(blueberryCheesecakePurchaseLbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(blueberryCheesecakePurchaseCheckBox)))
+                        .addComponent(blueberryCheesecakePurchase)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(blueberryCheesecakePanelLayout.createSequentialGroup()
                 .addComponent(blueberryCheesecakeHeader)
@@ -1468,18 +1425,16 @@ public class coffeeshop extends javax.swing.JFrame {
             blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, blueberryCheesecakePanelLayout.createSequentialGroup()
                 .addComponent(blueberryCheesecakeHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addGroup(blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jSpinnerBlueberryCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(blueberryCheesecakeQtyLbl))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(blueberryCheesecakePriceLbl)
-                        .addComponent(blueberryCheesecakePrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(blueberryCheesecakePurchaseLbl))
-                    .addComponent(blueberryCheesecakePurchaseCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(13, 13, 13))
+                .addGap(6, 6, 6)
+                .addGroup(blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(blueberryCheesecakePriceLbl)
+                    .addComponent(blueberryCheesecakePrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(blueberryCheesecakePurchase))
+                .addGap(11, 11, 11))
         );
 
         javax.swing.GroupLayout menuItemsPnlLayout = new javax.swing.GroupLayout(menuItemsPnl);
@@ -1632,6 +1587,7 @@ public class coffeeshop extends javax.swing.JFrame {
         cashLbl.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         cashLbl.setText("Cash");
 
+        cashTextFld.setEditable(false);
         cashTextFld.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         cashTextFld.setText("0.0");
         cashTextFld.addActionListener(new java.awt.event.ActionListener() {
@@ -1643,12 +1599,14 @@ public class coffeeshop extends javax.swing.JFrame {
         subTotalLbl.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         subTotalLbl.setText("SubTotal");
 
+        subTotalTextFld.setEditable(false);
         subTotalTextFld.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         subTotalTextFld.setText("0.0");
 
         taxLbl.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         taxLbl.setText("Tax");
 
+        taxTextFld.setEditable(false);
         taxTextFld.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         taxTextFld.setText("0.0");
         taxTextFld.addActionListener(new java.awt.event.ActionListener() {
@@ -1660,12 +1618,14 @@ public class coffeeshop extends javax.swing.JFrame {
         totalLbl.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         totalLbl.setText("Total");
 
+        totalTextFld.setEditable(false);
         totalTextFld.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         totalTextFld.setText("0.0");
 
         changeLbl.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         changeLbl.setText("Change");
 
+        changeTextFld.setEditable(false);
         changeTextFld.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         changeTextFld.setText("0.0");
 
@@ -1717,7 +1677,7 @@ public class coffeeshop extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addGroup(paymentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(changeTextFld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(changeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(changeLbl))
                 .addGap(16, 16, 16))
         );
 
@@ -1952,6 +1912,9 @@ public class coffeeshop extends javax.swing.JFrame {
 
     private void btnHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistoryActionPerformed
         // TODO add your handling code here:
+        history history = new history();
+        history.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        history.setVisible(true);
     }//GEN-LAST:event_btnHistoryActionPerformed
 
     private void whiteMochaPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_whiteMochaPriceActionPerformed
@@ -1982,50 +1945,6 @@ public class coffeeshop extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cashTextFldActionPerformed
 
-    private void americanoPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_americanoPurchaseCheckBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_americanoPurchaseCheckBoxActionPerformed
-
-    private void lattePurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lattePurchaseCheckBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lattePurchaseCheckBoxActionPerformed
-
-    private void cappucinoPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cappucinoPurchaseCheckBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cappucinoPurchaseCheckBoxActionPerformed
-
-    private void toffeeNutPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toffeeNutPurchaseCheckBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_toffeeNutPurchaseCheckBoxActionPerformed
-
-    private void hazelnutPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hazelnutPurchaseCheckBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_hazelnutPurchaseCheckBoxActionPerformed
-
-    private void chocoChipPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chocoChipPurchaseCheckBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_chocoChipPurchaseCheckBoxActionPerformed
-
-    private void cookiesNCreamPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cookiesNCreamPurchaseCheckBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cookiesNCreamPurchaseCheckBoxActionPerformed
-
-    private void whiteMochaPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_whiteMochaPurchaseCheckBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_whiteMochaPurchaseCheckBoxActionPerformed
-
-    private void darkChocoPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_darkChocoPurchaseCheckBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_darkChocoPurchaseCheckBoxActionPerformed
-
-    private void painAuChocolatPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_painAuChocolatPurchaseCheckBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_painAuChocolatPurchaseCheckBoxActionPerformed
-
-    private void macaronPurchaseCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_macaronPurchaseCheckBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_macaronPurchaseCheckBoxActionPerformed
-
     private void btnDeleteItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteItemActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnDeleteItemActionPerformed
@@ -2033,6 +1952,54 @@ public class coffeeshop extends javax.swing.JFrame {
     private void btnDisplayInvoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisplayInvoiceActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnDisplayInvoiceActionPerformed
+
+    private void americanoPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_americanoPurchaseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_americanoPurchaseActionPerformed
+
+    private void cappucinoPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cappucinoPurchaseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cappucinoPurchaseActionPerformed
+
+    private void lattePurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lattePurchaseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lattePurchaseActionPerformed
+
+    private void hazelnutPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hazelnutPurchaseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hazelnutPurchaseActionPerformed
+
+    private void chocoChipPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chocoChipPurchaseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chocoChipPurchaseActionPerformed
+
+    private void cookiesNCreamPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cookiesNCreamPurchaseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cookiesNCreamPurchaseActionPerformed
+
+    private void whiteMochaPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_whiteMochaPurchaseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_whiteMochaPurchaseActionPerformed
+
+    private void toffeeNutPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toffeeNutPurchaseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_toffeeNutPurchaseActionPerformed
+
+    private void darkChocoPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_darkChocoPurchaseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_darkChocoPurchaseActionPerformed
+
+    private void painAuChocolatPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_painAuChocolatPurchaseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_painAuChocolatPurchaseActionPerformed
+
+    private void macaronPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_macaronPurchaseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_macaronPurchaseActionPerformed
+
+    private void blueberryCheesecakePurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blueberryCheesecakePurchaseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_blueberryCheesecakePurchaseActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2075,16 +2042,14 @@ public class coffeeshop extends javax.swing.JFrame {
     private javax.swing.JPanel americanoPanel;
     private javax.swing.JTextField americanoPrice;
     private javax.swing.JLabel americanoPriceLbl;
-    private javax.swing.JCheckBox americanoPurchaseCheckBox;
-    private javax.swing.JLabel americanoPurchaseLbl;
+    private javax.swing.JButton americanoPurchase;
     private javax.swing.JLabel americanoQtyLbl;
     private javax.swing.JLabel americanoSizeLbl;
     private javax.swing.JLabel blueberryCheesecakeHeader;
     private javax.swing.JPanel blueberryCheesecakePanel;
     private javax.swing.JTextField blueberryCheesecakePrice;
     private javax.swing.JLabel blueberryCheesecakePriceLbl;
-    private javax.swing.JCheckBox blueberryCheesecakePurchaseCheckBox;
-    private javax.swing.JLabel blueberryCheesecakePurchaseLbl;
+    private javax.swing.JButton blueberryCheesecakePurchase;
     private javax.swing.JLabel blueberryCheesecakeQtyLbl;
     private javax.swing.JButton btnDeleteItem;
     private javax.swing.JButton btnDisplayInvoice;
@@ -2094,8 +2059,7 @@ public class coffeeshop extends javax.swing.JFrame {
     private javax.swing.JPanel cappucinoPanel;
     private javax.swing.JTextField cappucinoPrice;
     private javax.swing.JLabel cappucinoPriceLbl;
-    private javax.swing.JCheckBox cappucinoPurchaseCheckBox;
-    private javax.swing.JLabel cappucinoPurchaseLbl;
+    private javax.swing.JButton cappucinoPurchase;
     private javax.swing.JLabel cappucinoQtyLbl;
     private javax.swing.JLabel cappucinoSizeLbl;
     private javax.swing.JLabel cashLbl;
@@ -2107,8 +2071,7 @@ public class coffeeshop extends javax.swing.JFrame {
     private javax.swing.JPanel chocoChipPanel;
     private javax.swing.JTextField chocoChipPrice;
     private javax.swing.JLabel chocoChipPriceLbl;
-    private javax.swing.JCheckBox chocoChipPurchaseCheckBox;
-    private javax.swing.JLabel chocoChipPurchaseLbl;
+    private javax.swing.JButton chocoChipPurchase;
     private javax.swing.JLabel chocoChipQtyLbl;
     private javax.swing.JLabel chocoChipSizeLbl;
     private javax.swing.JLabel coffeeLbl;
@@ -2117,8 +2080,7 @@ public class coffeeshop extends javax.swing.JFrame {
     private javax.swing.JPanel cookiesNCreamPanel;
     private javax.swing.JTextField cookiesNCreamPrice;
     private javax.swing.JLabel cookiesNCreamPriceLbl;
-    private javax.swing.JCheckBox cookiesNCreamPurchaseCheckBox;
-    private javax.swing.JLabel cookiesNCreamPurchaseLbl;
+    private javax.swing.JButton cookiesNCreamPurchase;
     private javax.swing.JLabel cookiesNCreamQtyLbl;
     private javax.swing.JLabel cookiesNCreamSizeLbl;
     private javax.swing.JPanel customerOptions;
@@ -2127,8 +2089,7 @@ public class coffeeshop extends javax.swing.JFrame {
     private javax.swing.JPanel darkChocoPanel;
     private javax.swing.JTextField darkChocoPrice;
     private javax.swing.JLabel darkChocoPriceLbl;
-    private javax.swing.JCheckBox darkChocoPurchaseCheckBox;
-    private javax.swing.JLabel darkChocoPurchaseLbl;
+    private javax.swing.JButton darkChocoPurchase;
     private javax.swing.JLabel darkChocoQtyLbl;
     private javax.swing.JLabel darkChocoSizeLbl;
     private javax.swing.JLabel frappeLbl;
@@ -2137,8 +2098,7 @@ public class coffeeshop extends javax.swing.JFrame {
     private javax.swing.JPanel hazelnutPanel;
     private javax.swing.JTextField hazelnutPrice;
     private javax.swing.JLabel hazelnutPriceLbl;
-    private javax.swing.JCheckBox hazelnutPurchaseCheckBox;
-    private javax.swing.JLabel hazelnutPurchaseLbl;
+    private javax.swing.JButton hazelnutPurchase;
     private javax.swing.JLabel hazelnutQtyLbl;
     private javax.swing.JLabel hazelnutSizeLbl;
     private javax.swing.JLabel iceBlendedLbl;
@@ -2165,8 +2125,7 @@ public class coffeeshop extends javax.swing.JFrame {
     private javax.swing.JPanel lattePanel;
     private javax.swing.JTextField lattePrice;
     private javax.swing.JLabel lattePriceLbl;
-    private javax.swing.JCheckBox lattePurchaseCheckBox;
-    private javax.swing.JLabel lattePurchaseLbl;
+    private javax.swing.JButton lattePurchase;
     private javax.swing.JLabel latteQtyLbl;
     private javax.swing.JLabel latteSizeLbl;
     private javax.swing.JRadioButton lgAmericano;
@@ -2182,8 +2141,7 @@ public class coffeeshop extends javax.swing.JFrame {
     private javax.swing.JPanel macaronPanel;
     private javax.swing.JTextField macaronPrice;
     private javax.swing.JLabel macaronPriceLbl;
-    private javax.swing.JCheckBox macaronPurchaseCheckBox;
-    private javax.swing.JLabel macaronPurchaseLbl;
+    private javax.swing.JButton macaronPurchase;
     private javax.swing.JLabel macaronQtyLbl;
     private javax.swing.JRadioButton mdAmericano;
     private javax.swing.JRadioButton mdCappucino;
@@ -2202,8 +2160,7 @@ public class coffeeshop extends javax.swing.JFrame {
     private javax.swing.JPanel painAuChocolatPanel;
     private javax.swing.JTextField painAuChocolatPrice;
     private javax.swing.JLabel painAuChocolatPriceLbl;
-    private javax.swing.JCheckBox painAuChocolatPurchaseCheckBox;
-    private javax.swing.JLabel painAuChocolatPurchaseLbl;
+    private javax.swing.JButton painAuChocolatPurchase;
     private javax.swing.JLabel painAuChocolatQtyLbl;
     private javax.swing.JLabel pastryLbl;
     private javax.swing.JPanel paymentPanel;
@@ -2227,8 +2184,7 @@ public class coffeeshop extends javax.swing.JFrame {
     private javax.swing.JPanel toffeeNutPanel;
     private javax.swing.JTextField toffeeNutPrice;
     private javax.swing.JLabel toffeeNutPriceLbl;
-    private javax.swing.JCheckBox toffeeNutPurchaseCheckBox;
-    private javax.swing.JLabel toffeeNutPurchaseLbl;
+    private javax.swing.JButton toffeeNutPurchase;
     private javax.swing.JLabel toffeeNutQtyLbl;
     private javax.swing.JLabel toffeeNutSizeLbl;
     private javax.swing.JLabel totalLbl;
@@ -2238,8 +2194,7 @@ public class coffeeshop extends javax.swing.JFrame {
     private javax.swing.JPanel whiteMochaPanel;
     private javax.swing.JTextField whiteMochaPrice;
     private javax.swing.JLabel whiteMochaPriceLbl;
-    private javax.swing.JCheckBox whiteMochaPurchaseCheckBox;
-    private javax.swing.JLabel whiteMochaPurchaseLbl;
+    private javax.swing.JButton whiteMochaPurchase;
     private javax.swing.JLabel whiteMochaQtyLbl;
     private javax.swing.JLabel whiteMochaSizeLbl;
     // End of variables declaration//GEN-END:variables
