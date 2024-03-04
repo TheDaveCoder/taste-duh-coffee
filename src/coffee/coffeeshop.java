@@ -2165,7 +2165,7 @@ public class coffeeshop extends javax.swing.JFrame {
             Object[] addRow = {itemID, prodName, quantity, sizeName, unitPrice, amount};
             DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
             
-            Sale saleAmericano = new Sale(invoiceID, itemID, sizeName, unitPrice, quantity, amount);
+            Sale saleAmericano = new Sale(invoiceID, itemID, prodName, sizeName, unitPrice, quantity, amount);
    
             if(tblModel.getRowCount() == 0) {
                 tblModel.addRow(addRow);
@@ -2236,7 +2236,7 @@ public class coffeeshop extends javax.swing.JFrame {
             Object[] addRow = {itemID, prodName, quantity, sizeName, unitPrice, amount};
             DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
             
-            Sale saleCappucino = new Sale(invoiceID, itemID, sizeName, unitPrice, quantity, amount);
+            Sale saleCappucino = new Sale(invoiceID, itemID, prodName, sizeName, unitPrice, quantity, amount);
             
             if(tblModel.getRowCount() == 0) {
                 tblModel.addRow(addRow);
@@ -2307,7 +2307,7 @@ public class coffeeshop extends javax.swing.JFrame {
             Object[] addRow = {itemID, prodName, quantity, sizeName, unitPrice, amount};
             DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
             
-            Sale saleLatte = new Sale(invoiceID, itemID, sizeName, unitPrice, quantity, amount);
+            Sale saleLatte = new Sale(invoiceID, itemID, prodName, sizeName, unitPrice, quantity, amount);
             
             if(tblModel.getRowCount() == 0) {
                 tblModel.addRow(addRow);
@@ -2378,7 +2378,7 @@ public class coffeeshop extends javax.swing.JFrame {
             Object[] addRow = {itemID, prodName, quantity, sizeName, unitPrice, amount};
             DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
             
-            Sale saleHazelnut = new Sale(invoiceID, itemID, sizeName, unitPrice, quantity, amount);
+            Sale saleHazelnut = new Sale(invoiceID, itemID, prodName, sizeName, unitPrice, quantity, amount);
             
             if(tblModel.getRowCount() == 0) {
                 tblModel.addRow(addRow);
@@ -2449,7 +2449,7 @@ public class coffeeshop extends javax.swing.JFrame {
             Object[] addRow = {itemID, prodName, quantity, sizeName, unitPrice, amount};
             DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
             
-            Sale saleChocoChip = new Sale(invoiceID, itemID, sizeName, unitPrice, quantity, amount);
+            Sale saleChocoChip = new Sale(invoiceID, itemID, prodName, sizeName, unitPrice, quantity, amount);
             
             if(tblModel.getRowCount() == 0) {
                 tblModel.addRow(addRow);
@@ -2520,7 +2520,7 @@ public class coffeeshop extends javax.swing.JFrame {
             Object[] addRow = {itemID, prodName, quantity, sizeName, unitPrice, amount};
             DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
             
-            Sale saleCookiesNCream = new Sale(invoiceID, itemID, sizeName, unitPrice, quantity, amount);
+            Sale saleCookiesNCream = new Sale(invoiceID, itemID, prodName, sizeName, unitPrice, quantity, amount);
             
             if(tblModel.getRowCount() == 0) {
                 tblModel.addRow(addRow);
@@ -2591,7 +2591,7 @@ public class coffeeshop extends javax.swing.JFrame {
             Object[] addRow = {itemID, prodName, quantity, sizeName, unitPrice, amount};
             DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
             
-            Sale saleWhiteMocha = new Sale(invoiceID, itemID, sizeName, unitPrice, quantity, amount);
+            Sale saleWhiteMocha = new Sale(invoiceID, itemID, prodName, sizeName, unitPrice, quantity, amount);
             
             if(tblModel.getRowCount() == 0) {
                 tblModel.addRow(addRow);
@@ -2662,7 +2662,7 @@ public class coffeeshop extends javax.swing.JFrame {
             Object[] addRow = {itemID, prodName, quantity, sizeName, unitPrice, amount};
             DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
             
-            Sale saleToffeeNut = new Sale(invoiceID, itemID, sizeName, unitPrice, quantity, amount);
+            Sale saleToffeeNut = new Sale(invoiceID, itemID, prodName, sizeName, unitPrice, quantity, amount);
             
             if(tblModel.getRowCount() == 0) {
                 tblModel.addRow(addRow);
@@ -2733,7 +2733,7 @@ public class coffeeshop extends javax.swing.JFrame {
             Object[] addRow = {itemID, prodName, quantity, sizeName, unitPrice, amount};
             DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
             
-            Sale saleDarkChoco = new Sale(invoiceID, itemID, sizeName, unitPrice, quantity, amount);
+            Sale saleDarkChoco = new Sale(invoiceID, itemID, prodName, sizeName, unitPrice, quantity, amount);
             
             if(tblModel.getRowCount() == 0) {
                 tblModel.addRow(addRow);
@@ -2786,7 +2786,7 @@ public class coffeeshop extends javax.swing.JFrame {
         
         DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
         
-        Sale salePainAuChocolat = new Sale(invoiceID, itemID, sizeName, unitPrice, quantity, amount);
+        Sale salePainAuChocolat = new Sale(invoiceID, itemID, prodName, sizeName, unitPrice, quantity, amount);
             
         if(tblModel.getRowCount() == 0) {
             tblModel.addRow(addRow);
@@ -2836,7 +2836,7 @@ public class coffeeshop extends javax.swing.JFrame {
         
         DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
         
-        Sale saleMacaron = new Sale(invoiceID, itemID, sizeName, unitPrice, quantity, amount);
+        Sale saleMacaron = new Sale(invoiceID, itemID, prodName, sizeName, unitPrice, quantity, amount);
             
         if(tblModel.getRowCount() == 0) {
             tblModel.addRow(addRow);
@@ -2886,7 +2886,7 @@ public class coffeeshop extends javax.swing.JFrame {
         
         DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
         
-        Sale saleBlueberryCheesecake = new Sale(invoiceID, itemID, sizeName, unitPrice, quantity, amount);
+        Sale saleBlueberryCheesecake = new Sale(invoiceID, itemID, prodName, sizeName, unitPrice, quantity, amount);
             
         if(tblModel.getRowCount() == 0) {
             tblModel.addRow(addRow);
@@ -2932,7 +2932,7 @@ public class coffeeshop extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
 //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -2951,9 +2951,7 @@ public class coffeeshop extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(coffeeshop.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        
-        
-        
+    }
         /* Create and display the form */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
