@@ -78,10 +78,7 @@ public class history extends javax.swing.JFrame {
 
         HistoryTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
                 "ID", "Date", "Cashier ID", "SubTotal", "Total"

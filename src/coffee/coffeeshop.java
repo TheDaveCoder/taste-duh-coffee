@@ -2001,7 +2001,41 @@ public class coffeeshop extends javax.swing.JFrame {
                     sale.setInvoiceID(invoiceNum);
                 }
                 OrderManager.recordSale(sales);
-
+                
+                
+                // Display Invoice
+                String time = "8:52:22 PM";
+                String date = "Thursday, 21-07-2022";
+                int purchaseID = 1;
+                String filler = " ";
+                Object[][] prod = {
+                    {"Cold Coffee", 1, 6.0, 6.0},
+                    {"Cappuccino Coffee", 2, 15.0, 30.0},
+                    {"Fruits Cake", 3, 24.0, 72.0}
+                };
+                tax = 15.0;
+                subTotal = 225.8;
+                total = 240.8;
+                
+                String textArea = String.format("***********************Taste The Coffee**********************\n"
+                                                + "Time: %s\t  Date: %s\n"
+                                                + "Purchase ID: %d\n"
+                                                + "**************************************************\n"
+                                                + "Item Name:             \tQty\tPrice($)\tAmount\n"
+                                                + "1. %-20s\t%-3d\t%-8.2f\t%-6.2f\n"
+                                                + "2. %-20s\t%-3d\t%-8.2f\t%-6.2f\n"
+                                                + "3. %-20s\t%-3d\t%-8.2f\t%-6.2f\n"
+                                                + "**************************************************\n"
+                                                + "Tax: %.2f\n"
+                                                + "Sub Total: %.2f\n"
+                                                + "Total: %.2f\n"
+                                                + "**************************************************\n"
+                                                , time, date, purchaseID
+                                                , prod[0][0], prod[0][1], prod[0][2], prod[0][3]
+                                                , prod[1][0], prod[1][1], prod[1][2], prod[1][3]
+                                                , prod[2][0], prod[2][1], prod[2][2], prod[2][3]
+                                                , tax, subTotal, total); 
+                                        invoiceTextArea.setText(textArea);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Not enough cash!");
@@ -2955,7 +2989,7 @@ public class coffeeshop extends javax.swing.JFrame {
         
         
         /* Create and display the form */
-
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup americano;
     private javax.swing.JLabel americanoHeader;
