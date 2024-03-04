@@ -26,14 +26,13 @@ public class OrderManager {
     public static void recordSale(ArrayList<Sale> orders) {
         try {
             Connection sqlConnection = DBManager.getConnection();
-            PreparedStatement sqlStatement = sqlConnection.prepareStatement("INSERT INTO Sales VALUES (?, ?, ?, ?, ?, ?)");
+            PreparedStatement sqlStatement = sqlConnection.prepareStatement("INSERT INTO Sales VALUES (?, ?, ?, ?, ?)");
             for(int i = 0; i < orders.size(); i ++) {
                 sqlStatement.setInt(1, orders.get(i).getInvoiceID());
-                sqlStatement.setString(2, orders.get(i).getProductName());
-                sqlStatement.setString(3, orders.get(i).getSizeName());
-                sqlStatement.setDouble(4, orders.get(i).getUnitPrice());
-                sqlStatement.setInt(5, orders.get(i).getQuantity());
-                sqlStatement.setDouble(6, orders.get(i).getAmount());
+                sqlStatement.setString(2, orders.get(i).getSizeName());
+                sqlStatement.setDouble(3, orders.get(i).getUnitPrice());
+                sqlStatement.setInt(4, orders.get(i).getQuantity());
+                sqlStatement.setDouble(5, orders.get(i).getAmount());
                 sqlStatement.addBatch();
             }
             sqlStatement.executeBatch();
@@ -68,30 +67,6 @@ public class OrderManager {
         }
     }
 
-    public static ArrayList<Sale> getSales(int invoiceID) {
-        try {
-            Connection sqlConnection = DBManager.getConnection();
-            PreparedStatement sqlStatement = sqlConnection.prepareStatement("SELECT * FROM Sales WHERE invoice_id = ?;");
-            sqlStatement.setInt(1, invoiceID);
-            ResultSet resultSet = sqlStatement.executeQuery();
-            ArrayList<Sale> sales = new ArrayList<>();
-            while(resultSet.next()) {
-                sales.add(new Sale(resultSet.getInt(1),
-                        1,
-                        resultSet.getString(2),
-                        resultSet.getString(3),
-                        resultSet.getDouble(4),
-                        resultSet.getInt(5),
-                        resultSet.getDouble(6)
-                        ));
-            }
-            return sales;
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
     public static Invoice getInvoiceLatest() {
         try {
             Connection sqlConnection = DBManager.getConnection();
@@ -116,9 +91,32 @@ public class OrderManager {
         }
     }
 
+    public static Invoice getInvoiceByID(int invoiceID) {
+        try {
+            Connection sqlConnection = DBManager.getConnection();
+            PreparedStatement sqlStatement = sqlConnection.prepareStatement("SELECT Invoice.invoice_id, Invoice.invoice_date, Invoice.cashier_id, " +
+                    "Cashier_Accounts.cashier_lname, Invoice.subtotal, Invoice.total_amount " +
+                    "FROM Invoice " +
+                    "INNER JOIN Cashier_Accounts " +
+                    "ON Invoice.cashier_id = Cashier_Accounts.cashier_id " +
+                    "WHERE Invoice.invoice_id = ?;");
+            sqlStatement.setInt(1, invoiceID);
+            ResultSet resultSet = sqlStatement.executeQuery();
+            resultSet.next();
+            return new Invoice(resultSet.getInt(1),
+                    resultSet.getString(2),
+                    resultSet.getInt(3),
+                    resultSet.getString(4),
+                    resultSet.getDouble(5),
+                    resultSet.getDouble(6));
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public static void deleteInvoice(int invoiceID) {
         try {
-            deleteSales(invoiceID);
             Connection sqlConnection = DBManager.getConnection();
             PreparedStatement sqlStatement = sqlConnection.prepareStatement("DELETE FROM Invoice WHERE invoice_id = ?");
             sqlStatement.setInt(1, invoiceID);
@@ -128,16 +126,5 @@ public class OrderManager {
             e.printStackTrace();
         }
     }
-
-    private static void deleteSales(int invoiceID) {
-        try {
-            Connection sqlConnection = DBManager.getConnection();
-            PreparedStatement sqlStatement = sqlConnection.prepareStatement("DELETE FROM Sales WHERE invoice_id = ?");
-            sqlStatement.setInt(1, invoiceID);
-            sqlStatement.execute();
-            sqlConnection.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
 }
+
