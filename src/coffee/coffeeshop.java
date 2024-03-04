@@ -2001,7 +2001,32 @@ public class coffeeshop extends javax.swing.JFrame {
                     sale.setInvoiceID(invoiceNum);
                 }
                 OrderManager.recordSale(sales);
-
+                
+                // Display Invoice
+                String textTitle = String.format("*********************************Taste The Coffee******************************\n"
+                                               + "Time\\Date: %s\n"
+                                               + "Invoice ID: %d\n"
+                                               + "**********************************************************************************\n"
+                                               + "Item Name:             \tQty\tPrice($)\tAmount\n"
+                                               , currentTime, invoiceNum);
+                
+                String textItems = "";
+                for(int i = 0; i < sales.size(); i++) {
+                    textItems += String.format("%d. %-20s\t%-3d\t%-8.2f\t%-6.2f\n"
+                                              , i+1
+                                              , sales.get(i).getProductName()
+                                              , sales.get(i).getQuantity()
+                                              , sales.get(i).getUnitPrice()
+                                              , sales.get(i).getAmount());
+                } 
+                
+                String textTotal = String.format("**********************************************************************************\n"
+                                               + "Tax: %.2f\n"
+                                               + "Sub Total: %.2f\n"
+                                               + "Total: %.2f\n"
+                                               + "**********************************************************************************\n"
+                                               , tax, subTotal, total);
+                invoiceTextArea.setText(textTitle + textItems + textTotal);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Not enough cash!");
@@ -2085,6 +2110,16 @@ public class coffeeshop extends javax.swing.JFrame {
             int currentProdID = Integer.parseInt(orderListTbl.getValueAt(orderListTbl.getSelectedRow(), 0).toString());
             sales.removeIf(sales -> sales.getitemID() == currentProdID);
             tblModel.removeRow(orderListTbl.getSelectedRow());
+            
+            subTotal = 0.0;
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            subTotalTextFld.setText(String.valueOf(subTotal));           
+            tax = 0.12 * subTotal;
+            total = subTotal + tax;
+            taxTextFld.setText(String.valueOf(Math.round(tax * 100.0) / 100.0));
+            totalTextFld.setText(String.valueOf(Math.round(total * 100.0) / 100.0));
         } else {
             if(orderListTbl.getRowCount() == 0) {
                 JOptionPane.showMessageDialog(this, "Order is empty!");
