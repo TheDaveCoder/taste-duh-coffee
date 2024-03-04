@@ -1,18 +1,13 @@
 import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
 import Services.AccountManager;
 import coffee.coffeeshop;
 
 import java.awt.Color;
-import javax.swing.JLabel;
 import java.awt.Font;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.sql.Connection;
@@ -155,18 +150,15 @@ public class Final extends JFrame {
 		login.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				 	String username = user_input.getText();
-				 	String password = pass_input.getText();	          
-
-	               
+				 	String password = pass_input.getText();
 	                if(AccountManager.checkForMatch(username, password.toString())) {
 			            System.out.println("account already exists!");
-			            
 			            frame.setVisible(false);
-			            coffeeshop coffee = new coffeeshop();
+			            coffeeshop coffee = new coffeeshop(AccountManager.getUserByUsername(username));
 			            coffee.setVisible(true);
 			            } 
 	                else {
-			            System.out.println("account doesn't exist!");
+						JOptionPane.showMessageDialog(null, "Incorrect username or password!");
 			        }
        
 				login_panel.repaint();
@@ -216,24 +208,14 @@ public class Final extends JFrame {
 		    	String lastname = reg_lastname_input.getText();
 		        String username = reg_user_input.getText();
 		        String password = reg_password_input.getText();
-		       
-		        
-		       AccountManager.recordNewUser(lastname, username, password);
-		       System.out.println(password);
-		        login_panel.setVisible(true);
-		        Register_panel.setVisible(false);
+				AccountManager.recordNewUser(lastname, username, password);
+				System.out.println(password);
+				login_panel.setVisible(true);
+				Register_panel.setVisible(false);
 		    }
 		});
-		
-		
-
-		
 		pass_input = new JPasswordField();
 		pass_input.setBounds(37, 317, 323, 25);
 		login_panel.add(pass_input);
-		
-		
-		
-		
 	}
 }
