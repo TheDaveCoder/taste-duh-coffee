@@ -43,7 +43,7 @@ public class coffeeshop extends javax.swing.JFrame {
         initComponents();
         this.operatingCashier = operatingCashier;
     }
-    
+  
     public void resetToZero(){
         americano.clearSelection();
         jSpinnerAmericano.setValue(1);
@@ -242,7 +242,6 @@ public class coffeeshop extends javax.swing.JFrame {
         customerOptions = new javax.swing.JPanel();
         jButtonPay = new javax.swing.JButton();
         jButtonReset = new javax.swing.JButton();
-        jButtonRemove = new javax.swing.JButton();
         paymentPanel = new javax.swing.JPanel();
         cashLbl = new javax.swing.JLabel();
         cashTextFld = new javax.swing.JTextField();
@@ -1608,27 +1607,15 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
-        jButtonRemove.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonRemove.setText("Remove");
-        jButtonRemove.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRemoveActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout customerOptionsLayout = new javax.swing.GroupLayout(customerOptions);
         customerOptions.setLayout(customerOptionsLayout);
         customerOptionsLayout.setHorizontalGroup(
             customerOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(customerOptionsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButtonReset, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                .addComponent(jButtonRemove, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, customerOptionsLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButtonPay, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(123, Short.MAX_VALUE)
+                .addGroup(customerOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonReset, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonPay, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(120, 120, 120))
         );
         customerOptionsLayout.setVerticalGroup(
@@ -1637,9 +1624,7 @@ public class coffeeshop extends javax.swing.JFrame {
                 .addGap(52, 52, 52)
                 .addComponent(jButtonPay, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(customerOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonReset, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonRemove, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jButtonReset, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1820,7 +1805,7 @@ public class coffeeshop extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(invoicePanel)
                     .addComponent(customerOptions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 29, Short.MAX_VALUE))
+                .addGap(0, 12, Short.MAX_VALUE))
             .addComponent(shopNamePnl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -2033,17 +2018,6 @@ public class coffeeshop extends javax.swing.JFrame {
             resetToZero(); 
         }              
     }//GEN-LAST:event_jButtonResetActionPerformed
-
-    private void jButtonRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRemoveActionPerformed
-        // TODO add your handling code here:
-        int response = JOptionPane.showConfirmDialog(this,
-            "Are you sure?",
-            "Remove",
-            JOptionPane.YES_NO_OPTION);
-            
-        if(response == JOptionPane.YES_OPTION) {
-        }
-    }//GEN-LAST:event_jButtonRemoveActionPerformed
 
     private void americanoPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_americanoPriceActionPerformed
      
@@ -2981,7 +2955,6 @@ public class coffeeshop extends javax.swing.JFrame {
         
         
         /* Create and display the form */
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup americano;
@@ -3052,7 +3025,6 @@ public class coffeeshop extends javax.swing.JFrame {
     private javax.swing.JScrollPane invoicePanel;
     private javax.swing.JTextArea invoiceTextArea;
     private javax.swing.JButton jButtonPay;
-    private javax.swing.JButton jButtonRemove;
     private javax.swing.JButton jButtonReset;
     private javax.swing.JSpinner jSpinnerAmericano;
     private javax.swing.JSpinner jSpinnerBlueberryCheesecake;

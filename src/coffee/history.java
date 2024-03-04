@@ -5,17 +5,34 @@
  */
 package coffee;
 
+import Models.Invoice;
+import Services.OrderManager;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author barri
  */
 public class history extends javax.swing.JFrame {
-
+    ArrayList<Invoice> invoices  = OrderManager.getInvoiceAll();
+    
     /**
      * Creates new form history
      */
     public history() {
         initComponents();
+        DefaultTableModel tblModel = (DefaultTableModel) HistoryTbl.getModel();
+        for(Invoice invoice : invoices) {
+            String invoiceDate = invoice.getInvoiceDate();
+            int cashierID = invoice.getCashierID();
+            double subTotal = invoice.getSubtotal();
+            double totalAmount = invoice.getTotalAmount();
+            
+            Object[] addRow = {invoiceDate, cashierID, subTotal, totalAmount};
+            
+            tblModel.addRow(addRow);
+        }
     }
 
     /**
@@ -67,10 +84,25 @@ public class history extends javax.swing.JFrame {
                 {null, null, null, null, null}
             },
             new String [] {
-                "ID", "Product Name", "Quantity", "Size", "Price"
+                "ID", "Date", "Cashier ID", "SubTotal", "Total"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         histroyTblPnl.setViewportView(HistoryTbl);
+        if (HistoryTbl.getColumnModel().getColumnCount() > 0) {
+            HistoryTbl.getColumnModel().getColumn(0).setResizable(false);
+            HistoryTbl.getColumnModel().getColumn(1).setResizable(false);
+            HistoryTbl.getColumnModel().getColumn(2).setResizable(false);
+            HistoryTbl.getColumnModel().getColumn(3).setResizable(false);
+            HistoryTbl.getColumnModel().getColumn(4).setResizable(false);
+        }
 
         invoiceTextArea.setEditable(false);
         invoiceTextArea.setColumns(20);
