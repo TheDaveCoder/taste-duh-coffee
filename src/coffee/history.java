@@ -96,6 +96,11 @@ public class history extends javax.swing.JFrame {
             }
         });
         HistoryTbl.getTableHeader().setReorderingAllowed(false);
+        HistoryTbl.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                HistoryTblMouseClicked(evt);
+            }
+        });
         histroyTblPnl.setViewportView(HistoryTbl);
         if (HistoryTbl.getColumnModel().getColumnCount() > 0) {
             HistoryTbl.getColumnModel().getColumn(0).setResizable(false);
@@ -166,6 +171,13 @@ public class history extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_btnDeleteActionPerformed
+
+    
+    
+    private void HistoryTblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HistoryTblMouseClicked
+        // TODO add your handling code here:
+        System.out.println("Clicked!!!");
+    }//GEN-LAST:event_HistoryTblMouseClicked
 
     /**
      * @param args the command line arguments
