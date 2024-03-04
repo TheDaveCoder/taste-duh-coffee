@@ -83,5 +83,8 @@ public class TestClass {
         saleExamp.setAmount(5);
         System.out.println(saleExamp.getQuantity());
         System.out.println(saleExamp.getAmount());
+
+        // Delete Invoice
+        OrderManager.deleteInvoice(11);
     }
 }

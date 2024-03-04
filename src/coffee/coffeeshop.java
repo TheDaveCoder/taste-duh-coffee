@@ -5,7 +5,10 @@
  */
 package coffee;
 
+import Models.Cashier;
+import Models.Invoice;
 import Models.Sale;
+import Services.AccountManager;
 import Services.OrderManager;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
@@ -23,6 +26,7 @@ import javax.swing.table.DefaultTableModel;
 public class coffeeshop extends javax.swing.JFrame {
     // Initial declarations
     ArrayList<Sale> sales = new ArrayList<>();
+    private Cashier operatingCashier;
     private int itemID = 1;
     private int invoiceID = 1;
     private int cashierID = 1;
@@ -35,10 +39,11 @@ public class coffeeshop extends javax.swing.JFrame {
     /**
      * Creates new form coffeeshop
      */
-    public coffeeshop() {
+    public coffeeshop(Cashier operatingCashier) {
         initComponents();
+        this.operatingCashier = operatingCashier;
     }
-
+  
     public void resetToZero(){
         americano.clearSelection();
         jSpinnerAmericano.setValue(1);
@@ -1960,7 +1965,7 @@ public class coffeeshop extends javax.swing.JFrame {
             , subTotal = 0.0
             , tax = 0.0
             , change = 0.0;
-        
+
         cash = Double.parseDouble(cashTextFld.getText());
         
         if(cash > total) {
@@ -1990,7 +1995,13 @@ public class coffeeshop extends javax.swing.JFrame {
                 Date currDate = new Date();
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 String currentTime = sdf.format(currDate);
-                OrderManager.recordInvoice(currentTime, 3, 204.5, 250.75);
+                OrderManager.recordInvoice(currentTime, operatingCashier.getId(), subTotal, total);
+                int invoiceNum = OrderManager.getInvoiceLatest().getInvoiceID();
+                for(Sale sale : sales) {
+                    sale.setInvoiceID(invoiceNum);
+                }
+                OrderManager.recordSale(sales);
+
             }
         } else {
             JOptionPane.showMessageDialog(this, "Not enough cash!");
@@ -2944,15 +2955,6 @@ public class coffeeshop extends javax.swing.JFrame {
         
         
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                coffeeshop coffeeshop = new coffeeshop();
-                coffeeshop.setExtendedState(JFrame.MAXIMIZED_BOTH);
-                coffeeshop.setVisible(true);
-                
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup americano;

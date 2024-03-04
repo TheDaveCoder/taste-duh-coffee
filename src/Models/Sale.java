@@ -43,4 +43,5 @@ public class Sale {
     public void setAmount(double amount) {
         this.amount = amount;
     }
+    public void setInvoiceID(int invoiceID) { this.invoiceID = invoiceID; }
 }

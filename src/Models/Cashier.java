@@ -10,6 +10,7 @@ public class Cashier {
         this.username = username;
         this.password = password;
     }
+    public int getId() { return id; }
     public String getUsername() {
         return username;
     }
