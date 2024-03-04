@@ -10,6 +10,7 @@ public class Sale {
 
     public Sale(int invoiceID, int itemID, String sizeName, Double unitPrice, int quantity, Double amount) {
         this.invoiceID = invoiceID;
+        this.itemID = itemID;
         this.sizeName = sizeName;
         this.unitPrice = unitPrice;
         this.quantity = quantity;
