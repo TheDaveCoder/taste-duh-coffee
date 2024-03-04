@@ -5,9 +5,13 @@
  */
 package coffee;
 
+import Models.Sale;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.Date;
     import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 
 /**
@@ -15,7 +19,13 @@ import java.util.Date;
  * @author barri
  */
 public class coffeeshop extends javax.swing.JFrame {
-
+    // Initial declarations
+    ArrayList<Sale> sales = new ArrayList<>();
+    private int productID = 0;
+    private int invoiceID = 1;
+    private int cashierID = 1;
+    private double subTotal = 0.0;
+    
     /**
      * Creates new form coffeeshop
      */
@@ -30,12 +40,51 @@ public class coffeeshop extends javax.swing.JFrame {
 
     
     public void resetToZero(){
-        jSpinnerAmericano.setValue(0);
-        jSpinnerCappucino.setValue(0);
-        jSpinnerLatte.setValue(0);
+        americano.clearSelection();
+        jSpinnerAmericano.setValue(1);
+        americanoPrice.setText("");
+               
+        cappucino.clearSelection();
+        jSpinnerCappucino.setValue(1);
+        cappucinoPrice.setText("");
+        
+        latte.clearSelection();
+        jSpinnerLatte.setValue(1);
+        lattePrice.setText("");
+        
+        hazelnut.clearSelection();
+        jSpinnerHazelnut.setValue(1);
+        hazelnutPrice.setText("");
+        
+        chocoChip.clearSelection();
+        jSpinnerChocoChip.setValue(1);
+        chocoChipPrice.setText("");
+        
+        cookiesNCream.clearSelection();
+        jSpinnerCookiesNCream.setValue(1);
+        cookiesNCreamPrice.setText("");
+        
+        whiteMocha.clearSelection();
+        jSpinnerWhiteMocha.setValue(1);
+        whiteMochaPrice.setText("");
+        
+        toffeeNut.clearSelection();
+        jSpinnerToffeeNut.setValue(1);
+        toffeeNutPrice.setText("");
+        
+        darkChoco.clearSelection();
+        jSpinnerDarkChoco.setValue(1);
+        darkChocoPrice.setText("");
+        
+        jSpinnerPainAuChocolat.setValue(1);
+        jSpinnerMacaron.setValue(1);    
+        jSpinnerBlueberryCheesecake.setValue(1);
+        
+        cashTextFld.setText("0.0");
         subTotalTextFld.setText("0.0");
         taxTextFld.setText("0.0");
         totalTextFld.setText("0.0");
+        changeTextFld.setText("0.0");
     }
     
    
@@ -257,7 +306,6 @@ public class coffeeshop extends javax.swing.JFrame {
         americanoSizeLbl.setText("Size:");
 
         americanoPrice.setEditable(false);
-        americanoPrice.setText("80");
         americanoPrice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 americanoPriceActionPerformed(evt);
@@ -358,6 +406,8 @@ public class coffeeshop extends javax.swing.JFrame {
 
         cappucinoPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jSpinnerCappucino.setValue(1);
+
         cappucinoPriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         cappucinoPriceLbl.setText("Price:");
 
@@ -368,7 +418,6 @@ public class coffeeshop extends javax.swing.JFrame {
         cappucinoSizeLbl.setText("Size:");
 
         cappucinoPrice.setEditable(false);
-        cappucinoPrice.setText("85");
 
         cappucino.add(mdCappucino);
         mdCappucino.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
@@ -465,6 +514,8 @@ public class coffeeshop extends javax.swing.JFrame {
 
         lattePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jSpinnerLatte.setValue(1);
+
         lattePriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         lattePriceLbl.setText("Price:");
 
@@ -475,7 +526,6 @@ public class coffeeshop extends javax.swing.JFrame {
         latteSizeLbl.setText("Size:");
 
         lattePrice.setEditable(false);
-        lattePrice.setText("85");
         lattePrice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lattePriceActionPerformed(evt);
@@ -581,6 +631,8 @@ public class coffeeshop extends javax.swing.JFrame {
 
         hazelnutPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jSpinnerHazelnut.setValue(1);
+
         hazelnutPriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         hazelnutPriceLbl.setText("Price:");
 
@@ -591,7 +643,11 @@ public class coffeeshop extends javax.swing.JFrame {
         hazelnutSizeLbl.setText("Size:");
 
         hazelnutPrice.setEditable(false);
-        hazelnutPrice.setText("90");
+        hazelnutPrice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hazelnutPriceActionPerformed(evt);
+            }
+        });
 
         hazelnut.add(mdHazelnut);
         mdHazelnut.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
@@ -688,6 +744,8 @@ public class coffeeshop extends javax.swing.JFrame {
 
         chocoChipPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jSpinnerChocoChip.setValue(1);
+
         chocoChipPriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         chocoChipPriceLbl.setText("Price:");
 
@@ -698,7 +756,6 @@ public class coffeeshop extends javax.swing.JFrame {
         chocoChipSizeLbl.setText("Size:");
 
         chocoChipPrice.setEditable(false);
-        chocoChipPrice.setText("100");
         chocoChipPrice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chocoChipPriceActionPerformed(evt);
@@ -800,6 +857,8 @@ public class coffeeshop extends javax.swing.JFrame {
 
         cookiesNCreamPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jSpinnerCookiesNCream.setValue(1);
+
         cookiesNCreamPriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         cookiesNCreamPriceLbl.setText("Price:");
 
@@ -810,7 +869,6 @@ public class coffeeshop extends javax.swing.JFrame {
         cookiesNCreamSizeLbl.setText("Size:");
 
         cookiesNCreamPrice.setEditable(false);
-        cookiesNCreamPrice.setText("100");
 
         cookiesNCream.add(mdCookiesNCream);
         mdCookiesNCream.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
@@ -911,6 +969,8 @@ public class coffeeshop extends javax.swing.JFrame {
 
         whiteMochaPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jSpinnerWhiteMocha.setValue(1);
+
         whiteMochaPriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         whiteMochaPriceLbl.setText("Price:");
 
@@ -921,7 +981,6 @@ public class coffeeshop extends javax.swing.JFrame {
         whiteMochaSizeLbl.setText("Size:");
 
         whiteMochaPrice.setEditable(false);
-        whiteMochaPrice.setText("120");
         whiteMochaPrice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 whiteMochaPriceActionPerformed(evt);
@@ -1023,6 +1082,8 @@ public class coffeeshop extends javax.swing.JFrame {
 
         toffeeNutPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jSpinnerToffeeNut.setValue(1);
+
         toffeeNutPriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         toffeeNutPriceLbl.setText("Price:");
 
@@ -1033,7 +1094,6 @@ public class coffeeshop extends javax.swing.JFrame {
         toffeeNutSizeLbl.setText("Size:");
 
         toffeeNutPrice.setEditable(false);
-        toffeeNutPrice.setText("125");
         toffeeNutPrice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 toffeeNutPriceActionPerformed(evt);
@@ -1135,6 +1195,8 @@ public class coffeeshop extends javax.swing.JFrame {
 
         darkChocoPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jSpinnerDarkChoco.setValue(1);
+
         darkChocoPriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         darkChocoPriceLbl.setText("Price:");
 
@@ -1145,7 +1207,6 @@ public class coffeeshop extends javax.swing.JFrame {
         darkChocoSizeLbl.setText("Size:");
 
         darkChocoPrice.setEditable(false);
-        darkChocoPrice.setText("135");
 
         darkChoco.add(mdDarkChoco);
         mdDarkChoco.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
@@ -1246,6 +1307,8 @@ public class coffeeshop extends javax.swing.JFrame {
 
         painAuChocolatPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jSpinnerPainAuChocolat.setValue(1);
+
         painAuChocolatPriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         painAuChocolatPriceLbl.setText("Price:");
 
@@ -1312,6 +1375,8 @@ public class coffeeshop extends javax.swing.JFrame {
 
         macaronPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jSpinnerMacaron.setValue(1);
+
         macaronPriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         macaronPriceLbl.setText("Price:");
 
@@ -1377,6 +1442,8 @@ public class coffeeshop extends javax.swing.JFrame {
         );
 
         blueberryCheesecakePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jSpinnerBlueberryCheesecake.setValue(1);
 
         blueberryCheesecakePriceLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         blueberryCheesecakePriceLbl.setText("Price:");
@@ -1587,7 +1654,6 @@ public class coffeeshop extends javax.swing.JFrame {
         cashLbl.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         cashLbl.setText("Cash");
 
-        cashTextFld.setEditable(false);
         cashTextFld.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         cashTextFld.setText("0.0");
         cashTextFld.addActionListener(new java.awt.event.ActionListener() {
@@ -1683,16 +1749,32 @@ public class coffeeshop extends javax.swing.JFrame {
 
         orderListTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
-                "ID", "Product Name", "Quantity", "Size", "Price"
+                "ID", "Product Name", "Quantity", "Size", "Unit Price", "Amount"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        orderListTbl.getTableHeader().setReorderingAllowed(false);
         orderListPanel.setViewportView(orderListTbl);
+        if (orderListTbl.getColumnModel().getColumnCount() > 0) {
+            orderListTbl.getColumnModel().getColumn(0).setResizable(false);
+            orderListTbl.getColumnModel().getColumn(0).setPreferredWidth(50);
+            orderListTbl.getColumnModel().getColumn(1).setResizable(false);
+            orderListTbl.getColumnModel().getColumn(1).setPreferredWidth(150);
+            orderListTbl.getColumnModel().getColumn(2).setResizable(false);
+            orderListTbl.getColumnModel().getColumn(3).setResizable(false);
+            orderListTbl.getColumnModel().getColumn(4).setResizable(false);
+            orderListTbl.getColumnModel().getColumn(5).setResizable(false);
+        }
 
         invoiceTextArea.setEditable(false);
         invoiceTextArea.setColumns(20);
@@ -1733,13 +1815,13 @@ public class coffeeshop extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(paymentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(orderListPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnDeleteItem, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btnHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnDisplayInvoice, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnDisplayInvoice, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(orderListPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(invoicePanel)
@@ -1780,102 +1862,149 @@ public class coffeeshop extends javax.swing.JFrame {
 
     private void lgAmericanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lgAmericanoActionPerformed
         // TODO add your handling code here:
+        americanoPrice.setText("110");
     }//GEN-LAST:event_lgAmericanoActionPerformed
 
     private void smAmericanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smAmericanoActionPerformed
         // TODO add your handling code here:
+        americanoPrice.setText("80");
     }//GEN-LAST:event_smAmericanoActionPerformed
 
     private void mdAmericanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mdAmericanoActionPerformed
         // TODO add your handling code here:
+        americanoPrice.setText("100");
     }//GEN-LAST:event_mdAmericanoActionPerformed
 
     private void mdCappucinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mdCappucinoActionPerformed
         // TODO add your handling code here:
+        cappucinoPrice.setText("115");
     }//GEN-LAST:event_mdCappucinoActionPerformed
 
     private void smCappucinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smCappucinoActionPerformed
         // TODO add your handling code here:
+        cappucinoPrice.setText("95");
     }//GEN-LAST:event_smCappucinoActionPerformed
 
     private void lgCappucinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lgCappucinoActionPerformed
         // TODO add your handling code here:
+        cappucinoPrice.setText("125");
     }//GEN-LAST:event_lgCappucinoActionPerformed
 
     private void mdLatteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mdLatteActionPerformed
         // TODO add your handling code here:
+        lattePrice.setText("105");
     }//GEN-LAST:event_mdLatteActionPerformed
 
     private void smLatteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smLatteActionPerformed
         // TODO add your handling code here:
+        lattePrice.setText("85");
     }//GEN-LAST:event_smLatteActionPerformed
 
     private void lgLatteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lgLatteActionPerformed
         // TODO add your handling code here:
+        lattePrice.setText("115");
     }//GEN-LAST:event_lgLatteActionPerformed
 
     private void mdWhiteMochaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mdWhiteMochaActionPerformed
         // TODO add your handling code here:
+        whiteMochaPrice.setText("140");
     }//GEN-LAST:event_mdWhiteMochaActionPerformed
 
     private void smWhiteMochaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smWhiteMochaActionPerformed
         // TODO add your handling code here:
+        whiteMochaPrice.setText("120");
     }//GEN-LAST:event_smWhiteMochaActionPerformed
 
     private void lgWhiteMochaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lgWhiteMochaActionPerformed
         // TODO add your handling code here:
+        whiteMochaPrice.setText("150");
     }//GEN-LAST:event_lgWhiteMochaActionPerformed
 
     private void mdChocoChipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mdChocoChipActionPerformed
         // TODO add your handling code here:
+        chocoChipPrice.setText("130");
     }//GEN-LAST:event_mdChocoChipActionPerformed
 
     private void smChocoChipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smChocoChipActionPerformed
         // TODO add your handling code here:
+        chocoChipPrice.setText("110");
     }//GEN-LAST:event_smChocoChipActionPerformed
 
     private void lgChocoChipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lgChocoChipActionPerformed
         // TODO add your handling code here:
+        chocoChipPrice.setText("140");
     }//GEN-LAST:event_lgChocoChipActionPerformed
 
     private void mdCookiesNCreamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mdCookiesNCreamActionPerformed
         // TODO add your handling code here:
+        cookiesNCreamPrice.setText("130");
     }//GEN-LAST:event_mdCookiesNCreamActionPerformed
 
     private void smCookiesNCreamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smCookiesNCreamActionPerformed
         // TODO add your handling code here:
+        cookiesNCreamPrice.setText("110");
     }//GEN-LAST:event_smCookiesNCreamActionPerformed
 
     private void lgCookiesNCreamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lgCookiesNCreamActionPerformed
         // TODO add your handling code here:
+        cookiesNCreamPrice.setText("140");
     }//GEN-LAST:event_lgCookiesNCreamActionPerformed
 
     private void mdHazelnutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mdHazelnutActionPerformed
         // TODO add your handling code here:
+        hazelnutPrice.setText("120");
     }//GEN-LAST:event_mdHazelnutActionPerformed
 
     private void smHazelnutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smHazelnutActionPerformed
         // TODO add your handling code here:
+        hazelnutPrice.setText("100");
     }//GEN-LAST:event_smHazelnutActionPerformed
 
     private void lgHazelnutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lgHazelnutActionPerformed
         // TODO add your handling code here:
+        hazelnutPrice.setText("130");
     }//GEN-LAST:event_lgHazelnutActionPerformed
 
     private void mdToffeeNutNutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mdToffeeNutNutActionPerformed
         // TODO add your handling code here:
+        toffeeNutPrice.setText("140");
     }//GEN-LAST:event_mdToffeeNutNutActionPerformed
 
     private void smToffeeNutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smToffeeNutActionPerformed
         // TODO add your handling code here:
+        toffeeNutPrice.setText("120");
     }//GEN-LAST:event_smToffeeNutActionPerformed
 
     private void lgToffeeNutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lgToffeeNutActionPerformed
         // TODO add your handling code here:
+        toffeeNutPrice.setText("150");
     }//GEN-LAST:event_lgToffeeNutActionPerformed
 
     private void jButtonPayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPayActionPerformed
         // TODO add your handling code here:
+        Double cash = 0.0
+            , subTotal = 0.0
+            , tax = 0.0
+            , total = 0.0
+            , change = 0.0;
+        
+        cash = Double.parseDouble(cashTextFld.getText());
+        
+        if(cash > 0.0) {
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            tax = 0.12 * subTotal;
+            total = subTotal + tax;
+            change = cash - total;
+            
+            subTotalTextFld.setText(String.valueOf(subTotal));
+            taxTextFld.setText(String.valueOf(tax));
+            totalTextFld.setText(String.valueOf(total));
+            changeTextFld.setText(String.valueOf(Math.round(change * 100.0) / 100.0));
+        } else {
+            JOptionPane.showMessageDialog(this, "The cash has not been set!");
+        }
     }//GEN-LAST:event_jButtonPayActionPerformed
 
     private void jButtonReceiptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReceiptActionPerformed
@@ -1896,14 +2025,17 @@ public class coffeeshop extends javax.swing.JFrame {
 
     private void mdDarkChocoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mdDarkChocoActionPerformed
         // TODO add your handling code here:
+        darkChocoPrice.setText("140");
     }//GEN-LAST:event_mdDarkChocoActionPerformed
 
     private void smDarkChocoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smDarkChocoActionPerformed
         // TODO add your handling code here:
+        darkChocoPrice.setText("120");
     }//GEN-LAST:event_smDarkChocoActionPerformed
 
     private void lgDarkChocoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lgDarkChocoActionPerformed
         // TODO add your handling code here:
+        darkChocoPrice.setText("150");
     }//GEN-LAST:event_lgDarkChocoActionPerformed
 
     private void taxTextFldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_taxTextFldActionPerformed
@@ -1947,66 +2079,478 @@ public class coffeeshop extends javax.swing.JFrame {
 
     private void btnDeleteItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteItemActionPerformed
         // TODO add your handling code here:
+        DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
+        
+        if(orderListTbl.getSelectedRowCount() == 1) {
+            int currentProdID = Integer.parseInt(orderListTbl.getValueAt(orderListTbl.getSelectedRow(), 0).toString());
+            sales.removeIf(sales -> sales.getProductID() == currentProdID);
+            tblModel.removeRow(orderListTbl.getSelectedRow());
+        } else {
+            if(orderListTbl.getRowCount() == 0) {
+                JOptionPane.showMessageDialog(this, "Order is empty!");
+            } else {
+                JOptionPane.showMessageDialog(this, "Please select an order to be removed!");
+            }
+        }
     }//GEN-LAST:event_btnDeleteItemActionPerformed
 
     private void btnDisplayInvoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisplayInvoiceActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnDisplayInvoiceActionPerformed
 
     private void americanoPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_americanoPurchaseActionPerformed
         // TODO add your handling code here:
+        String prodName = "Americano";
+        String sizeName = "";
+        boolean isSizeSelected = false;
+        if (smAmericano.isSelected() || mdAmericano.isSelected() || lgAmericano.isSelected()) {
+            isSizeSelected = true;
+        }
+        
+        if(isSizeSelected) {
+            productID++;
+            
+            if (smAmericano.isSelected()) {
+                sizeName = smAmericano.getText();
+            } else if (mdAmericano.isSelected()) {
+                sizeName = mdAmericano.getText();
+            } else if (lgAmericano.isSelected()) {
+                sizeName = lgAmericano.getText();
+            }
+            Double unitPrice = Double.parseDouble(americanoPrice.getText());
+            int quantity = (int) jSpinnerAmericano.getValue();
+            Double amount = unitPrice * quantity;
+            
+            Object[] addRow = {productID, prodName, quantity, sizeName, unitPrice, amount};
+        
+            DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
+            tblModel.addRow(addRow);
+            
+            Sale saleAmericano = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
+            sales.add(saleAmericano);
+            
+            subTotal = 0.0;
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            subTotalTextFld.setText(String.valueOf(subTotal));
+        } else {
+            JOptionPane.showMessageDialog(this, "Size for the "+ prodName + " is not selected!");
+        }
     }//GEN-LAST:event_americanoPurchaseActionPerformed
 
     private void cappucinoPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cappucinoPurchaseActionPerformed
         // TODO add your handling code here:
+        String prodName = "Cappucino";
+        String sizeName = "";
+        boolean isSizeSelected = false;
+        if (smCappucino.isSelected() || mdCappucino.isSelected() || lgCappucino.isSelected()) {
+            isSizeSelected = true;
+        }
+        
+        if(isSizeSelected) {
+            productID++;
+            
+            if (smCappucino.isSelected()) {
+                sizeName = smCappucino.getText();
+            } else if (mdCappucino.isSelected()) {
+                sizeName = mdCappucino.getText();
+            } else if (lgCappucino.isSelected()) {
+                sizeName = lgCappucino.getText();
+            }
+            Double unitPrice = Double.parseDouble(cappucinoPrice.getText());
+            int quantity = (int) jSpinnerCappucino.getValue();
+            Double amount = unitPrice * quantity;
+            
+            Object[] addRow = {productID, prodName, quantity, sizeName, unitPrice, amount};
+        
+            DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
+            tblModel.addRow(addRow);
+            
+            Sale saleCappucino = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
+            sales.add(saleCappucino);
+            
+            subTotal = 0.0;
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            subTotalTextFld.setText(String.valueOf(subTotal));
+        } else {
+            JOptionPane.showMessageDialog(this, "Size for the "+ prodName + " is not selected!");
+        }
     }//GEN-LAST:event_cappucinoPurchaseActionPerformed
 
     private void lattePurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lattePurchaseActionPerformed
         // TODO add your handling code here:
+        String prodName = "Latte";
+        String sizeName = "";
+        boolean isSizeSelected = false;
+        if (smLatte.isSelected() || mdLatte.isSelected() || lgLatte.isSelected()) {
+            isSizeSelected = true;
+        }
+        
+        if(isSizeSelected) {
+            productID++;
+            
+            if (smLatte.isSelected()) {
+                sizeName = smLatte.getText();
+            } else if (mdLatte.isSelected()) {
+                sizeName = mdLatte.getText();
+            } else if (lgLatte.isSelected()) {
+                sizeName = lgLatte.getText();
+            }
+            Double unitPrice = Double.parseDouble(lattePrice.getText());
+            int quantity = (int) jSpinnerLatte.getValue();
+            Double amount = unitPrice * quantity;
+            
+            Object[] addRow = {productID, prodName, quantity, sizeName, unitPrice, amount};
+        
+            DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
+            tblModel.addRow(addRow);
+            
+            Sale saleLatte = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
+            sales.add(saleLatte);
+            
+            subTotal = 0.0;
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            subTotalTextFld.setText(String.valueOf(subTotal));
+        } else {
+            JOptionPane.showMessageDialog(this, "Size for the "+ prodName + " is not selected!");
+        }
     }//GEN-LAST:event_lattePurchaseActionPerformed
 
     private void hazelnutPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hazelnutPurchaseActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:        
+        String prodName = "Hazelnut Mocha";
+        String sizeName = "";
+        boolean isSizeSelected = false;
+        if (smHazelnut.isSelected() || mdHazelnut.isSelected() || lgHazelnut.isSelected()) {
+            isSizeSelected = true;
+        }
+        
+        
+        if(isSizeSelected) {
+            productID++;
+            
+            if (smHazelnut.isSelected()) {
+                sizeName = smHazelnut.getText();
+            } else if (mdHazelnut.isSelected()) {
+                sizeName = mdHazelnut.getText();
+            } else if (lgHazelnut.isSelected()) {
+                sizeName = lgHazelnut.getText();
+            }
+            Double unitPrice = Double.parseDouble(hazelnutPrice.getText());
+            int quantity = (int) jSpinnerHazelnut.getValue();
+            Double amount = unitPrice * quantity;
+            
+            Object[] addRow = {productID, prodName, quantity, sizeName, unitPrice, amount};
+        
+            DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
+            tblModel.addRow(addRow);
+            
+            Sale saleHazelnut = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
+            sales.add(saleHazelnut);
+            
+            subTotal = 0.0;
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            subTotalTextFld.setText(String.valueOf(subTotal));
+        } else {
+            JOptionPane.showMessageDialog(this, "Size for the "+ prodName + " is not selected!");
+        }
     }//GEN-LAST:event_hazelnutPurchaseActionPerformed
 
     private void chocoChipPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chocoChipPurchaseActionPerformed
         // TODO add your handling code here:
+        String prodName = "Chocolate Chip";
+        String sizeName = "";
+        boolean isSizeSelected = false;
+        if (smChocoChip.isSelected() || mdChocoChip.isSelected() || lgChocoChip.isSelected()) {
+            isSizeSelected = true;
+        }
+        
+        if(isSizeSelected) {
+            productID++;
+            
+            if (smChocoChip.isSelected()) {
+                sizeName = smChocoChip.getText();
+            } else if (mdChocoChip.isSelected()) {
+                sizeName = mdChocoChip.getText();
+            } else if (lgChocoChip.isSelected()) {
+                sizeName = lgChocoChip.getText();
+            }
+            Double unitPrice = Double.parseDouble(chocoChipPrice.getText());
+            int quantity = (int) jSpinnerChocoChip.getValue();
+            Double amount = unitPrice * quantity;
+            
+            Object[] addRow = {productID, prodName, quantity, sizeName, unitPrice, amount};
+        
+            DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
+            tblModel.addRow(addRow);
+            
+            Sale saleChocoChip = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
+            sales.add(saleChocoChip);
+            
+            subTotal = 0.0;
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            subTotalTextFld.setText(String.valueOf(subTotal));
+        } else {
+            JOptionPane.showMessageDialog(this, "Size for the "+ prodName + " is not selected!");
+        }
     }//GEN-LAST:event_chocoChipPurchaseActionPerformed
 
     private void cookiesNCreamPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cookiesNCreamPurchaseActionPerformed
         // TODO add your handling code here:
+        String prodName = "Cookies and Cream";
+        String sizeName = "";
+        boolean isSizeSelected = false;
+        if (smCookiesNCream.isSelected() || mdCookiesNCream.isSelected() || lgCookiesNCream.isSelected()) {
+            isSizeSelected = true;
+        }
+        
+        if(isSizeSelected) {
+            productID++;
+            
+            if (smCookiesNCream.isSelected()) {
+                sizeName = smCookiesNCream.getText();
+            } else if (mdCookiesNCream.isSelected()) {
+                sizeName = mdCookiesNCream.getText();
+            } else if (lgCookiesNCream.isSelected()) {
+                sizeName = lgCookiesNCream.getText();
+            }
+            Double unitPrice = Double.parseDouble(cookiesNCreamPrice.getText());
+            int quantity = (int) jSpinnerCookiesNCream.getValue();
+            Double amount = unitPrice * quantity;
+            
+            Object[] addRow = {productID, prodName, quantity, sizeName, unitPrice, amount};
+        
+            DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
+            tblModel.addRow(addRow);
+            
+            Sale saleCookiesNCream = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
+            sales.add(saleCookiesNCream);
+            
+            subTotal = 0.0;
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            subTotalTextFld.setText(String.valueOf(subTotal));
+        } else {
+            JOptionPane.showMessageDialog(this, "Size for the "+ prodName + " is not selected!");
+        }
     }//GEN-LAST:event_cookiesNCreamPurchaseActionPerformed
 
     private void whiteMochaPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_whiteMochaPurchaseActionPerformed
         // TODO add your handling code here:
+        String prodName = "White Mocha";
+        String sizeName = "";
+        boolean isSizeSelected = false;
+        if (smWhiteMocha.isSelected() || mdWhiteMocha.isSelected() || lgWhiteMocha.isSelected()) {
+            isSizeSelected = true;
+        }
+        
+        if(isSizeSelected) {
+            productID++;
+            
+            if (smWhiteMocha.isSelected()) {
+                sizeName = smWhiteMocha.getText();
+            } else if (mdWhiteMocha.isSelected()) {
+                sizeName = mdWhiteMocha.getText();
+            } else if (lgWhiteMocha.isSelected()) {
+                sizeName = lgWhiteMocha.getText();
+            }
+            Double unitPrice = Double.parseDouble(whiteMochaPrice.getText());
+            int quantity = (int) jSpinnerWhiteMocha.getValue();
+            Double amount = unitPrice * quantity;
+            
+            Object[] addRow = {productID, prodName, quantity, sizeName, unitPrice, amount};
+        
+            DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
+            tblModel.addRow(addRow);
+            
+            Sale saleWhiteMocha = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
+            sales.add(saleWhiteMocha);
+            
+            subTotal = 0.0;
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            subTotalTextFld.setText(String.valueOf(subTotal));
+        } else {
+            JOptionPane.showMessageDialog(this, "Size for the "+ prodName + " is not selected!");
+        }
     }//GEN-LAST:event_whiteMochaPurchaseActionPerformed
 
     private void toffeeNutPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toffeeNutPurchaseActionPerformed
         // TODO add your handling code here:
+        String prodName = "Toffee Nut";
+        String sizeName = "";
+        boolean isSizeSelected = false;
+        if (smToffeeNut.isSelected() || mdToffeeNut.isSelected() || lgToffeeNut.isSelected()) {
+            isSizeSelected = true;
+        }
+        
+        if(isSizeSelected) {
+            productID++;
+            
+            if (smToffeeNut.isSelected()) {
+                sizeName = smToffeeNut.getText();
+            } else if (mdToffeeNut.isSelected()) {
+                sizeName = mdToffeeNut.getText();
+            } else if (lgToffeeNut.isSelected()) {
+                sizeName = lgToffeeNut.getText();
+            }
+            Double unitPrice = Double.parseDouble(toffeeNutPrice.getText());
+            int quantity = (int) jSpinnerToffeeNut.getValue();
+            Double amount = unitPrice * quantity;
+            
+            Object[] addRow = {productID, prodName, quantity, sizeName, unitPrice, amount};
+        
+            DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
+            tblModel.addRow(addRow);
+            
+            Sale saleToffeeNut = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
+            sales.add(saleToffeeNut);
+            
+            subTotal = 0.0;
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            subTotalTextFld.setText(String.valueOf(subTotal));
+        } else {
+            JOptionPane.showMessageDialog(this, "Size for the "+ prodName + " is not selected!");
+        }
     }//GEN-LAST:event_toffeeNutPurchaseActionPerformed
 
     private void darkChocoPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_darkChocoPurchaseActionPerformed
         // TODO add your handling code here:
+        String prodName = "Dark Chocolate";
+        String sizeName = "";
+        boolean isSizeSelected = false;
+        if (smDarkChoco.isSelected() || mdDarkChoco.isSelected() || lgDarkChoco.isSelected()) {
+            isSizeSelected = true;
+        }
+        
+        if(isSizeSelected) {
+            productID++;
+            
+            if (smDarkChoco.isSelected()) {
+                sizeName = smDarkChoco.getText();
+            } else if (mdDarkChoco.isSelected()) {
+                sizeName = mdDarkChoco.getText();
+            } else if (lgDarkChoco.isSelected()) {
+                sizeName = lgDarkChoco.getText();
+            }
+            Double unitPrice = Double.parseDouble(darkChocoPrice.getText());
+            int quantity = (int) jSpinnerDarkChoco.getValue();
+            Double amount = unitPrice * quantity;
+            
+            Object[] addRow = {productID, prodName, quantity, sizeName, unitPrice, amount};
+        
+            DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
+            tblModel.addRow(addRow);
+            
+            Sale saleDarkChoco = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
+            sales.add(saleDarkChoco);
+            
+            subTotal = 0.0;
+            for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+            }
+            subTotalTextFld.setText(String.valueOf(subTotal));
+        } else {
+            JOptionPane.showMessageDialog(this, "Size for the "+ prodName + " is not selected!");
+        }
     }//GEN-LAST:event_darkChocoPurchaseActionPerformed
 
     private void painAuChocolatPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_painAuChocolatPurchaseActionPerformed
         // TODO add your handling code here:
+        productID++;
+        String prodName = "Pain Au Chocolat";
+        String sizeName = "Normal";
+        Double unitPrice = Double.parseDouble(painAuChocolatPrice.getText());
+        int quantity = (int) jSpinnerPainAuChocolat.getValue();
+        Double amount = unitPrice * quantity;
+        
+        Object[] addRow = {productID, prodName, quantity, sizeName, unitPrice, amount};
+        
+        DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
+        tblModel.addRow(addRow);
+        
+        Sale salePainAuChocolat = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
+        sales.add(salePainAuChocolat);
+        
+        subTotal = 0.0;
+        for(Sale sale : sales) {
+                subTotal += sale.getAmount();
+        }
+        subTotalTextFld.setText(String.valueOf(subTotal));
     }//GEN-LAST:event_painAuChocolatPurchaseActionPerformed
 
     private void macaronPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_macaronPurchaseActionPerformed
         // TODO add your handling code here:
+        productID++;
+        String prodName = "Macaron";
+        String sizeName = "Normal";
+        Double unitPrice = Double.parseDouble(macaronPrice.getText());
+        int quantity = (int) jSpinnerMacaron.getValue();
+        Double amount = unitPrice * quantity;
+        
+        Object[] addRow = {productID, prodName, quantity, sizeName, unitPrice, amount};
+        
+        DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
+        tblModel.addRow(addRow);
+        
+        Sale saleMacaron = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
+        sales.add(saleMacaron);
+        
+        subTotal = 0.0;
+        for(Sale sale : sales) {
+            subTotal += sale.getAmount();
+        }
+        subTotalTextFld.setText(String.valueOf(subTotal));
     }//GEN-LAST:event_macaronPurchaseActionPerformed
 
     private void blueberryCheesecakePurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blueberryCheesecakePurchaseActionPerformed
         // TODO add your handling code here:
+        productID++;
+        String prodName = "Blueberry Cheesecake";
+        String sizeName = "Normal";
+        Double unitPrice = Double.parseDouble(blueberryCheesecakePrice.getText());
+        int quantity = (int) jSpinnerBlueberryCheesecake.getValue();
+        Double amount = unitPrice * quantity;
+        
+        Object[] addRow = {productID, prodName, quantity, sizeName, unitPrice, amount};
+        
+        DefaultTableModel tblModel = (DefaultTableModel) orderListTbl.getModel();
+        tblModel.addRow(addRow);
+        
+        Sale saleBlueberryCheesecake = new Sale(invoiceID, productID, sizeName, unitPrice, quantity, amount);
+        sales.add(saleBlueberryCheesecake);
+        
+        subTotal = 0.0;
+        for(Sale sale : sales) {
+            subTotal += sale.getAmount();
+        }
+        subTotalTextFld.setText(String.valueOf(subTotal));
     }//GEN-LAST:event_blueberryCheesecakePurchaseActionPerformed
+
+    private void hazelnutPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hazelnutPriceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hazelnutPriceActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
@@ -2027,7 +2571,9 @@ public class coffeeshop extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(coffeeshop.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
+        
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

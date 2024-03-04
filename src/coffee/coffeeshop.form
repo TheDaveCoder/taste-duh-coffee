@@ -49,7 +49,6 @@
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="paymentPanel" min="-2" max="-2" attributes="0"/>
-                  <Component id="orderListPanel" min="-2" pref="458" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="btnDeleteItem" min="-2" pref="138" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -57,6 +56,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnDisplayInvoice" min="-2" pref="138" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="orderListPanel" alignment="1" min="-2" pref="458" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -390,7 +390,6 @@
             <Component class="javax.swing.JTextField" name="americanoPrice">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="80"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="americanoPriceActionPerformed"/>
@@ -543,6 +542,11 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JSpinner" name="jSpinnerCappucino">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="1" type="code"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="cappucinoPriceLbl">
               <Properties>
@@ -571,7 +575,6 @@
             <Component class="javax.swing.JTextField" name="cappucinoPrice">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="85"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="mdCappucino">
@@ -721,6 +724,11 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JSpinner" name="jSpinnerLatte">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="1" type="code"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lattePriceLbl">
               <Properties>
@@ -749,7 +757,6 @@
             <Component class="javax.swing.JTextField" name="lattePrice">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="85"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lattePriceActionPerformed"/>
@@ -913,6 +920,11 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JSpinner" name="jSpinnerHazelnut">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="1" type="code"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="hazelnutPriceLbl">
               <Properties>
@@ -941,8 +953,10 @@
             <Component class="javax.swing.JTextField" name="hazelnutPrice">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="90"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hazelnutPriceActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JRadioButton" name="mdHazelnut">
               <Properties>
@@ -1091,6 +1105,11 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JSpinner" name="jSpinnerChocoChip">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="1" type="code"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="chocoChipPriceLbl">
               <Properties>
@@ -1119,7 +1138,6 @@
             <Component class="javax.swing.JTextField" name="chocoChipPrice">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="100"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chocoChipPriceActionPerformed"/>
@@ -1272,6 +1290,11 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JSpinner" name="jSpinnerCookiesNCream">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="1" type="code"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="cookiesNCreamPriceLbl">
               <Properties>
@@ -1300,7 +1323,6 @@
             <Component class="javax.swing.JTextField" name="cookiesNCreamPrice">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="100"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="mdCookiesNCream">
@@ -1461,6 +1483,11 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JSpinner" name="jSpinnerWhiteMocha">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="1" type="code"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="whiteMochaPriceLbl">
               <Properties>
@@ -1489,7 +1516,6 @@
             <Component class="javax.swing.JTextField" name="whiteMochaPrice">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="120"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="whiteMochaPriceActionPerformed"/>
@@ -1642,6 +1668,11 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JSpinner" name="jSpinnerToffeeNut">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="1" type="code"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="toffeeNutPriceLbl">
               <Properties>
@@ -1670,7 +1701,6 @@
             <Component class="javax.swing.JTextField" name="toffeeNutPrice">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="125"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toffeeNutPriceActionPerformed"/>
@@ -1823,6 +1853,11 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JSpinner" name="jSpinnerDarkChoco">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="1" type="code"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="darkChocoPriceLbl">
               <Properties>
@@ -1851,7 +1886,6 @@
             <Component class="javax.swing.JTextField" name="darkChocoPrice">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="135"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="mdDarkChoco">
@@ -1991,6 +2025,11 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JSpinner" name="jSpinnerPainAuChocolat">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="1" type="code"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="painAuChocolatPriceLbl">
               <Properties>
@@ -2101,6 +2140,11 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JSpinner" name="jSpinnerMacaron">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="1" type="code"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="macaronPriceLbl">
               <Properties>
@@ -2211,6 +2255,11 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JSpinner" name="jSpinnerBlueberryCheesecake">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="1" type="code"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="blueberryCheesecakePriceLbl">
               <Properties>
@@ -2440,7 +2489,6 @@
         </Component>
         <Component class="javax.swing.JTextField" name="cashTextFld">
           <Properties>
-            <Property name="editable" type="boolean" value="false"/>
             <Property name="horizontalAlignment" type="int" value="2"/>
             <Property name="text" type="java.lang.String" value="0.0"/>
           </Properties>
@@ -2523,37 +2571,43 @@
         <Component class="javax.swing.JTable" name="orderListTbl">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="5" rowCount="4">
-                <Column editable="true" title="ID" type="java.lang.Object"/>
-                <Column editable="true" title="Product Name" type="java.lang.Object"/>
-                <Column editable="true" title="Quantity" type="java.lang.Object"/>
-                <Column editable="true" title="Size" type="java.lang.Object"/>
-                <Column editable="true" title="Price" type="java.lang.Object"/>
+              <Table columnCount="6" rowCount="0">
+                <Column editable="false" title="ID" type="java.lang.Object"/>
+                <Column editable="false" title="Product Name" type="java.lang.Object"/>
+                <Column editable="false" title="Quantity" type="java.lang.Object"/>
+                <Column editable="false" title="Size" type="java.lang.Object"/>
+                <Column editable="false" title="Unit Price" type="java.lang.Object"/>
+                <Column editable="false" title="Amount" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="0">
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="50" resizable="false">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="150" resizable="false">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
                   <Title/>
                   <Editor/>
                   <Renderer/>
@@ -2561,7 +2615,7 @@
               </TableColumnModel>
             </Property>
             <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
-              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+              <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
             </Property>
           </Properties>
         </Component>
