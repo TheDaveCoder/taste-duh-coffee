@@ -150,14 +150,11 @@ public class Final extends JFrame {
 		login.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				 	String username = user_input.getText();
-				 	String password = pass_input.getText();	          
-
-	               
+				 	String password = pass_input.getText();
 	                if(AccountManager.checkForMatch(username, password.toString())) {
 			            System.out.println("account already exists!");
-			            
 			            frame.setVisible(false);
-			            coffeeshop coffee = new coffeeshop();
+			            coffeeshop coffee = new coffeeshop(AccountManager.getUserByUsername(username));
 			            coffee.setVisible(true);
 			            } 
 	                else {
