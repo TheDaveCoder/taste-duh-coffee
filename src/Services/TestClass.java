@@ -40,10 +40,10 @@ public class TestClass {
         // ----------------
         // Upload Invoice details to Database
         // Arguments accepted are the current timestamp, cashierID, subtotal, and total amount
-//        Date currDate = new Date();
-//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//        String currentTime = sdf.format(currDate);
-//        OrderManager.recordInvoice(currentTime, 3, 204.5, 250.75);
+        Date currDate = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String currentTime = sdf.format(currDate);
+        OrderManager.recordInvoice(currentTime, 3, 204.5, 250.75);
         // Upload Sales into Database
         // Argument accepted is an arraylist with the generic `sale`
 //        ArrayList<Sale> sales = new ArrayList<>();
