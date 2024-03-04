@@ -20,7 +20,9 @@ public class Sale {
     public int getInvoiceID() {
         return invoiceID;
     }
-    public int getitemID() { return itemID; }
+    public int getitemID() {
+        return itemID;
+    }
     public String getSizeName() {
         return sizeName;
     }
