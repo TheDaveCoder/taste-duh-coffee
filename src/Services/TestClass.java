@@ -69,11 +69,11 @@ public class TestClass {
         ArrayList<Invoice> inv2 = OrderManager.getInvoiceAll();
         for( Invoice ob :inv2) {
             System.out.println(ob.getInvoiceID() + " " +
-                ob.getInvoiceDate() + " " +
-                ob.getCashierID() + " " +
-                ob.getCashierName() + " " +
-                ob.getSubtotal() + " " +
-                ob.getTotalAmount());
+                    ob.getInvoiceDate() + " " +
+                    ob.getCashierID() + " " +
+                    ob.getCashierName() + " " +
+                    ob.getSubtotal() + " " +
+                    ob.getTotalAmount());
         }
         // Test Sale Object
 //        Sale saleExamp = new Sale(5, 12, "Small", 85d, 2, 170d);
@@ -85,12 +85,10 @@ public class TestClass {
 //        System.out.println(saleExamp.getAmount());
 
         // Delete Invoice
-//        OrderManager.deleteInvoice(28);
+//        OrderManager.deleteInvoice(11);
 
-        // Test getting list of sales by invoice id
-//        ArrayList<Sale> salsbury = OrderManager.getSales(28);
-//        for (Sale sals : salsbury) {
-//            System.out.println(sals.getAmount());
-//        }
+        // Get singular invoice by ID
+//        System.out.println(OrderManager.getInvoiceByID(26).getTotalAmount());
     }
 }
+
