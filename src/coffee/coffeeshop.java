@@ -2001,11 +2001,7 @@ public class coffeeshop extends javax.swing.JFrame {
                 subTotalTextFld.setText(String.valueOf(subTotal));
                 taxTextFld.setText(String.valueOf(Math.round(tax * 100.0) / 100.0));
                 totalTextFld.setText(String.valueOf(Math.round(total * 100.0) / 100.0));
-                changeTextFld.setText(String.valueOf(Math.round(change * 100.0) / 100.0));
-                
-                for(Sale sale : sales) {
-                    System.out.println("ID: " + sale.getitemID() + " Qty: " + sale.getQuantity() + " Amount: "  + sale.getAmount());
-                }
+                changeTextFld.setText(String.valueOf(Math.round(change * 100.0) / 100.0));          
                 
                 // Insert Invoice into the database
                 Date currDate = new Date();

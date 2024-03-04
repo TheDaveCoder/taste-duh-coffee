@@ -26,13 +26,14 @@ public class OrderManager {
     public static void recordSale(ArrayList<Sale> orders) {
         try {
             Connection sqlConnection = DBManager.getConnection();
-            PreparedStatement sqlStatement = sqlConnection.prepareStatement("INSERT INTO Sales VALUES (?, ?, ?, ?, ?)");
+            PreparedStatement sqlStatement = sqlConnection.prepareStatement("INSERT INTO Sales VALUES (?, ?, ?, ?, ?, ?)");
             for(int i = 0; i < orders.size(); i ++) {
                 sqlStatement.setInt(1, orders.get(i).getInvoiceID());
-                sqlStatement.setString(2, orders.get(i).getSizeName());
-                sqlStatement.setDouble(3, orders.get(i).getUnitPrice());
-                sqlStatement.setInt(4, orders.get(i).getQuantity());
-                sqlStatement.setDouble(5, orders.get(i).getAmount());
+                sqlStatement.setString(2, orders.get(i).getProductName());
+                sqlStatement.setString(3, orders.get(i).getSizeName());
+                sqlStatement.setDouble(4, orders.get(i).getUnitPrice());
+                sqlStatement.setInt(5, orders.get(i).getQuantity());
+                sqlStatement.setDouble(6, orders.get(i).getAmount());
                 sqlStatement.addBatch();
             }
             sqlStatement.executeBatch();
@@ -109,6 +110,30 @@ public class OrderManager {
                     resultSet.getString(4),
                     resultSet.getDouble(5),
                     resultSet.getDouble(6));
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    
+    public static ArrayList<Sale> getSales(int invoiceID) {
+        try {
+            Connection sqlConnection = DBManager.getConnection();
+            PreparedStatement sqlStatement = sqlConnection.prepareStatement("SELECT * FROM Sales WHERE invoice_id = ?;");
+            sqlStatement.setInt(1, invoiceID);
+            ResultSet resultSet = sqlStatement.executeQuery();
+            ArrayList<Sale> sales = new ArrayList<>();
+            while(resultSet.next()) {
+                sales.add(new Sale(resultSet.getInt(1),
+                        1,
+                        resultSet.getString(2),
+                        resultSet.getString(3),
+                        resultSet.getDouble(4),
+                        resultSet.getInt(5),
+                        resultSet.getDouble(6)
+                        ));
+            }
+            return sales;
         } catch (SQLException e) {
             e.printStackTrace();
             return null;

@@ -25,7 +25,9 @@ public class Sale {
     public int getitemID() {
         return itemID;
     }
-    public String getProductName() { return productName; }
+    public String getProductName(){
+        return productName;
+    }
     public String getSizeName() {
         return sizeName;
     }

@@ -155,6 +155,7 @@ public class Final extends JFrame {
 			            System.out.println("account already exists!");
 			            frame.setVisible(false);
 			            coffeeshop coffee = new coffeeshop(AccountManager.getUserByUsername(username));
+                                    coffee.setExtendedState(MAXIMIZED_BOTH);
 			            coffee.setVisible(true);
 			            } 
 	                else {
