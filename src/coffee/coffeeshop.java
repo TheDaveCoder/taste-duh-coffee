@@ -90,6 +90,20 @@ public class coffeeshop extends javax.swing.JFrame {
         taxTextFld.setText("0.0");
         totalTextFld.setText("0.0");
         changeTextFld.setText("0.0");
+                
+        Cashier operatingCashier;
+        itemID = 1;
+        invoiceID = 1;
+        cashierID = 1;
+        cash = 0.0;
+        subTotal = 0.0;
+        tax = 0.0;
+        total = 0.0;
+        change = 0.0;
+        
+        sales.removeAll(sales);
+        orderListTbl.removeAll();
+        invoiceTextArea.setText("");
     }
     
    
@@ -1968,7 +1982,9 @@ public class coffeeshop extends javax.swing.JFrame {
 
         cash = Double.parseDouble(cashTextFld.getText());
         
-        if(cash > total) {
+        if (orderListTbl.getRowCount() == 0) {
+            JOptionPane.showMessageDialog(this, "Please add an order before paying!");
+        } else if(cash > total) {
             int response = JOptionPane.showConfirmDialog(this,
             "Are you sure?",
             "Pay",
@@ -1985,11 +2001,7 @@ public class coffeeshop extends javax.swing.JFrame {
                 subTotalTextFld.setText(String.valueOf(subTotal));
                 taxTextFld.setText(String.valueOf(Math.round(tax * 100.0) / 100.0));
                 totalTextFld.setText(String.valueOf(Math.round(total * 100.0) / 100.0));
-                changeTextFld.setText(String.valueOf(Math.round(change * 100.0) / 100.0));
-                
-                for(Sale sale : sales) {
-                    System.out.println("ID: " + sale.getitemID() + " Qty: " + sale.getQuantity() + " Amount: "  + sale.getAmount());
-                }
+                changeTextFld.setText(String.valueOf(Math.round(change * 100.0) / 100.0));          
                 
                 // Insert Invoice into the database
                 Date currDate = new Date();

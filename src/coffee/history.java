@@ -96,6 +96,11 @@ public class history extends javax.swing.JFrame {
             }
         });
         HistoryTbl.getTableHeader().setReorderingAllowed(false);
+        HistoryTbl.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                HistoryTblMouseClicked(evt);
+            }
+        });
         histroyTblPnl.setViewportView(HistoryTbl);
         if (HistoryTbl.getColumnModel().getColumnCount() > 0) {
             HistoryTbl.getColumnModel().getColumn(0).setResizable(false);
@@ -158,6 +163,7 @@ public class history extends javax.swing.JFrame {
             int currentInvoiceID = Integer.parseInt(HistoryTbl.getValueAt(HistoryTbl.getSelectedRow(), 0).toString());
             tblModel.removeRow(HistoryTbl.getSelectedRow());
             OrderManager.deleteInvoice(currentInvoiceID);
+            invoiceTextArea.setText("");
         } else {
             if(HistoryTbl.getRowCount() == 0) {
                 JOptionPane.showMessageDialog(this, "History of transaction is empty!");
@@ -166,6 +172,53 @@ public class history extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_btnDeleteActionPerformed
+
+    
+    
+    private void HistoryTblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HistoryTblMouseClicked
+        // TODO add your handling code here:       
+        if(HistoryTbl.getSelectedRowCount() == 1) {
+        int currentInvoiceID = Integer.parseInt(HistoryTbl.getValueAt(HistoryTbl.getSelectedRow(), 0).toString());
+
+        ArrayList<Sale> sales = OrderManager.getSales(currentInvoiceID);
+        Invoice invoice = OrderManager.getInvoiceByID(currentInvoiceID);
+        double subTotal = invoice.getSubtotal();
+        double tax = 0.12 * subTotal;
+        double total = invoice.getTotalAmount();
+
+        String textTitle = String.format("*********************************Taste The Coffee******************************\n"
+                                           + "Time\\Date: %s\n"
+                                           + "Invoice ID: %d\n"
+                                           + "**********************************************************************************\n"
+                                           + "Item Name:             \tQty\tPrice($)\tAmount\n"
+                                           , invoice.getInvoiceDate(), invoice.getInvoiceID());
+
+        String textItems = "";
+        for(int i = 0; i < sales.size(); i++) {
+            textItems += String.format("%d. %-20s\t%-3d\t%-8.2f\t%-6.2f\n"
+                                      , i+1
+                                      , sales.get(i).getProductName()
+                                      , sales.get(i).getQuantity()
+                                      , sales.get(i).getUnitPrice()
+                                      , sales.get(i).getAmount());
+        } 
+
+        String textTotal = String.format("**********************************************************************************\n"
+                                       + "Tax: %.2f\n"
+                                       + "Sub Total: %.2f\n"
+                                       + "Total: %.2f\n"
+                                       + "**********************************************************************************\n"
+                                       , tax, subTotal, total);
+        
+        invoiceTextArea.setText(textTitle + textItems + textTotal);
+        } else {
+            if(HistoryTbl.getRowCount() == 0) {
+                JOptionPane.showMessageDialog(this, "History of transaction is empty!");
+            } else {
+                JOptionPane.showMessageDialog(this, "Please select a transaction to be removed!");
+            }
+        }
+    }//GEN-LAST:event_HistoryTblMouseClicked
 
     /**
      * @param args the command line arguments
