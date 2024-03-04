@@ -90,4 +90,16 @@ public class OrderManager {
             return null;
         }
     }
+
+    public static void deleteInvoice(int invoiceID) {
+        try {
+            Connection sqlConnection = DBManager.getConnection();
+            PreparedStatement sqlStatement = sqlConnection.prepareStatement("DELETE FROM Invoice WHERE invoice_id = ?");
+            sqlStatement.setInt(1, invoiceID);
+            sqlStatement.execute();
+            sqlConnection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
