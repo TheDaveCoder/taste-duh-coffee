@@ -10,7 +10,6 @@ public class Sale {
 
     public Sale(int invoiceID, int itemID, String sizeName, Double unitPrice, int quantity, Double amount) {
         this.invoiceID = invoiceID;
-        this.itemID = itemID;
         this.sizeName = sizeName;
         this.unitPrice = unitPrice;
         this.quantity = quantity;
@@ -20,9 +19,7 @@ public class Sale {
     public int getInvoiceID() {
         return invoiceID;
     }
-    public int getitemID() {
-        return itemID;
-    }
+    public int getitemID() { return itemID; }
     public String getSizeName() {
         return sizeName;
     }
@@ -34,5 +31,13 @@ public class Sale {
     }
     public Double getAmount() {
         return amount;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 }
