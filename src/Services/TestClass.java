@@ -85,6 +85,12 @@ public class TestClass {
 //        System.out.println(saleExamp.getAmount());
 
         // Delete Invoice
-        OrderManager.deleteInvoice(11);
+//        OrderManager.deleteInvoice(28);
+
+        // Test getting list of sales by invoice id
+//        ArrayList<Sale> salsbury = OrderManager.getSales(28);
+//        for (Sale sals : salsbury) {
+//            System.out.println(sals.getAmount());
+//        }
     }
 }
