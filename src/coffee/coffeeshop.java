@@ -2084,7 +2084,7 @@ public class coffeeshop extends javax.swing.JFrame {
         
         if(orderListTbl.getSelectedRowCount() == 1) {
             int currentProdID = Integer.parseInt(orderListTbl.getValueAt(orderListTbl.getSelectedRow(), 0).toString());
-            sales.removeIf(sales -> sales.getProductID() == currentProdID);
+            sales.removeIf(sales -> sales.getitemID() == currentProdID);
             tblModel.removeRow(orderListTbl.getSelectedRow());
         } else {
             if(orderListTbl.getRowCount() == 0) {

@@ -28,7 +28,7 @@ public class OrderManager {
             PreparedStatement sqlStatement = sqlConnection.prepareStatement("INSERT INTO Sales VALUES (?, ?, ?, ?, ?, ?)");
             for(int i = 0; i < orders.size(); i ++) {
                 sqlStatement.setInt(1, orders.get(i).getInvoiceID());
-                sqlStatement.setInt(2, orders.get(i).getProductID());
+                sqlStatement.setInt(2, orders.get(i).getitemID());
                 sqlStatement.setString(3, orders.get(i).getSizeName());
                 sqlStatement.setDouble(4, orders.get(i).getUnitPrice());
                 sqlStatement.setInt(5, orders.get(i).getQuantity());
