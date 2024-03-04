@@ -76,13 +76,13 @@ public class TestClass {
                 ob.getTotalAmount());
         }
         // Test Sale Object
-        Sale saleExamp = new Sale(5, 12, "Small", 85d, 2, 170d);
-        System.out.println(saleExamp.getQuantity());
-        System.out.println(saleExamp.getAmount());
-        saleExamp.setQuantity(5);
-        saleExamp.setAmount(5);
-        System.out.println(saleExamp.getQuantity());
-        System.out.println(saleExamp.getAmount());
+//        Sale saleExamp = new Sale(5, 12, "Small", 85d, 2, 170d);
+//        System.out.println(saleExamp.getQuantity());
+//        System.out.println(saleExamp.getAmount());
+//        saleExamp.setQuantity(5);
+//        saleExamp.setAmount(5);
+//        System.out.println(saleExamp.getQuantity());
+//        System.out.println(saleExamp.getAmount());
 
         // Delete Invoice
         OrderManager.deleteInvoice(11);
