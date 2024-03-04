@@ -6,8 +6,10 @@
 package coffee;
 
 import Models.Invoice;
+import Models.Sale;
 import Services.OrderManager;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -24,12 +26,13 @@ public class history extends javax.swing.JFrame {
         initComponents();
         DefaultTableModel tblModel = (DefaultTableModel) HistoryTbl.getModel();
         for(Invoice invoice : invoices) {
+            int invoiceID = invoice.getInvoiceID();
             String invoiceDate = invoice.getInvoiceDate();
             int cashierID = invoice.getCashierID();
             double subTotal = invoice.getSubtotal();
             double totalAmount = invoice.getTotalAmount();
             
-            Object[] addRow = {invoiceDate, cashierID, subTotal, totalAmount};
+            Object[] addRow = {invoiceID, invoiceDate, cashierID, subTotal, totalAmount};
             
             tblModel.addRow(addRow);
         }
@@ -78,10 +81,7 @@ public class history extends javax.swing.JFrame {
 
         HistoryTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
                 "ID", "Date", "Cashier ID", "SubTotal", "Total"
@@ -95,10 +95,12 @@ public class history extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        HistoryTbl.getTableHeader().setReorderingAllowed(false);
         histroyTblPnl.setViewportView(HistoryTbl);
         if (HistoryTbl.getColumnModel().getColumnCount() > 0) {
             HistoryTbl.getColumnModel().getColumn(0).setResizable(false);
             HistoryTbl.getColumnModel().getColumn(1).setResizable(false);
+            HistoryTbl.getColumnModel().getColumn(1).setPreferredWidth(150);
             HistoryTbl.getColumnModel().getColumn(2).setResizable(false);
             HistoryTbl.getColumnModel().getColumn(3).setResizable(false);
             HistoryTbl.getColumnModel().getColumn(4).setResizable(false);
@@ -150,6 +152,19 @@ public class history extends javax.swing.JFrame {
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         // TODO add your handling code here:
+        DefaultTableModel tblModel = (DefaultTableModel) HistoryTbl.getModel();
+        
+        if(HistoryTbl.getSelectedRowCount() == 1) {
+            int currentInvoiceID = Integer.parseInt(HistoryTbl.getValueAt(HistoryTbl.getSelectedRow(), 0).toString());
+            tblModel.removeRow(HistoryTbl.getSelectedRow());
+            OrderManager.deleteInvoice(currentInvoiceID);
+        } else {
+            if(HistoryTbl.getRowCount() == 0) {
+                JOptionPane.showMessageDialog(this, "History of transaction is empty!");
+            } else {
+                JOptionPane.showMessageDialog(this, "Please select a transaction to be removed!");
+            }
+        }
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     /**
