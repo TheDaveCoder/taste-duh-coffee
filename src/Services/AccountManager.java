@@ -21,12 +21,15 @@ public class AccountManager {
         }
     }
 
-    public static boolean checkForMatch(String lastName, String userName) {
+    public static boolean checkForMatch(String username, String password) {
         try {
             Connection sqlConnection = DBManager.getConnection();
-            PreparedStatement sqlStatement = sqlConnection.prepareStatement("SELECT * FROM Cashier_Accounts WHERE cashier_lname = ? AND login_username = ?");
-            sqlStatement.setString(1, lastName);
-            sqlStatement.setString(2, userName);
+            PreparedStatement sqlStatement = sqlConnection.prepareStatement("SELECT * FROM `point-of-system`.Cashier_Accounts WHERE login_username = ? AND login_password = ?");
+            sqlStatement.setString(1, username);
+            sqlStatement.setString(2, password);
+            System.out.println(username);
+            System.out.println(password);
+            
             ResultSet resultSet = sqlStatement.executeQuery();
             return resultSet.next();
         } catch (SQLException e) {

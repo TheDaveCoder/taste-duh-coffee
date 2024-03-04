@@ -3,6 +3,10 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Services.AccountManager;
+import coffee.coffeeshop;
+
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -11,21 +15,35 @@ import javax.swing.JButton;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class Final extends JFrame {
+	
+	
+	static String endpoint = "database-1.cl85pye4up69.ap-southeast-1.rds.amazonaws.com";
+	static String port = "3306";
+	static String DBIdentifier = "point-of-system";
+	static String masterUsername = "sf_app_admin";
+	static String masterPassword = "davePogi123";
+
+	public static Connection getConnection() throws SQLException {
+		String url = "jdbc:mysql://" + endpoint + ":" + port + "/" + DBIdentifier;
+		return DriverManager.getConnection(url, masterUsername, masterPassword);
+	}
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private final JPanel Login_panel = new JPanel();
 	private JTextField user_input;
-	private JLabel yey;
-	private JPasswordField pass_input;
+	private JTextField pass_input;
 	
-	private String[] usernames = {"user1", "user2", "user3"};
-    private String[] passwords = {"pass1", "pass2", "pass3"};
     private JTextField reg_user_input;
-    private JPasswordField reg_pass_input;
-    
+    private JTextField reg_lastname_input;
+    private JTextField reg_password_input;
+    public static Final frame = new Final();
 	/**
 	 * Launch the application.
 	 */
@@ -33,7 +51,7 @@ public class Final extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Final frame = new Final();
+					
 					frame.setVisible(true);
 					
 				} catch (Exception e) {
@@ -73,30 +91,23 @@ public class Final extends JFrame {
 		
 		JLabel register_lbl = new JLabel("REGISTER");
 		register_lbl.setFont(new Font("Tahoma", Font.BOLD, 40));
-		register_lbl.setBounds(94, 109, 213, 84);
+		register_lbl.setBounds(95, 95, 213, 84);
 		reg_panel.add(register_lbl);
 		
 		JLabel reg_user = new JLabel("Username");
 		reg_user.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		reg_user.setBounds(37, 215, 73, 25);
+		reg_user.setBounds(37, 281, 73, 25);
 		reg_panel.add(reg_user);
 		
 		reg_user_input = new JTextField();
-		reg_user_input.setBounds(37, 244, 323, 25);
+		reg_user_input.setBounds(37, 317, 323, 25);
 		reg_panel.add(reg_user_input);
 		reg_user_input.setColumns(10);
 		
 		JLabel reg_pass = new JLabel("Password");
 		reg_pass.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		reg_pass.setBounds(37, 287, 73, 25);
+		reg_pass.setBounds(37, 353, 73, 25);
 		reg_panel.add(reg_pass);
-		
-		reg_pass_input = new JPasswordField();
-		reg_pass_input.setBounds(37, 317, 323, 25);
-		reg_panel.add(reg_pass_input);
-		
-		
-		
 		
 		
 		Login_panel.setBounds(0, 0, 784, 561);
@@ -144,28 +155,23 @@ public class Final extends JFrame {
 		login.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				 	String username = user_input.getText();
-	                char[] password = pass_input.getPassword();
-	                boolean isValidCredentials = CheckInput(username, password);
+				 	String password = pass_input.getText();	          
 
-	                if (isValidCredentials) {	               
-	                    yey = new JLabel("Login successful!");
-	                } else {
-	                    yey = new JLabel("Invalid username or password");
-	                }
-
-	                yey.setBounds(167, 501, 200, 14);
-	                login_panel.add(yey);
+	               
+	                if(AccountManager.checkForMatch(username, password.toString())) {
+			            System.out.println("account already exists!");
+			            
+			            frame.setVisible(false);
+			            coffeeshop coffee = new coffeeshop();
+			            coffee.setVisible(true);
+			            } 
+	                else {
+			            System.out.println("account doesn't exist!");
+			        }
+       
 				login_panel.repaint();
 			}
 
-			private boolean CheckInput(String username, char[] password) {
-				for (int i = 0; i < usernames.length; i++) {
-		            if (usernames[i].equals(username) && passwords[i].equals(new String(password))) {
-		                return true;
-		            }
-		        }
-				return false;
-			}
 		});
 		login.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		login_panel.add(login);
@@ -179,28 +185,48 @@ public class Final extends JFrame {
 		register.setBounds(237, 448, 89, 23);
 		register.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		login_panel.add(register);
-		register.addActionListener(new ActionListener() {
+		register.addActionListener(new ActionListener() { // register action
 			public void actionPerformed(ActionEvent e) {
+				
 				login_panel.setVisible(false);
 				Register_panel.setVisible(true);
 			}});
 		JButton register_btn = new JButton("Register");
 		
-		register_btn.setBounds(150, 397, 89, 23);
+		register_btn.setBounds(151, 463, 89, 23);
 		reg_panel.add(register_btn);
+		
+		reg_lastname_input = new JTextField();
+		reg_lastname_input.setBounds(37, 245, 323, 25);
+		reg_panel.add(reg_lastname_input);
+		reg_lastname_input.setColumns(10);
+		
+		JLabel reg_lastname = new JLabel("User's Lastname");
+		reg_lastname.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		reg_lastname.setBounds(37, 209, 119, 25);
+		
+		reg_panel.add(reg_lastname);
+		
+		reg_password_input = new JPasswordField();;
+		reg_password_input.setBounds(37, 389, 323, 25);
+		reg_panel.add(reg_password_input);
+		reg_password_input.setColumns(10);
 		register_btn.addActionListener(new ActionListener() {
 		    public void actionPerformed(ActionEvent e) {
-		        String newUsername = reg_user_input.getText();
-		        char[] newPassword = reg_pass_input.getPassword();
-
+		    	String lastname = reg_lastname_input.getText();
+		        String username = reg_user_input.getText();
+		        String password = reg_password_input.getText();
+		       
 		        
+		       AccountManager.recordNewUser(lastname, username, password);
+		       System.out.println(password);
 		        login_panel.setVisible(true);
 		        Register_panel.setVisible(false);
 		    }
 		});
-			
-			
-			
+		
+		
+
 		
 		pass_input = new JPasswordField();
 		pass_input.setBounds(37, 317, 323, 25);
