@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="60dedfb3-17c4-42a7-acd0-aa17fc2887dd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/coffee/Cookies n' cream.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/coffee/coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/built-jar.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Final$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Final$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Final$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Final$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Final.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Models/Cashier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Models/Sale.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Services/AccountManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Services/DBManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Services/OrderManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Services/TestClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/Americano.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/Cappucino.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/Cheesecake.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/Chocolate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/Cookies n' cream.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/Dark Choco.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/Hazelnut.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/Latte.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/Macaron.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/Pain Au Chocolat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/Toffee.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/White Mocha.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffee.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$15.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$16.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$17.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$18.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$19.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$20.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$21.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$22.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$23.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$24.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$25.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$26.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$27.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$28.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$29.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$30.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$31.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$32.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$33.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$34.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$35.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$36.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$37.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$38.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$39.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$40.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$41.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$42.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$43.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$44.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$45.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$46.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$47.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$48.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$49.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$50.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$51.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$52.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$53.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$54.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$55.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$56.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/coffeeshop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/history$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/history$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/coffee/history.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/Tesda_Final_Project.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coffee/Cookies n' cream.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coffee/coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coffee/coffeeshop.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/coffee/coffeeshop.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coffee/coffeeshop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coffee/coffeeshop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coffee/history.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/coffee/history.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coffee/history.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coffee/history.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2dGpS3CWjJeoTF3L2YakOCrkiC6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/Libraries/Programming/tesda/taste-duh-coffee"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="60dedfb3-17c4-42a7-acd0-aa17fc2887dd" name="Changes" comment="" />
+      <created>1709644267473</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709644267473</updated>
+    </task>
+    <servers />
+  </component>
+</project>
