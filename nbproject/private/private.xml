@@ -1,24 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
-        <file>
-            <url>src/coffee/coffeeshop.java</url>
-            <bookmark id="1">
-                <name/>
-                <line>2169</line>
-                <key/>
-            </bookmark>
-        </file>
-    </editor-bookmarks>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/joshu/Desktop/Joshua%20Files/Tech%20Journey/Free%20Courses/TESDA/Final%20Project/taste-duh-coffee/src/Services/TestClass.java</file>
-            <file>file:/C:/Users/joshu/Desktop/Joshua%20Files/Tech%20Journey/Free%20Courses/TESDA/Final%20Project/taste-duh-coffee/src/Final.java</file>
-            <file>file:/C:/Users/joshu/Desktop/Joshua%20Files/Tech%20Journey/Free%20Courses/TESDA/Final%20Project/taste-duh-coffee/src/Models/Sale.java</file>
-            <file>file:/C:/Users/joshu/Desktop/Joshua%20Files/Tech%20Journey/Free%20Courses/TESDA/Final%20Project/taste-duh-coffee/src/coffee/history.java</file>
-            <file>file:/C:/Users/joshu/Desktop/Joshua%20Files/Tech%20Journey/Free%20Courses/TESDA/Final%20Project/taste-duh-coffee/src/Models/Cashier.java</file>
-            <file>file:/C:/Users/joshu/Desktop/Joshua%20Files/Tech%20Journey/Free%20Courses/TESDA/Final%20Project/taste-duh-coffee/src/coffee/coffeeshop.java</file>
-            <file>file:/C:/Users/joshu/Desktop/Joshua%20Files/Tech%20Journey/Free%20Courses/TESDA/Final%20Project/taste-duh-coffee/src/Services/OrderManager.java</file>
+            <file>file:/D:/Libraries/Programming/tesda/taste-duh-coffee/src/coffee/history.java</file>
+            <file>file:/D:/Libraries/Programming/tesda/taste-duh-coffee/src/Services/AccountManager.java</file>
+            <file>file:/D:/Libraries/Programming/tesda/taste-duh-coffee/src/coffee/coffeeshop.java</file>
         </group>
     </open-files>
 </project-private>

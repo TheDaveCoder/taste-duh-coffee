@@ -11,11 +11,25 @@ public class AccountManager {
             sqlStatement.setString(1, username);
             ResultSet queryResults = sqlStatement.executeQuery();
             if (queryResults.next()) {
-                return new Cashier(queryResults.getInt(1), queryResults.getString(3), queryResults.getString(4));
+                return new Cashier(queryResults.getInt(1), queryResults.getString(2), queryResults.getString(3), queryResults.getString(4));
             } else {
                 return null;
             }
         } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    
+    public static String getUsernameByID(int cashierID) {
+        try {
+            Connection sqlConnection = DBManager.getConnection();
+            PreparedStatement sqlStatement = sqlConnection.prepareStatement("SELECT * FROM Cashier_Accounts WHERE cashier_id = ?;");
+            sqlStatement.setInt(1, cashierID);
+            ResultSet queryResults = sqlStatement.executeQuery();
+            queryResults.next();
+            return queryResults.getString(2);
+        } catch(SQLException e) {
             e.printStackTrace();
             return null;
         }

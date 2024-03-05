@@ -126,8 +126,7 @@ public class coffeeshop extends javax.swing.JFrame {
         toffeeNut = new javax.swing.ButtonGroup();
         darkChoco = new javax.swing.ButtonGroup();
         cookiesNCream = new javax.swing.ButtonGroup();
-        shopNamePnl = new javax.swing.JPanel();
-        shopNameLbl = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         menuItemsPnl = new javax.swing.JPanel();
         menuItemsLbl = new javax.swing.JLabel();
         coffeeLbl = new javax.swing.JLabel();
@@ -254,9 +253,8 @@ public class coffeeshop extends javax.swing.JFrame {
         blueberryCheesecakePrice = new javax.swing.JTextField();
         blueberryCheesecakeHeader = new javax.swing.JLabel();
         blueberryCheesecakePurchase = new javax.swing.JButton();
-        customerOptions = new javax.swing.JPanel();
-        jButtonPay = new javax.swing.JButton();
-        jButtonReset = new javax.swing.JButton();
+        orderListPanel = new javax.swing.JScrollPane();
+        orderListTbl = new javax.swing.JTable();
         paymentPanel = new javax.swing.JPanel();
         cashLbl = new javax.swing.JLabel();
         cashTextFld = new javax.swing.JTextField();
@@ -268,39 +266,28 @@ public class coffeeshop extends javax.swing.JFrame {
         totalTextFld = new javax.swing.JTextField();
         changeLbl = new javax.swing.JLabel();
         changeTextFld = new javax.swing.JTextField();
-        orderListPanel = new javax.swing.JScrollPane();
-        orderListTbl = new javax.swing.JTable();
-        invoicePanel = new javax.swing.JScrollPane();
-        invoiceTextArea = new javax.swing.JTextArea();
         btnDeleteItem = new javax.swing.JButton();
         btnHistory = new javax.swing.JButton();
         btnUpdateOrder = new javax.swing.JButton();
+        customerOptions = new javax.swing.JPanel();
+        jButtonPay = new javax.swing.JButton();
+        jButtonReset = new javax.swing.JButton();
+        invoicePanel = new javax.swing.JScrollPane();
+        invoiceTextArea = new javax.swing.JTextArea();
+        shopNamePnl = new javax.swing.JPanel();
+        shopNameLbl = new javax.swing.JLabel();
+        shopNameLbl1 = new javax.swing.JLabel();
+        shopNameLbl2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(139, 93, 8));
 
-        shopNamePnl.setBackground(new java.awt.Color(102, 102, 102));
-        shopNamePnl.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.setBackground(new java.awt.Color(241, 220, 185));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1950, 1036));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        shopNameLbl.setFont(new java.awt.Font("Script MT Bold", 1, 48)); // NOI18N
-        shopNameLbl.setForeground(new java.awt.Color(255, 255, 255));
-        shopNameLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        shopNameLbl.setText("Taste The Coffee");
-
-        javax.swing.GroupLayout shopNamePnlLayout = new javax.swing.GroupLayout(shopNamePnl);
-        shopNamePnl.setLayout(shopNamePnlLayout);
-        shopNamePnlLayout.setHorizontalGroup(
-            shopNamePnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(shopNamePnlLayout.createSequentialGroup()
-                .addGap(590, 590, 590)
-                .addComponent(shopNameLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        shopNamePnlLayout.setVerticalGroup(
-            shopNamePnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(shopNameLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
-        );
-
-        menuItemsPnl.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        menuItemsPnl.setBackground(new java.awt.Color(255, 252, 240));
+        menuItemsPnl.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         menuItemsLbl.setFont(new java.awt.Font("Segoe Print", 1, 36)); // NOI18N
         menuItemsLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -310,7 +297,7 @@ public class coffeeshop extends javax.swing.JFrame {
         coffeeLbl.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         coffeeLbl.setText("Coffee");
 
-        americanoPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        americanoPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jSpinnerAmericano.setValue(1);
 
@@ -403,7 +390,7 @@ public class coffeeshop extends javax.swing.JFrame {
             americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, americanoPanelLayout.createSequentialGroup()
                 .addComponent(americanoHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(americanoSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -422,7 +409,7 @@ public class coffeeshop extends javax.swing.JFrame {
                 .addGap(11, 11, 11))
         );
 
-        cappucinoPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cappucinoPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jSpinnerCappucino.setValue(1);
 
@@ -511,7 +498,7 @@ public class coffeeshop extends javax.swing.JFrame {
             cappucinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cappucinoPanelLayout.createSequentialGroup()
                 .addComponent(cappucinoHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(cappucinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cappucinoSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cappucinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -530,7 +517,7 @@ public class coffeeshop extends javax.swing.JFrame {
                 .addGap(11, 11, 11))
         );
 
-        lattePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lattePanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jSpinnerLatte.setValue(1);
 
@@ -624,7 +611,7 @@ public class coffeeshop extends javax.swing.JFrame {
             lattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lattePanelLayout.createSequentialGroup()
                 .addComponent(latteHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addGroup(lattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(latteSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -647,7 +634,7 @@ public class coffeeshop extends javax.swing.JFrame {
         iceBlendedLbl.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         iceBlendedLbl.setText("Ice Blended");
 
-        hazelnutPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        hazelnutPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jSpinnerHazelnut.setValue(1);
 
@@ -741,7 +728,7 @@ public class coffeeshop extends javax.swing.JFrame {
             hazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hazelnutPanelLayout.createSequentialGroup()
                 .addComponent(hazelnutHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(hazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(hazelnutSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -760,7 +747,7 @@ public class coffeeshop extends javax.swing.JFrame {
                 .addGap(11, 11, 11))
         );
 
-        chocoChipPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        chocoChipPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jSpinnerChocoChip.setValue(1);
 
@@ -854,7 +841,7 @@ public class coffeeshop extends javax.swing.JFrame {
             chocoChipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, chocoChipPanelLayout.createSequentialGroup()
                 .addComponent(chocoChipHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(chocoChipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(chocoChipSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, chocoChipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -873,7 +860,7 @@ public class coffeeshop extends javax.swing.JFrame {
                 .addGap(11, 11, 11))
         );
 
-        cookiesNCreamPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cookiesNCreamPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jSpinnerCookiesNCream.setValue(1);
 
@@ -962,7 +949,7 @@ public class coffeeshop extends javax.swing.JFrame {
             cookiesNCreamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cookiesNCreamPanelLayout.createSequentialGroup()
                 .addComponent(cookiesNCreamHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addGroup(cookiesNCreamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cookiesNCreamSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cookiesNCreamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -985,7 +972,7 @@ public class coffeeshop extends javax.swing.JFrame {
         frappeLbl.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         frappeLbl.setText("Frappe");
 
-        whiteMochaPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        whiteMochaPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jSpinnerWhiteMocha.setValue(1);
 
@@ -1079,7 +1066,7 @@ public class coffeeshop extends javax.swing.JFrame {
             whiteMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, whiteMochaPanelLayout.createSequentialGroup()
                 .addComponent(whiteMochaHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(whiteMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(whiteMochaSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, whiteMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1098,7 +1085,7 @@ public class coffeeshop extends javax.swing.JFrame {
                 .addGap(11, 11, 11))
         );
 
-        toffeeNutPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        toffeeNutPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jSpinnerToffeeNut.setValue(1);
 
@@ -1192,7 +1179,7 @@ public class coffeeshop extends javax.swing.JFrame {
             toffeeNutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, toffeeNutPanelLayout.createSequentialGroup()
                 .addComponent(toffeeNutHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(toffeeNutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(toffeeNutSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, toffeeNutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1211,7 +1198,7 @@ public class coffeeshop extends javax.swing.JFrame {
                 .addGap(11, 11, 11))
         );
 
-        darkChocoPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        darkChocoPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jSpinnerDarkChoco.setValue(1);
 
@@ -1300,7 +1287,7 @@ public class coffeeshop extends javax.swing.JFrame {
             darkChocoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, darkChocoPanelLayout.createSequentialGroup()
                 .addComponent(darkChocoHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addGroup(darkChocoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(darkChocoSizeLbl, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, darkChocoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1323,7 +1310,7 @@ public class coffeeshop extends javax.swing.JFrame {
         pastryLbl.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         pastryLbl.setText("Pastry");
 
-        painAuChocolatPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        painAuChocolatPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jSpinnerPainAuChocolat.setValue(1);
 
@@ -1379,7 +1366,7 @@ public class coffeeshop extends javax.swing.JFrame {
             painAuChocolatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painAuChocolatPanelLayout.createSequentialGroup()
                 .addComponent(painAuChocolatHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(painAuChocolatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jSpinnerPainAuChocolat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(painAuChocolatQtyLbl))
@@ -1391,7 +1378,7 @@ public class coffeeshop extends javax.swing.JFrame {
                 .addGap(11, 11, 11))
         );
 
-        macaronPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        macaronPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jSpinnerMacaron.setValue(1);
 
@@ -1447,7 +1434,7 @@ public class coffeeshop extends javax.swing.JFrame {
             macaronPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, macaronPanelLayout.createSequentialGroup()
                 .addComponent(macaronHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addGroup(macaronPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jSpinnerMacaron, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(macaronQtyLbl))
@@ -1459,7 +1446,7 @@ public class coffeeshop extends javax.swing.JFrame {
                 .addGap(11, 11, 11))
         );
 
-        blueberryCheesecakePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        blueberryCheesecakePanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jSpinnerBlueberryCheesecake.setValue(1);
 
@@ -1510,7 +1497,7 @@ public class coffeeshop extends javax.swing.JFrame {
             blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, blueberryCheesecakePanelLayout.createSequentialGroup()
                 .addComponent(blueberryCheesecakeHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(blueberryCheesecakePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jSpinnerBlueberryCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(blueberryCheesecakeQtyLbl))
@@ -1566,7 +1553,7 @@ public class coffeeshop extends javax.swing.JFrame {
                                 .addGroup(menuItemsPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(cookiesNCreamPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(darkChocoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         menuItemsPnlLayout.setVerticalGroup(
             menuItemsPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1604,50 +1591,46 @@ public class coffeeshop extends javax.swing.JFrame {
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        customerOptions.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(menuItemsPnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 77, -1, -1));
 
-        jButtonPay.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonPay.setText("Pay");
-        jButtonPay.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPayActionPerformed(evt);
+        orderListTbl.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Product Name", "Quantity", "Size", "Unit Price", "Amount"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
+        orderListTbl.getTableHeader().setReorderingAllowed(false);
+        orderListPanel.setViewportView(orderListTbl);
+        if (orderListTbl.getColumnModel().getColumnCount() > 0) {
+            orderListTbl.getColumnModel().getColumn(0).setResizable(false);
+            orderListTbl.getColumnModel().getColumn(0).setPreferredWidth(50);
+            orderListTbl.getColumnModel().getColumn(1).setResizable(false);
+            orderListTbl.getColumnModel().getColumn(1).setPreferredWidth(150);
+            orderListTbl.getColumnModel().getColumn(2).setResizable(false);
+            orderListTbl.getColumnModel().getColumn(3).setResizable(false);
+            orderListTbl.getColumnModel().getColumn(4).setResizable(false);
+            orderListTbl.getColumnModel().getColumn(5).setResizable(false);
+        }
 
-        jButtonReset.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonReset.setText("Reset");
-        jButtonReset.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonResetActionPerformed(evt);
-            }
-        });
+        jPanel1.add(orderListPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(921, 77, 458, 594));
 
-        javax.swing.GroupLayout customerOptionsLayout = new javax.swing.GroupLayout(customerOptions);
-        customerOptions.setLayout(customerOptionsLayout);
-        customerOptionsLayout.setHorizontalGroup(
-            customerOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, customerOptionsLayout.createSequentialGroup()
-                .addContainerGap(123, Short.MAX_VALUE)
-                .addGroup(customerOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonReset, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonPay, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(120, 120, 120))
-        );
-        customerOptionsLayout.setVerticalGroup(
-            customerOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(customerOptionsLayout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addComponent(jButtonPay, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButtonReset, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        paymentPanel.setBackground(new java.awt.Color(255, 252, 240));
+        paymentPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        paymentPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        cashLbl.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        cashLbl.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
         cashLbl.setText("Cash");
 
+        cashTextFld.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         cashTextFld.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         cashTextFld.setText("0.0");
         cashTextFld.addActionListener(new java.awt.event.ActionListener() {
@@ -1656,17 +1639,21 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
-        subTotalLbl.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        subTotalLbl.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
         subTotalLbl.setText("SubTotal");
 
         subTotalTextFld.setEditable(false);
+        subTotalTextFld.setBackground(new java.awt.Color(255, 255, 255));
+        subTotalTextFld.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         subTotalTextFld.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         subTotalTextFld.setText("0.0");
 
-        taxLbl.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        taxLbl.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
         taxLbl.setText("Tax");
 
         taxTextFld.setEditable(false);
+        taxTextFld.setBackground(new java.awt.Color(255, 255, 255));
+        taxTextFld.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         taxTextFld.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         taxTextFld.setText("0.0");
         taxTextFld.addActionListener(new java.awt.event.ActionListener() {
@@ -1675,17 +1662,21 @@ public class coffeeshop extends javax.swing.JFrame {
             }
         });
 
-        totalLbl.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        totalLbl.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
         totalLbl.setText("Total");
 
         totalTextFld.setEditable(false);
+        totalTextFld.setBackground(new java.awt.Color(255, 255, 255));
+        totalTextFld.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         totalTextFld.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         totalTextFld.setText("0.0");
 
-        changeLbl.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        changeLbl.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
         changeLbl.setText("Change");
 
         changeTextFld.setEditable(false);
+        changeTextFld.setBackground(new java.awt.Color(255, 255, 255));
+        changeTextFld.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         changeTextFld.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         changeTextFld.setText("0.0");
 
@@ -1741,113 +1732,145 @@ public class coffeeshop extends javax.swing.JFrame {
                 .addGap(16, 16, 16))
         );
 
-        orderListTbl.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+        jPanel1.add(paymentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(921, 827, -1, -1));
 
-            },
-            new String [] {
-                "ID", "Product Name", "Quantity", "Size", "Unit Price", "Amount"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        orderListTbl.getTableHeader().setReorderingAllowed(false);
-        orderListPanel.setViewportView(orderListTbl);
-        if (orderListTbl.getColumnModel().getColumnCount() > 0) {
-            orderListTbl.getColumnModel().getColumn(0).setResizable(false);
-            orderListTbl.getColumnModel().getColumn(0).setPreferredWidth(50);
-            orderListTbl.getColumnModel().getColumn(1).setResizable(false);
-            orderListTbl.getColumnModel().getColumn(1).setPreferredWidth(150);
-            orderListTbl.getColumnModel().getColumn(2).setResizable(false);
-            orderListTbl.getColumnModel().getColumn(3).setResizable(false);
-            orderListTbl.getColumnModel().getColumn(4).setResizable(false);
-            orderListTbl.getColumnModel().getColumn(5).setResizable(false);
-        }
-
-        invoiceTextArea.setEditable(false);
-        invoiceTextArea.setColumns(20);
-        invoiceTextArea.setRows(5);
-        invoicePanel.setViewportView(invoiceTextArea);
-
-        btnDeleteItem.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        btnDeleteItem.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnDeleteItem.setText("Delete");
         btnDeleteItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteItemActionPerformed(evt);
             }
         });
+        jPanel1.add(btnDeleteItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(921, 712, 138, 51));
 
-        btnHistory.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        btnHistory.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnHistory.setText("History");
         btnHistory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHistoryActionPerformed(evt);
             }
         });
+        jPanel1.add(btnHistory, new org.netbeans.lib.awtextra.AbsoluteConstraints(1077, 712, 148, 51));
 
-        btnUpdateOrder.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        btnUpdateOrder.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnUpdateOrder.setText("Update");
         btnUpdateOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateOrderActionPerformed(evt);
             }
         });
+        jPanel1.add(btnUpdateOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(1237, 712, 138, 51));
+
+        customerOptions.setBackground(new java.awt.Color(255, 252, 240));
+        customerOptions.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jButtonPay.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jButtonPay.setText("Pay");
+        jButtonPay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPayActionPerformed(evt);
+            }
+        });
+
+        jButtonReset.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jButtonReset.setText("Reset");
+        jButtonReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonResetActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout customerOptionsLayout = new javax.swing.GroupLayout(customerOptions);
+        customerOptions.setLayout(customerOptionsLayout);
+        customerOptionsLayout.setHorizontalGroup(
+            customerOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerOptionsLayout.createSequentialGroup()
+                .addGap(97, 97, 97)
+                .addGroup(customerOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButtonReset, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
+                    .addComponent(jButtonPay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
+        );
+        customerOptionsLayout.setVerticalGroup(
+            customerOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerOptionsLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jButtonPay, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(jButtonReset, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(customerOptions, new org.netbeans.lib.awtextra.AbsoluteConstraints(1399, 827, 418, -1));
+
+        invoiceTextArea.setEditable(false);
+        invoiceTextArea.setColumns(20);
+        invoiceTextArea.setRows(5);
+        invoicePanel.setViewportView(invoiceTextArea);
+
+        jPanel1.add(invoicePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1397, 77, 420, 693));
+
+        shopNamePnl.setBackground(new java.awt.Color(94, 54, 10));
+        shopNamePnl.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        shopNamePnl.setPreferredSize(new java.awt.Dimension(1900, 67));
+
+        shopNameLbl.setBackground(new java.awt.Color(158, 109, 47));
+        shopNameLbl.setFont(new java.awt.Font("Script MT Bold", 1, 48)); // NOI18N
+        shopNameLbl.setForeground(new java.awt.Color(255, 255, 255));
+        shopNameLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        shopNameLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/title.png"))); // NOI18N
+
+        shopNameLbl1.setBackground(new java.awt.Color(158, 109, 47));
+        shopNameLbl1.setFont(new java.awt.Font("Script MT Bold", 1, 48)); // NOI18N
+        shopNameLbl1.setForeground(new java.awt.Color(255, 255, 255));
+        shopNameLbl1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        shopNameLbl1.setText("Taste The Coffee");
+
+        shopNameLbl2.setBackground(new java.awt.Color(158, 109, 47));
+        shopNameLbl2.setFont(new java.awt.Font("Script MT Bold", 1, 48)); // NOI18N
+        shopNameLbl2.setForeground(new java.awt.Color(255, 255, 255));
+        shopNameLbl2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        shopNameLbl2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/title.png"))); // NOI18N
+        shopNameLbl2.setMaximumSize(new java.awt.Dimension(749, 55));
+
+        javax.swing.GroupLayout shopNamePnlLayout = new javax.swing.GroupLayout(shopNamePnl);
+        shopNamePnl.setLayout(shopNamePnlLayout);
+        shopNamePnlLayout.setHorizontalGroup(
+            shopNamePnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, shopNamePnlLayout.createSequentialGroup()
+                .addComponent(shopNameLbl)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
+                .addComponent(shopNameLbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(83, 83, 83)
+                .addComponent(shopNameLbl2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        shopNamePnlLayout.setVerticalGroup(
+            shopNamePnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, shopNamePnlLayout.createSequentialGroup()
+                .addGroup(shopNamePnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, shopNamePnlLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(shopNameLbl1))
+                    .addComponent(shopNameLbl2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, shopNamePnlLayout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(shopNameLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+
+        jPanel1.add(shopNamePnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1950, 59));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(menuItemsPnl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(paymentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnDeleteItem, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnUpdateOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(orderListPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(invoicePanel)
-                    .addComponent(customerOptions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 12, Short.MAX_VALUE))
-            .addComponent(shopNamePnl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(shopNamePnl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(menuItemsPnl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(orderListPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(33, 33, 33)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(btnDeleteItem, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnUpdateOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(paymentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(invoicePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 693, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(customerOptions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(20, 20, 20))))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1065, Short.MAX_VALUE)
         );
 
         pack();
@@ -2017,11 +2040,11 @@ public class coffeeshop extends javax.swing.JFrame {
                 
                 // Display Invoice
                 String textTitle = String.format("*********************************Taste The Coffee******************************\n"
-                                               + "Time\\Date: %s\n"
+                                               + "Time\\Date: %s\tCashier: %s\n"
                                                + "Invoice ID: %d\n"
                                                + "**********************************************************************************\n"
                                                + "Item Name:             \tQty\tPrice($)\tAmount\n"
-                                               , currentTime, invoiceNum);
+                                               , currentTime, operatingCashier.getLastName(), invoiceNum);
                 
                 String textItems = "";
                 for(int i = 0; i < sales.size(); i++) {
@@ -2046,7 +2069,7 @@ public class coffeeshop extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonPayActionPerformed
 
-    private void jButtonResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResetActionPerformed
+    private void jButtonResetActionPerformed(java.awt.event.ActionEvent evt) {                                             
         int response = JOptionPane.showConfirmDialog(this,
             "Are you sure?",
             "Reset",
@@ -2055,7 +2078,7 @@ public class coffeeshop extends javax.swing.JFrame {
         if(response == JOptionPane.YES_OPTION) {
             resetToZero(); 
         }              
-    }//GEN-LAST:event_jActionPerformed
+    }                                 
     private void americanoPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_americanoPriceActionPerformed
      
     }//GEN-LAST:event_americanoPriceActionPerformed
@@ -3071,6 +3094,7 @@ public class coffeeshop extends javax.swing.JFrame {
     private javax.swing.JTextArea invoiceTextArea;
     private javax.swing.JButton jButtonPay;
     private javax.swing.JButton jButtonReset;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JSpinner jSpinnerAmericano;
     private javax.swing.JSpinner jSpinnerBlueberryCheesecake;
     private javax.swing.JSpinner jSpinnerCappucino;
@@ -3128,6 +3152,8 @@ public class coffeeshop extends javax.swing.JFrame {
     private javax.swing.JLabel pastryLbl;
     private javax.swing.JPanel paymentPanel;
     private javax.swing.JLabel shopNameLbl;
+    private javax.swing.JLabel shopNameLbl1;
+    private javax.swing.JLabel shopNameLbl2;
     private javax.swing.JPanel shopNamePnl;
     private javax.swing.JRadioButton smAmericano;
     private javax.swing.JRadioButton smCappucino;

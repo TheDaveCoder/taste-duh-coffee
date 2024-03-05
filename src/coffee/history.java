@@ -7,6 +7,7 @@ package coffee;
 
 import Models.Invoice;
 import Models.Sale;
+import Services.AccountManager;
 import Services.OrderManager;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -47,37 +48,21 @@ public class history extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        historyOfTransactionPanel = new javax.swing.JPanel();
-        historyOfTransactionLbl = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         histroyTblPnl = new javax.swing.JScrollPane();
         HistoryTbl = new javax.swing.JTable();
         invoiceScrnPanel = new javax.swing.JScrollPane();
         invoiceTextArea = new javax.swing.JTextArea();
+        historyOfTransactionPanel = new javax.swing.JPanel();
+        historyOfTransactionLbl = new javax.swing.JLabel();
+        historyOfTransactionLbl1 = new javax.swing.JLabel();
+        historyOfTransactionLbl2 = new javax.swing.JLabel();
         btnDelete = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        historyOfTransactionPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        historyOfTransactionLbl.setBackground(new java.awt.Color(204, 0, 0));
-        historyOfTransactionLbl.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
-        historyOfTransactionLbl.setText("History of Transaction");
-
-        javax.swing.GroupLayout historyOfTransactionPanelLayout = new javax.swing.GroupLayout(historyOfTransactionPanel);
-        historyOfTransactionPanel.setLayout(historyOfTransactionPanelLayout);
-        historyOfTransactionPanelLayout.setHorizontalGroup(
-            historyOfTransactionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, historyOfTransactionPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(historyOfTransactionLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(349, 349, 349))
-        );
-        historyOfTransactionPanelLayout.setVerticalGroup(
-            historyOfTransactionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, historyOfTransactionPanelLayout.createSequentialGroup()
-                .addGap(0, 13, Short.MAX_VALUE)
-                .addComponent(historyOfTransactionLbl))
-        );
+        jPanel1.setBackground(new java.awt.Color(241, 220, 185));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         HistoryTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -111,45 +96,76 @@ public class history extends javax.swing.JFrame {
             HistoryTbl.getColumnModel().getColumn(4).setResizable(false);
         }
 
+        jPanel1.add(histroyTblPnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 75, 458, 614));
+
         invoiceTextArea.setEditable(false);
         invoiceTextArea.setColumns(20);
         invoiceTextArea.setRows(5);
         invoiceScrnPanel.setViewportView(invoiceTextArea);
 
-        btnDelete.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jPanel1.add(invoiceScrnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(497, 75, 497, 699));
+
+        historyOfTransactionPanel.setBackground(new java.awt.Color(94, 54, 10));
+        historyOfTransactionPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        historyOfTransactionPanel.setForeground(new java.awt.Color(255, 255, 255));
+
+        historyOfTransactionLbl.setBackground(new java.awt.Color(204, 0, 0));
+        historyOfTransactionLbl.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        historyOfTransactionLbl.setForeground(new java.awt.Color(255, 255, 255));
+        historyOfTransactionLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        historyOfTransactionLbl.setText("History of Transaction");
+
+        historyOfTransactionLbl1.setBackground(new java.awt.Color(204, 0, 0));
+        historyOfTransactionLbl1.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        historyOfTransactionLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/title.png"))); // NOI18N
+        historyOfTransactionLbl1.setText("History of Transaction");
+
+        historyOfTransactionLbl2.setBackground(new java.awt.Color(204, 0, 0));
+        historyOfTransactionLbl2.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        historyOfTransactionLbl2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coffee/title.png"))); // NOI18N
+        historyOfTransactionLbl2.setText("History of Transaction");
+
+        javax.swing.GroupLayout historyOfTransactionPanelLayout = new javax.swing.GroupLayout(historyOfTransactionPanel);
+        historyOfTransactionPanel.setLayout(historyOfTransactionPanelLayout);
+        historyOfTransactionPanelLayout.setHorizontalGroup(
+            historyOfTransactionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, historyOfTransactionPanelLayout.createSequentialGroup()
+                .addComponent(historyOfTransactionLbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(historyOfTransactionLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addComponent(historyOfTransactionLbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        historyOfTransactionPanelLayout.setVerticalGroup(
+            historyOfTransactionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(historyOfTransactionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(historyOfTransactionLbl1)
+                .addComponent(historyOfTransactionLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(historyOfTransactionLbl2)
+        );
+
+        jPanel1.add(historyOfTransactionPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        btnDelete.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteActionPerformed(evt);
             }
         });
+        jPanel1.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 716, 174, 58));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(historyOfTransactionPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(histroyTblPnl, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(invoiceScrnPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(historyOfTransactionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(histroyTblPnl, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27)
-                        .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(invoiceScrnPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 693, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 796, Short.MAX_VALUE)
         );
 
         pack();
@@ -186,12 +202,13 @@ public class history extends javax.swing.JFrame {
         double tax = 0.12 * subTotal;
         double total = invoice.getTotalAmount();
 
-        String textTitle = String.format("*********************************Taste The Coffee******************************\n"
-                                           + "Time\\Date: %s\n"
-                                           + "Invoice ID: %d\n"
-                                           + "**********************************************************************************\n"
-                                           + "Item Name:             \tQty\tPrice($)\tAmount\n"
-                                           , invoice.getInvoiceDate(), invoice.getInvoiceID());
+        String textTitle;
+            textTitle = String.format("*********************************Taste The Coffee******************************\n"
+                    + "Time\\Date: %s\tCashier: %s\n"
+                    + "Invoice ID: %d\n"
+                    + "**********************************************************************************\n"
+                    + "Item Name:             \tQty\tPrice($)\tAmount\n"
+                    , invoice.getInvoiceDate(), AccountManager.getUsernameByID(invoice.getCashierID()), invoice.getInvoiceID());
 
         String textItems = "";
         for(int i = 0; i < sales.size(); i++) {
@@ -259,9 +276,12 @@ public class history extends javax.swing.JFrame {
     private javax.swing.JTable HistoryTbl;
     private javax.swing.JButton btnDelete;
     private javax.swing.JLabel historyOfTransactionLbl;
+    private javax.swing.JLabel historyOfTransactionLbl1;
+    private javax.swing.JLabel historyOfTransactionLbl2;
     private javax.swing.JPanel historyOfTransactionPanel;
     private javax.swing.JScrollPane histroyTblPnl;
     private javax.swing.JScrollPane invoiceScrnPanel;
     private javax.swing.JTextArea invoiceTextArea;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
