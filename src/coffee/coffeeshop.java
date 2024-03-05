@@ -101,8 +101,9 @@ public class coffeeshop extends javax.swing.JFrame {
         total = 0.0;
         change = 0.0;
         
-        sales.removeAll(sales);
-        orderListTbl.removeAll();
+        sales.clear();
+        DefaultTableModel model = (DefaultTableModel) orderListTbl.getModel();
+        model.setRowCount(0);
         invoiceTextArea.setText("");
     }
     
@@ -2054,8 +2055,7 @@ public class coffeeshop extends javax.swing.JFrame {
         if(response == JOptionPane.YES_OPTION) {
             resetToZero(); 
         }              
-    }//GEN-LAST:event_jButtonResetActionPerformed
-
+    }//GEN-LAST:event_jActionPerformed
     private void americanoPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_americanoPriceActionPerformed
      
     }//GEN-LAST:event_americanoPriceActionPerformed
@@ -2326,7 +2326,7 @@ public class coffeeshop extends javax.swing.JFrame {
     private int lgLatteQty = 0;
     private void lattePurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lattePurchaseActionPerformed
         // TODO add your handling code here:
-        String prodName = "Latte";
+        String prodName = "Café Latte";
         String sizeName = "";
         boolean isSizeSelected = false;
         int quantity = 0;
