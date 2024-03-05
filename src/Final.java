@@ -213,7 +213,7 @@ public class Final extends JFrame {
 		reg_password_input.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("Images/tesda.png"));
+		lblNewLabel.setIcon(new ImageIcon("taste-duh-coffee/src/Images/tesda.png"));
 		lblNewLabel.setBounds(0, 0, 397, 561);
 		Register_panel.add(lblNewLabel);
 		register_btn.addActionListener(new ActionListener() {
@@ -231,7 +231,7 @@ public class Final extends JFrame {
 		login_panel.add(pass_input);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon("Images/tesda1.png"));
+		lblNewLabel_1.setIcon(new ImageIcon("taste-duh-coffee/src/Images/tesda1.png"));
 		lblNewLabel_1.setBounds(0, 0, 397, 561);
 		Login_panel.add(lblNewLabel_1);
 	}
