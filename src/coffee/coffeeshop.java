@@ -2326,7 +2326,7 @@ public class coffeeshop extends javax.swing.JFrame {
     private int lgLatteQty = 0;
     private void lattePurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lattePurchaseActionPerformed
         // TODO add your handling code here:
-        String prodName = "Latte";
+        String prodName = "Café Latte";
         String sizeName = "";
         boolean isSizeSelected = false;
         int quantity = 0;
