@@ -73,23 +73,20 @@ public class Final extends JFrame {
 		contentPane.add(Register_panel);
 		Register_panel.setLayout(null);
 		
-		JPanel logo_panel1 = new JPanel();
-		logo_panel1.setBackground(Color.GRAY);
-		logo_panel1.setBounds(0, 0, 395, 561);
-		Register_panel.add(logo_panel1);
-		
 		JPanel reg_panel = new JPanel();
-		reg_panel.setBackground(Color.WHITE);
+		reg_panel.setBackground(new Color(222, 184, 135));
 		reg_panel.setBounds(394, 0, 390, 561);
 		Register_panel.add(reg_panel);
 		reg_panel.setLayout(null);
 		
 		JLabel register_lbl = new JLabel("REGISTER");
+		register_lbl.setForeground(new Color(255, 250, 250));
 		register_lbl.setFont(new Font("Tahoma", Font.BOLD, 40));
 		register_lbl.setBounds(95, 95, 213, 84);
 		reg_panel.add(register_lbl);
 		
 		JLabel reg_user = new JLabel("Username");
+		reg_user.setForeground(new Color(255, 250, 250));
 		reg_user.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		reg_user.setBounds(37, 281, 73, 25);
 		reg_panel.add(reg_user);
@@ -100,6 +97,7 @@ public class Final extends JFrame {
 		reg_user_input.setColumns(10);
 		
 		JLabel reg_pass = new JLabel("Password");
+		reg_pass.setForeground(new Color(255, 250, 250));
 		reg_pass.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		reg_pass.setBounds(37, 353, 73, 25);
 		reg_panel.add(reg_pass);
@@ -111,24 +109,20 @@ public class Final extends JFrame {
 		
 		Register_panel.setVisible(false);
 		
-		JPanel logo_panel = new JPanel();
-		logo_panel.setBackground(Color.LIGHT_GRAY);
-		logo_panel.setBounds(0, 0, 396, 561);
-		Login_panel.add(logo_panel);
-		logo_panel.setLayout(null);
-		
 		JPanel login_panel = new JPanel();
 		login_panel.setBounds(393, 0, 391, 561);
 		Login_panel.add(login_panel);
-		login_panel.setBackground(Color.WHITE);
+		login_panel.setBackground(new Color(102, 51, 0));
 		login_panel.setLayout(null);
 		
-		JLabel welcome = new JLabel("WELCOME");
-		welcome.setBounds(94, 109, 214, 50);
+		JLabel welcome = new JLabel("LOGIN");
+		welcome.setForeground(new Color(255, 255, 255));
+		welcome.setBounds(129, 110, 145, 50);
 		welcome.setFont(new Font("Tahoma", Font.BOLD, 40));
 		login_panel.add(welcome);
 		
 		JLabel user_lbl = new JLabel("Username");
+		user_lbl.setForeground(new Color(255, 255, 255));
 		user_lbl.setBounds(37, 215, 73, 25);
 		user_lbl.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		login_panel.add(user_lbl);
@@ -139,6 +133,7 @@ public class Final extends JFrame {
 		user_input.setColumns(10);
 		
 		JLabel pass_lbl = new JLabel("Password");
+		pass_lbl.setForeground(new Color(255, 255, 255));
 		pass_lbl.setBounds(37, 287, 73, 25);
 		pass_lbl.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		login_panel.add(pass_lbl);
@@ -146,6 +141,9 @@ public class Final extends JFrame {
 	
 		
 		JButton login = new JButton("Login");
+		login.setForeground(new Color(102, 51, 0));
+		login.setBorderPainted(false);
+		login.setBackground(new Color(255, 255, 255));
 		login.setBounds(149, 387, 89, 23);
 		login.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -170,23 +168,31 @@ public class Final extends JFrame {
 		login_panel.add(login);
 		
 		JLabel no_acc = new JLabel("Don't have an account?");
+		no_acc.setForeground(new Color(255, 255, 255));
 		no_acc.setBounds(63, 452, 164, 14);
 		no_acc.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		login_panel.add(no_acc);
 		
 		JButton register = new JButton("Register");
+		register.setForeground(new Color(102, 51, 0));
+		register.setBorderPainted(false);
+		register.setBackground(new Color(255, 255, 255));
 		register.setBounds(237, 448, 89, 23);
 		register.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		login_panel.add(register);
-		register.addActionListener(new ActionListener() { // register action
+		register.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				login_panel.setVisible(false);
 				Register_panel.setVisible(true);
 			}});
 		JButton register_btn = new JButton("Register");
+		register_btn.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		register_btn.setBorderPainted(false);
+		register_btn.setBackground(new Color(184, 134, 11));
+		register_btn.setForeground(new Color(255, 250, 250));
 		
-		register_btn.setBounds(151, 463, 89, 23);
+		register_btn.setBounds(129, 463, 127, 37);
 		reg_panel.add(register_btn);
 		
 		reg_lastname_input = new JTextField();
@@ -195,6 +201,7 @@ public class Final extends JFrame {
 		reg_lastname_input.setColumns(10);
 		
 		JLabel reg_lastname = new JLabel("User's Lastname");
+		reg_lastname.setForeground(new Color(255, 250, 250));
 		reg_lastname.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		reg_lastname.setBounds(37, 209, 119, 25);
 		
@@ -204,13 +211,17 @@ public class Final extends JFrame {
 		reg_password_input.setBounds(37, 389, 323, 25);
 		reg_panel.add(reg_password_input);
 		reg_password_input.setColumns(10);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setIcon(new ImageIcon("taste-duh-coffee/src/Images/tesda.png"));
+		lblNewLabel.setBounds(0, 0, 397, 561);
+		Register_panel.add(lblNewLabel);
 		register_btn.addActionListener(new ActionListener() {
 		    public void actionPerformed(ActionEvent e) {
 		    	String lastname = reg_lastname_input.getText();
 		        String username = reg_user_input.getText();
 		        String password = reg_password_input.getText();
 				AccountManager.recordNewUser(lastname, username, password);
-				System.out.println(password);
 				login_panel.setVisible(true);
 				Register_panel.setVisible(false);
 		    }
@@ -218,5 +229,10 @@ public class Final extends JFrame {
 		pass_input = new JPasswordField();
 		pass_input.setBounds(37, 317, 323, 25);
 		login_panel.add(pass_input);
+		
+		JLabel lblNewLabel_1 = new JLabel("New label");
+		lblNewLabel_1.setIcon(new ImageIcon("taste-duh-coffee/src/Images/tesda1.png"));
+		lblNewLabel_1.setBounds(0, 0, 397, 561);
+		Login_panel.add(lblNewLabel_1);
 	}
 }
