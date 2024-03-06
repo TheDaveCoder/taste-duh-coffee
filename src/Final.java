@@ -14,10 +14,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class Final extends JFrame {
 	
-	
+	private static final String HASH_ALGORITHM = "SHA-256";
 	static String endpoint = "database-1.cl85pye4up69.ap-southeast-1.rds.amazonaws.com";
 	static String port = "3306";
 	static String DBIdentifier = "point-of-system";
@@ -149,12 +151,11 @@ public class Final extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				 	String username = user_input.getText();
 				 	String password = pass_input.getText();
-	                if(AccountManager.checkForMatch(username, password.toString())) {
-			            System.out.println("account already exists!");
-			            frame.setVisible(false);
+	                if(AccountManager.checkForMatch(username, password)) {
 			            coffeeshop coffee = new coffeeshop(AccountManager.getUserByUsername(username));
                                     coffee.setExtendedState(MAXIMIZED_BOTH);
 			            coffee.setVisible(true);
+			            System.out.println(password.toString());
 			            } 
 	                else {
 						JOptionPane.showMessageDialog(null, "Incorrect username or password!");
@@ -221,9 +222,11 @@ public class Final extends JFrame {
 		    	String lastname = reg_lastname_input.getText();
 		        String username = reg_user_input.getText();
 		        String password = reg_password_input.getText();
+		        System.out.println(password);
 				AccountManager.recordNewUser(lastname, username, password);
 				login_panel.setVisible(true);
 				Register_panel.setVisible(false);
+			
 		    }
 		});
 		pass_input = new JPasswordField();
